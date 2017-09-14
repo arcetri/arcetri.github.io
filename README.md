@@ -1,6 +1,7 @@
 # Arcetri cluster official site
 
 Presentation site for the CISCO Arcetri cluster
+
 Avaliable at [arcetri.github.io](http://arcetri.github.io)
 
 ### Prerequisites
@@ -13,7 +14,7 @@ pip install jinja2
 
 ### Cloning and modifying code
 
-Run this in your terminal
+Run this code in your terminal:
 
 ```
 git clone https://github.com/arcetri/arcetri.github.io.git
@@ -23,9 +24,9 @@ Notice: .html files in a root directory are generated automatically - do not cha
 
 Instead, modify files in templates/ directory. Do not forget to make changes in compile.py file to compile new files.
 
-## Deployment
+## Compilation
 
-Run this command in terminal in a root project directory
+Execute this command in your terminal in a root project directory:
 
 ```
 python compile.py
@@ -38,7 +39,7 @@ python compile.py
 
 ## Authors
 
-* **Bogdan Salyp** - *Initial work* - [PurpleBooth](https://github.com/trntga)
+* **Bogdan Salyp** - *Initial work* - [trntga](https://github.com/trntga)
 
 ## Acknowledgments
 
