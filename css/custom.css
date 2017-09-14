@@ -1,1 +1,13 @@
 .navbar { position: relative!important; }
+
+.jumbotron {
+    background-color: #17a2b8;
+    border-radius: 0;
+    color: #fff;
+    padding-left: 9%;
+}
+
+.jumbotron-href, .jumbotron-href:hover {
+    color: inherit;
+    text-decoration: underline;
+}
