@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Arcetri | About</title>
+    <title>Arcetri | {{ title }}</title>
     <link href="bootstrap-4/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
 </head>
@@ -38,24 +38,7 @@
     </div>
 </nav>
 
-
-
-<div class="jumbotron">
-    <h1 class="display-3">Interesting facts</h1>
-    <p class="lead">Why is it called "Arcetri"? See here :)</p>
-</div>
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-1"></div>
-        <div class="col-10">
-            <h1>Nothing</h1>
-        </div>
-        <div class="col-1"></div>
-    </div>
-</div>
-
-
+{% block body %}{% endblock %}
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="bootstrap-4/js/bootstrap.min.js"></script>
