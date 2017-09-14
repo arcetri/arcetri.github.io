@@ -2,6 +2,11 @@ from jinja2 import Environment, BaseLoader, Template, FileSystemLoader
 
 TEMPLATES_DIR = 'templates/'
 
+class Page(object):
+    def __init__(self, **kwargs):
+        for key, value in kwargs.items():
+              setattr(self, key, value)
+
 def compile_html(old_name, new_name, data):
     with open(TEMPLATES_DIR + old_name, 'rb') as f:
         text = f.read()
@@ -14,20 +19,15 @@ def compile_html(old_name, new_name, data):
 env = Environment()
 env.loader = FileSystemLoader('.')
 
-data = {'title': 'Home'}
-compile_html('index_template.html', 'index.html', data)
+pages = [
+    Page(old_name='index_template.html', new_name='index.html', data = { 'title': 'Home' }),
+    Page(old_name='about_template.html', new_name='about.html', data = { 'title': 'About' }),
+    Page(old_name='contacts_template.html', new_name='contacts.html', data = { 'title': 'Contacts' }),
+    Page(old_name='faq_template.html', new_name='faq.html', data = { 'title': 'FAQ' }),
+    Page(old_name='help_template.html', new_name='help.html', data = { 'title': 'Help' }),
+    Page(old_name='index_template.html', new_name='index.html', data = { 'title': 'Index' }),
+    Page(old_name='projects_template.html', new_name='projects.html', data = { 'title': 'Projects' })
+]
 
-data = {'title': 'About'}
-compile_html('about_template.html', 'about.html', data)
-
-data = {'title': 'Contacts'}
-compile_html('contacts_template.html', 'contacts.html', data)
-
-data = {'title': 'FAQ'}
-compile_html('faq_template.html', 'faq.html', data)
-
-data = {'title': 'Help'}
-compile_html('help_template.html', 'help.html', data)
-
-data = {'title': 'Projects'}
-compile_html('projects_template.html', 'projects.html', data)
+for page in pages:
+    compile_html(page.old_name, page.new_name, page.data)
