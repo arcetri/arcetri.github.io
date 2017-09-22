@@ -11,3 +11,15 @@
     color: inherit;
     text-decoration: underline;
 }
+
+.textblock {
+    padding-bottom: 5%;
+}
+
+.textheader {
+    padding-bottom: 1%;
+}
+
+.textcard {
+    padding: 10px 20px;
+}

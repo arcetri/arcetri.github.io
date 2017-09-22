@@ -14,7 +14,7 @@ def compile_html(old_name, new_name, data):
     output = Environment(loader = FileSystemLoader(TEMPLATES_DIR)).get_template(old_name).render(data)
 
     with open(new_name, 'wb') as f:
-        f.write(output)
+        f.write(output.encode('utf-8'))
 
 env = Environment()
 env.loader = FileSystemLoader('.')
