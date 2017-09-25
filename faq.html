@@ -51,17 +51,16 @@
         <div class="col-10">
             <div class="textblock">
                 <h1 class="textheader">Arcetri</h1>
-                <div class="arcetri-accordion" role="tablist" aria-multiselectable="true">
+                <div id="arcetri-accordion" role="tablist" aria-multiselectable="true">
                     <div class="card">
                         <div class="card-header" role="tab" id="headingOne">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#arcetri-accordion" href="#arcetri1" aria-expanded="true" aria-controls="arcetri1">
-                                    Q: How to login?
+                                <a data-toggle="collapse" data-parent="#arcetri-accordion" href="#arcetri-login" aria-controls="arcetri-login">
+                                    How to login to Arcetri?
                                 </a>
                             </h5>
                         </div>
-
-                        <div id="arcetri1" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="arcetri-login" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
                                 <ul>
                                     <li>Download Cisco AnyConnect</li>
@@ -74,21 +73,98 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#arcetri-accordion" href="#arcetri-contact" aria-controls="arcetri-contact">
+                                    Who do a contact if I need help with Arcetri?
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="arcetri-contact" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-block textcard">
+                                ====================================Empty================================================
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#arcetri-accordion" href="#arcetri-names" aria-controls="arcetri-names">
+                                    What is the meaning behind the names, Pacini, Franco and Arcetri?
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="arcetri-names" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-block textcard">
+                                ====================================Empty================================================
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#arcetri-accordion" href="#arcetri-differences" aria-controls="arcetri-differences">
+                                    What is the difference between Pacini and Arcetri?
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="arcetri-differences" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-block textcard">
+                                ====================================Empty================================================
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#arcetri-accordion" href="#arcetri-structure" aria-controls="arcetri-structure">
+                                    What is the structure of Arcetri?
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="arcetri-structure" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-block textcard">
+                                ====================================Empty================================================
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#arcetri-accordion" href="#arcetri-graphical" aria-controls="arcetri-graphical">
+                                    How can I start a graphical desktop on Pacini?
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="arcetri-graphical" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-block textcard">
+
+                                ====================================Empty================================================
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="textblock">
                 <h1 class="textheader">Moab/Torque</h1>
-                <div class="moab-accordion" role="tablist" aria-multiselectable="true">
+                <div id="moab-accordion" role="tablist" aria-multiselectable="true">
                     <div class="card">
-                        <div class="card-header" role="tab" id="headingOne">
+                        <div class="card-header" role="tab" id="moab-card-launch">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab1" aria-expanded="true" aria-controls="moab1">
-                                    Q: How to launch jobs?
+                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab-launch" aria-controls="moab-launch">
+                                    How do I launch jobs?
                                 </a>
                             </h5>
                         </div>
 
-                        <div id="moab1" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="moab-launch" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
                                 <b>Via batch script</b>
                                 <ul>
@@ -99,123 +175,201 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="card">
-                        <div class="card-header" role="tab" id="headingOne">
+                        <div class="card-header" role="tab" id="moab-card-monitor">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab2" aria-expanded="true" aria-controls="moab2">
-                                    Q: How to monitor jobs?
+                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab-monitor" aria-controls="moab-monitor">
+                                    How do I monitor my jobs?
                                 </a>
                             </h5>
                         </div>
 
-                        <div id="moab2" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="moab-monitor" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+                                ====================================Empty================================================
+
                             </div>
                         </div>
                     </div>
+
                     <div class="card">
-                        <div class="card-header" role="tab" id="headingOne">
+                        <div class="card-header" role="tab" id="moab-card-specific">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab3" aria-expanded="true" aria-controls="moab3">
-                                    Q: Why can’t I launch jobs on a specific node?
+                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab-specific" aria-controls="moab-specific">
+                                    Why can’t I launch jobs on a specific node?
                                 </a>
                             </h5>
                         </div>
 
-                        <div id="moab3" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="moab-specific" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+                                ====================================Empty================================================
+
                             </div>
                         </div>
                     </div>
+
                     <div class="card">
-                        <div class="card-header" role="tab" id="headingOne">
+                        <div class="card-header" role="tab" id="moab-card-ssh">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab4" aria-expanded="true" aria-controls="moab4">
-                                    Q: Why can’t I launch jobs on the head node?
+                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab-ssh" aria-controls="moab-ssh">
+                                    What can't I ssh into a compute node?
                                 </a>
                             </h5>
                         </div>
 
-                        <div id="moab4" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="moab-ssh" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+                                ====================================Empty================================================
+
                             </div>
                         </div>
                     </div>
+
                     <div class="card">
-                        <div class="card-header" role="tab" id="headingOne">
+                        <div class="card-header" role="tab" id="moab-card-head">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab5" aria-expanded="true" aria-controls="moab5">
-                                    Q: Where are the results of my job?
+                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab-head" aria-controls="moab-head">
+                                    Why can’t I launch jobs on the head node?
                                 </a>
                             </h5>
                         </div>
 
-                        <div id="moab5" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="moab-head" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+                                ====================================Empty================================================
+
                             </div>
                         </div>
                     </div>
+
                     <div class="card">
-                        <div class="card-header" role="tab" id="headingOne">
+                        <div class="card-header" role="tab" id="moab-card-results">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab6" aria-expanded="true" aria-controls="moab6">
-                                    Q: What if my job is still in the queue?
+                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab-results" aria-controls="moab-results">
+                                    Where are the results of my job?
                                 </a>
                             </h5>
                         </div>
 
-                        <div id="moab6" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="moab-results" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+                                ====================================Empty================================================
+
                             </div>
                         </div>
                     </div>
+
                     <div class="card">
-                        <div class="card-header" role="tab" id="headingOne">
+                        <div class="card-header" role="tab" id="moab-card-queue">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab7" aria-expanded="true" aria-controls="moab7">
-                                    Q: How to cancel my job?
+                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab-queue" aria-controls="moab-queue">
+                                    What if my job is still in the queue?
                                 </a>
                             </h5>
                         </div>
 
-                        <div id="moab7" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="moab-queue" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+                                ====================================Empty================================================
+
                             </div>
                         </div>
                     </div>
+
                     <div class="card">
-                        <div class="card-header" role="tab" id="headingOne">
+                        <div class="card-header" role="tab" id="moab-card-cancel">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab8" aria-expanded="true" aria-controls="moab8">
-                                    Q: How many resources can I request?
+                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab-cancel" aria-controls="moab-cancel">
+                                    How may I cancel my job?
                                 </a>
                             </h5>
                         </div>
 
-                        <div id="moab8" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="moab-cancel" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+                                ====================================Empty================================================
+
                             </div>
                         </div>
                     </div>
+
                     <div class="card">
-                        <div class="card-header" role="tab" id="headingOne">
+                        <div class="card-header" role="tab" id="moab-card-resources">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab9" aria-expanded="true" aria-controls="moab9">
-                                    Q: What can I do with moab?
+                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab-resources" aria-controls="moab-resources">
+                                    What resources may I request for my job?
                                 </a>
                             </h5>
                         </div>
 
-                        <div id="moab9" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="moab-resources" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+                                ====================================Empty================================================
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" role="tab" id="moab-card-filesystems">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab-filesystems" aria-controls="moab-filesystems">
+                                    What filesystems may I use on Pacini and the Pacini compute nodes?
+                                </a>
+                            </h5>
+                        </div>
+
+                        <div id="moab-filesystems" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-block textcard">
+
+                                ====================================Empty================================================
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" role="tab" id="moab-card-msub">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab-msub" aria-controls="moab-msub">
+                                    How may I use the msub command?
+                                </a>
+                            </h5>
+                        </div>
+
+                        <div id="moab-msub" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-block textcard">
+
+                                ====================================Empty================================================
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" role="tab" id="moab-card-more">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab-more" aria-controls="moab-more">
+                                    Where can I read more about Moab/TORQUE?
+                                </a>
+                            </h5>
+                        </div>
+
+                        <div id="moab-more" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-block textcard">
+
+                                ====================================Empty================================================
+
                             </div>
                         </div>
                     </div>
@@ -225,47 +379,184 @@
                 <h1 class="textheader">Matlab</h1>
                 <div id="matlab-accordion" role="tablist" aria-multiselectable="true">
                     <div class="card">
-                        <div class="card-header" role="tab" id="matlab-card1">
+                        <div class="card-header" role="tab" id="matlab-card-windows">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#matlab-accordion" href="#matlab1" aria-controls="matlab1">
-                                    Q: How to run Matlab on Windows?
+                                <a data-toggle="collapse" data-parent="#matlab-accordion" href="#matlab-windows" aria-controls="matlab-windows">
+                                    How do I run Matlab on the Pacini cluster from Windows laptop?
                                 </a>
                             </h5>
                         </div>
 
-                        <div id="matlab1" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="matlab-windows" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+                                ====================================Empty================================================
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" role="tab" id="matlab-card-linux">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#matlab-accordion" href="#matlab-linux" aria-controls="matlab-linux">
+                                    How do I run Matlab on the Pacini cluster from Linux system?
+                                </a>
+                            </h5>
+                        </div>
+
+                        <div id="matlab-linux" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-block textcard">
+
+                                ====================================Empty================================================
+
                             </div>
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-header" role="tab" id="matlab-card2">
+                        <div class="card-header" role="tab" id="matlab-card-macos">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#matlab-accordion" href="#matlab2" aria-controls="matlab2">
-                                    Q: How to run Matlab on Linux?
+                                <a data-toggle="collapse" data-parent="#matlab-accordion" href="#matlab-macos" aria-controls="matlab-macos">
+                                    How do I run Matlab on the Pacini cluster from macOS?
                                 </a>
                             </h5>
                         </div>
 
-                        <div id="matlab2" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="matlab-macos" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+                                ====================================Empty================================================
+
                             </div>
                         </div>
                     </div>
+
                     <div class="card">
-                        <div class="card-header" role="tab" id="matlab-card3">
+                        <div class="card-header" role="tab" id="matlab-card-more">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#matlab-accordion" href="#matlab3" aria-controls="matlab3">
-                                    Q: How to run Matlab on OS X?
+                                <a data-toggle="collapse" data-parent="#matlab-accordion" href="#matlab-more" aria-controls="matlab-more">
+                                    Where can I read more about Matlab?
                                 </a>
                             </h5>
                         </div>
 
-                        <div id="matlab3" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="matlab-more" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+                                ====================================Empty================================================
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="textblock">
+                <h1 class="textheader">Python</h1>
+                <div id="python-accordion" role="tablist" aria-multiselectable="true">
+                    <div class="card">
+                        <div class="card-header" role="tab" id="python-card-libraries">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#python-accordion" href="#python-libraries" aria-controls="python-libraries">
+                                    How to install new python libraries?
+                                </a>
+                            </h5>
+                        </div>
+
+                        <div id="python-libraries" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-block textcard">
+
+                                ====================================Empty================================================
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" role="tab" id="python-card-new">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#python-accordion" href="#python-new" aria-controls="pythonnew">
+                                    How to create new virtual environment?
+                                </a>
+                            </h5>
+                        </div>
+
+                        <div id="python-new" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-block textcard">
+
+                                ====================================Empty================================================
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" role="tab" id="python-card-activate">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#python-accordion" href="#python-activate" aria-controls="python-activate">
+                                    How to activate my environment?
+                                </a>
+                            </h5>
+                        </div>
+
+                        <div id="python-activate" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-block textcard">
+
+                                ====================================Empty================================================
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" role="tab" id="python-card-deactivate">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#python-accordion" href="#python-deactivate" aria-controls="python-deactivate">
+                                    How to deactivate virtual environment?
+                                </a>
+                            </h5>
+                        </div>
+
+                        <div id="python-deactivate" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-block textcard">
+
+                                ====================================Empty================================================
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" role="tab" id="python-card-version">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#python-accordion" href="#python-version" aria-controls="python-version">
+                                    How to specify Python version inside an environment?
+                                </a>
+                            </h5>
+                        </div>
+
+                        <div id="python-version" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-block textcard">
+
+                                ====================================Empty================================================
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" role="tab" id="python-card-more">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#python-accordion" href="#python-more" aria-controls="python-more">
+                                    Where can I read more about virtual environments?
+                                </a>
+                            </h5>
+                        </div>
+
+                        <div id="python-more" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-block textcard">
+
+                                ====================================Empty================================================
+
                             </div>
                         </div>
                     </div>
