@@ -69,7 +69,7 @@
                                     <li>Press ‘Connect’ and enter your login detail</li>
                                     <img src="img/faq/arcetri/anyconnect-2.png">
                                     <li>Now open a terminal and enter the following command: </li>
-                                    <b>$ ssh pacini.cisco.com</b>
+                                    <code>$ ssh pacini.cisco.com</code>
                                     <li>Type in your arcetri user name and password and press Enter</li>
                                 </ul>
                             </div>
@@ -135,23 +135,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="card">
-                        <div class="card-header" role="tab" id="headingOne">
-                            <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#arcetri-accordion" href="#arcetri-graphical" aria-controls="arcetri-graphical">
-                                    How can I start a graphical desktop on Pacini?
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="arcetri-graphical" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
-
-                                ====================================Empty================================================
-
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="textblock">
@@ -168,12 +151,23 @@
 
                         <div id="moab-launch" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
-                                <b>Via batch script</b>
-                                <ul>
-                                    <li>Create a .msub file with parameters for the job</li>
-                                    <li>Type in the command</li>
-                                    <b>$ msub <i>yourfilename</i>.msub</b>
-                                </ul>
+                                <p>
+                                    <h4>Via batch script</h4>
+                                    <ul>
+                                        <li>Create a .msub file with parameters for the job</li>
+                                        <li>Type in the command</li>
+                                        <code>$ msub <i>yourfilename</i>.msub</code>
+                                    </ul>
+
+                                    <i>Learn more about Torque parameters <a href="https://www.osc.edu/supercomputing/batch-processing-at-osc/job-scripts">here</a></i>
+                                </p>
+                                <p>
+                                    <h4>Via interactive ssh job</h4>
+                                    <ul>
+                                        <li>Submit your job using the following format:</li>
+                                        <code>$ msub -I -l nodes=1:nogpu:ppn=1-q interactive -l walltime=01:00 -l pmem=1gb –l pvmem=1gb–N SSH_session</code>
+                                    </ul>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -190,7 +184,34 @@
                         <div id="moab-monitor" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
 
-                                ====================================Empty================================================
+                                <p>
+                                    After you launch your job you could monitor its progress using the following command:<br>
+                                    <code>$ showstate</code><br>
+                                </p>
+                                <p>
+                                    This command will show your all running jobs’ progress in the following format:
+                                    <img src="img/faq/moab/monitor-1.png" width="50%">
+                                    <img src="img/faq/moab/monitor-2.png" width="50%"><br>
+                                    Here you can see list of running jobs, jobIDs and busy nodes map
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" role="tab" id="moab-card-number">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab-number" aria-controls="moab-number">
+                                    How can I check my job's number?
+                                </a>
+                            </h5>
+                        </div>
+
+                        <div id="moab-number" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-block textcard">
+
+                                qstat
 
                             </div>
                         </div>
@@ -208,7 +229,9 @@
                         <div id="moab-specific" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
 
-                                ====================================Empty================================================
+                                The Moab/Torque system reserves resources among the pacini compute nodes
+                                and (pacini000 – pacini095) based the resources requested and your job's relative priority.
+                                While you can request a specific node via the msub command, this practice is not recommended.
 
                             </div>
                         </div>
@@ -226,7 +249,8 @@
                         <div id="moab-ssh" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
 
-                                ====================================Empty================================================
+                                Users are not permitted to ssh into a pacini compute node (pacini000 – pacini095) unless
+                                they have a job running on that node via Moab/Torque.
 
                             </div>
                         </div>
@@ -243,9 +267,9 @@
 
                         <div id="moab-head" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
-
-                                ====================================Empty================================================
-
+                                The head node’s (pacini) solely purpose is to schedule and monitor jobs on the
+                                compute nodes (pacini000 – pacini095). Before launching a job, you need to execute
+                                msub commands via either a batch script or interactive ssh job
                             </div>
                         </div>
                     </div>
@@ -280,8 +304,14 @@
                         <div id="moab-queue" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
 
-                                ====================================Empty================================================
-
+                                Your job is in the queue and is still not executing due to one of the following reasons:
+                                <ol>
+                                    <li>The amount of resources that you have requested is currently unavailable</li>
+                                    <li>A job with higher priority than yours is running</li>
+                                    <li>Moab maybe still executing your request</li>
+                                    <li>Occassionaly due to the reboot of the system Moab puts all jobs in the queue,
+                                        in which case, you must contact the Arcetri team and re-run your job</li>
+                                </ol>
                             </div>
                         </div>
                     </div>
@@ -298,7 +328,9 @@
                         <div id="moab-cancel" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
 
-                                ====================================Empty================================================
+                                Use the following command:<br>
+                                <code>$ canceljob <i>JobID</i></code><br>
+                                Where JobID is the unique id of your job (for help finding you JobID, see <a href="#">here</a>)
 
                             </div>
                         </div>
@@ -316,8 +348,30 @@
                         <div id="moab-resources" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
 
-                                ====================================Empty================================================
+                                <h4>Arcetri resources</h4>
+                                <ul>
+                                    <li>96 compute nodes in total</li>
+                                    <li>16 nodes with Tesla GPUs: <code>pacini080</code> - <code>pacini095</code></li>
+                                    <li>256GB of RAM each</li>
+                                </ul>
 
+                                <b>Compute nodes are divided in three groups:</b><br>
+
+                                IB group
+                                <ul>
+                                    <li>32 nodes: <code>pacini000</code> - <code>pacini031</code></li>
+                                    <li>20 CPU cores per node</li>
+                                </ul>
+                                HW group
+                                <ul>
+                                    <li>32 nodes: <code>pacini032</code> - <code>pacini063</code></li>
+                                    <li>24 CPU cores per node</li>
+                                </ul>
+                                BW group
+                                <ul>
+                                    <li>32 nodes: <code>pacini064</code> - <code>pacini095</code></li>
+                                    <li>28 CPU cores per node</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -352,7 +406,58 @@
                         <div id="moab-msub" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
 
-                                ====================================Empty================================================
+                                <p>
+                                    <code>msub <i>job_batch_script.msub</i></code> - Submit job
+                                    defined in <i>job batch script</i> in current directory
+                                </p>
+
+                                <p>
+                                    <code>msub -l <i>parameters</i></code> - Ask for
+                                    interactive SSH session with specified parameters
+                                </p>
+
+                                <p>
+                                    <code>mjobctl -c JobID</code> - Cancel job based on jobID (<code>canceljob JobID</code>
+                                    is a handy alias for this command)
+                                </p>
+
+                                <p>
+                                    <code>mjobctl -c -w user=$USER</code> - Cancel all jobs by the user
+                                </p>
+
+                                <p>
+                                    <code>qstat JobID</code> - Show queue info for a current job
+                                </p>
+
+                                <p>
+                                    <code>qstat -f JobID</code> - Show detailed queue info about job
+                                </p>
+
+                                <p>
+                                    <code>showq</code> - Show queue info about all users
+                                </p>
+
+                                <p>
+                                    <code>checkjob JobID</code> - Show scheduling info about job
+                                </p>
+netstat
+                                <p>
+                                    <code>checkjob -v JobID</code> - Show detailed scheduling info about job
+                                </p>
+
+                                <p>
+                                    <code>checkjob -v -v JobID</code> - Show very detailed scheduling info about job
+                                </p>
+
+                                <p>
+                                    <code>showbf</code> - Show available system resources
+                                </p>
+
+                                <p>
+                                    <code>showstate</code> -
+                                </p>
+
+                                See more here: <a href="http://docs.adaptivecomputing.com/mwm/7-0/Content/commands/msub.html">docs.adaptivecomputing.com/mwm/7-0/Content/commands/msub.html</a>
 
                             </div>
                         </div>
@@ -369,27 +474,30 @@
 
                         <div id="moab-more" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
-
-                                ====================================Empty================================================
-
+                                <p>
+                                    Read more about Moab: <a href="http://www.adaptivecomputing.com/wp-content/media/pdf/ClusterSuiteTutorial_IhliN.pdf">adaptivecomputing.com/wp-content/media/pdf/ClusterSuiteTutorial_IhliN.pdf</a>
+                                </p>
+                                <p>
+                                    Read more about TORQUE: <a href="http://www.adaptivecomputing.com/wp-content/media/pdf/TorqueTutorial_NielsonK.pdf">adaptivecomputing.com/wp-content/media/pdf/TorqueTutorial_NielsonK.pdf</a>
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="textblock">
-                <h1 class="textheader">Matlab</h1>
-                <div id="matlab-accordion" role="tablist" aria-multiselectable="true">
+                <h1 class="textheader">Graphical desktop</h1>
+                <div id="graphical-accordion" role="tablist" aria-multiselectable="true">
                     <div class="card">
-                        <div class="card-header" role="tab" id="matlab-card-windows">
+                        <div class="card-header" role="tab" id="graphical-card-windows">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#matlab-accordion" href="#matlab-windows" aria-controls="matlab-windows">
+                                <a data-toggle="collapse" data-parent="#graphical-accordion" href="#graphical-windows" aria-controls="graphical-windows">
                                     How do I run Matlab on the Pacini cluster from Windows laptop?
                                 </a>
                             </h5>
                         </div>
 
-                        <div id="matlab-windows" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="graphical-windows" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
 
                                 ====================================Empty================================================
@@ -399,15 +507,15 @@
                     </div>
 
                     <div class="card">
-                        <div class="card-header" role="tab" id="matlab-card-linux">
+                        <div class="card-header" role="tab" id="graphical-card-linux">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#matlab-accordion" href="#matlab-linux" aria-controls="matlab-linux">
+                                <a data-toggle="collapse" data-parent="#graphical-accordion" href="#graphical-linux" aria-controls="graphical-linux">
                                     How do I run Matlab on the Pacini cluster from Linux system?
                                 </a>
                             </h5>
                         </div>
 
-                        <div id="matlab-linux" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="graphical-linux" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
 
                                 ====================================Empty================================================
@@ -416,37 +524,95 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-header" role="tab" id="matlab-card-macos">
+                        <div class="card-header" role="tab" id="graphical-card-macos">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#matlab-accordion" href="#matlab-macos" aria-controls="matlab-macos">
+                                <a data-toggle="collapse" data-parent="#graphical-accordion" href="#graphical-macos" aria-controls="graphical-macos">
                                     How do I run Matlab on the Pacini cluster from macOS?
                                 </a>
                             </h5>
                         </div>
 
-                        <div id="matlab-macos" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="graphical-macos" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
 
-                                ====================================Empty================================================
+                                <h4>Installation</h4>
+                                Requirements:
+                                <ul>
+                                    <li>MacOS X 10.6 and up </li>
+                                    <li>Xquartz - <a href="https://www.xquartz.org">Download Xquartz for macOS here</a></li>
+                                </ul>
 
-                            </div>
-                        </div>
-                    </div>
+                                Download X2Go Client
+                                <ul>
+                                    <li>MacOS X 10.6 and up</li>
+                                    <a href="http://code.x2go.org/releases/X2GoClient_latest_macosx.dmg">http://code.x2go.org/releases/X2GoClient_latest_macosx.dmg</a>
+                                    <li>MacOS X 10.9 and up</li>
+                                    <a href="http://code.x2go.org/releases/X2GoClient_latest_macosx_10_9.dmg">http://code.x2go.org/releases/X2GoClient_latest_macosx_10_9.dmg</a>
+                                    <li>Official page</li>
+                                    <a href="http://wiki.x2go.org/">http://wiki.x2go.org/</a>
+                                </ul>
 
-                    <div class="card">
-                        <div class="card-header" role="tab" id="matlab-card-more">
-                            <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#matlab-accordion" href="#matlab-more" aria-controls="matlab-more">
-                                    Where can I read more about Matlab?
-                                </a>
-                            </h5>
-                        </div>
 
-                        <div id="matlab-more" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
+                                <h4>If you are using key with password encryption</h4>
+                                <img src="img/faq/graphical/osx-1.png" width="70%"><br>
+                                <b>Steps:</b>
+                                <ol>
+                                    <li>Input saved profile name (local identification for your personal use)</li>
+                                    <li>Input Pacini domain name</li>
+                                    <li>Input your username (also used for SSH)</li>
+                                    <li>Tick “Try auto login” checkbox</li>
+                                    <li>Make sure you have “MATE” selected as session type</li>
+                                    <li>Select “Media” tab for next settings</li>
+                                </ol>
 
-                                ====================================Empty================================================
+                                <h4>If you are using password authentication or key without password encryption:</h4>
+                                <img src="img/faq/graphical/osx-2.png" width="70%"><br>
+                                <br><b>Steps:</b>
+                                <ol>
+                                    <li>Input your private key path</li>
+                                    <li>Make sure you have “MATE” selected as session type </li>
+                                    <li>Select “Media” tab for next settings</li>
+                                </ol>
 
+                                <h4>Media settings</h4>
+                                <img src="img/faq/graphical/osx-3.png" width="70%"><br>
+                                <br><b>Steps:</b>
+                                <ol>
+                                    <li>Check "Enable sound support"</li>
+                                    <li>Check esd radio button</li>
+                                    <li>Uncheck client side printing option</li>
+                                    <li>Save dialog settings by selecting “OK”</li>
+                                </ol>
+
+                                <p>
+                                    <h4>Connection</h4>
+                                    Select created profile to connect to Pacini
+                                    <img src="img/faq/graphical/osx-4.png" width="70%"><br>
+
+                                    <br>Click the session card to start the session
+                                    <img src="img/faq/graphical/osx-5.png" width="70%"><br>
+
+                                    <br>You should see full desktop on Pacini
+                                    <img src="img/faq/graphical/osx-6.png" width="70%"><br>
+                                </p>
+
+                                <p>
+                                    <h4>Matlab</h4>
+                                    Open Terminal<br>
+                                    <img src="img/faq/graphical/osx-7.png" width="70%"><br>
+
+                                    <img src="img/faq/graphical/osx-8.png" width="70%"><br>
+                                    <ol>
+                                        <li>Load desired version of Matlab by “module load” command. </li>
+                                        <li>Launch Matlab</li>
+                                    </ol>
+
+                                    <img src="img/faq/graphical/osx-9.png" width="70%"><br>
+                                    Matlab should be up and running by this point.
+                                </p>
+
+                                <h4>To end the session</h4>
+                                <img src="img/faq/graphical/osx-10.png" width="70%"><br>
                             </div>
                         </div>
                     </div>
@@ -472,7 +638,7 @@
                                 </a> and
                                 <a data-toggle="collapse" data-parent="#python-accordion" href="#python-activate" aria-controls="python-activate">
                                     activate
-                                </a> your virtual environment. <br/> After that type into your command line: <b>$ pip install SomePackage</b>
+                                </a> your virtual environment. <br/> After that type into your command line: <code>$ pip install SomePackage</code>
                             </div>
                         </div>
                     </div>
@@ -488,7 +654,7 @@
 
                         <div id="python-new" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
-                                <b>$ virtualenv my_project</b><br/>
+                                <code>$ virtualenv <i>my_project</i></code><br/>
                                 The name of the virtual environment (in this case, it was <i>my_project</i>) can be anything; omitting the name will place the files in the current directory instead.
                                 <br>
                             </div>
@@ -506,10 +672,10 @@
 
                         <div id="python-activate" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
-                                <b>$ source my_project/bin/activate</b><br>
+                                <code>$ source <i>my_project</i>/bin/activate</code><br>
                                 Where <i>my_project</i> is the environment folder.<br>
                                 The name of the current virtual environment will now appear on the
-                                left of the prompt (e.g. <i>(my_project)UserName$</i>) to let you know that it’s active.
+                                left of the prompt (e.g. <code>(my_project)UserName$</code>) to let you know that it’s active.
                                 From now on, any package that you install using pip will be placed in the my_project folder, isolated from the global Python installation.
                                 <br>
                             </div>
@@ -527,7 +693,7 @@
 
                         <div id="python-deactivate" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
-                                <b>$ deactivate</b><br>
+                                <code>$ deactivate</code><br>
                                 This puts you back to the system’s default Python interpreter with all its installed libraries.
                             </div>
                         </div>
@@ -547,9 +713,9 @@
                                 There are two ways to specify Python version inside a virtual environment:
                                 <ul>
                                     <li>While creating an environment:</li>
-                                    <b>$ virtualenv -p /usr/bin/python2.7 my_project</b>
+                                    <code>$ virtualenv -p /usr/bin/python2.7 <i>my_project</i></code>
                                     <li>Or change the interpreter globally with an env variable in ~/.bashrc</li>
-                                    <b>$ export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2.7</b>
+                                    <code>$ export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2.7</code>
                                 </ul>
                             </div>
                         </div>
