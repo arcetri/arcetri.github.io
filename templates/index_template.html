@@ -1,18 +1,31 @@
 {% extends "base.html" %}
 {% block body %}
 
-<div class="jumbotron">
+<div class="jumbotron jumbotron-fluid">
     <h1 class="display-3">Welcome to Arcetri!</h1>
     <p class="lead">Here you can find all needed information or <a class="jumbotron-href" href="contacts.html">contact us</a></p>
 </div>
 
-<div class="container-fluid">
-    <div class="row">
+<div class="container-fluid" style="height: 65%;">
+    <div class="row" style="height: 100%;">
         <div class="col-1"></div>
-        <div class="col-10">
-            <h1>Nothing</h1>
+        <div class="col-5" style="height: 100%;">
+            <div class="content">
+                <p>
+                    <h3>If you here for the first time...</h3>
+                    ...read a little about our cluster <a href="about.html">here</a>!
+                </p>
+                <br>
+                <p>
+                    <h3>If you have any questions, we recommend you to check out <a href="faq.html">FAQ page</a></h3>
+                </p>
+                <br>
+            </div>
         </div>
         <div class="col-1"></div>
+        <div class="col-5">
+            <img src="img/cluster.jpg" class="main-photo">
+        </div>
     </div>
 </div>
 

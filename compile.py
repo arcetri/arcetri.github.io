@@ -20,13 +20,12 @@ env = Environment()
 env.loader = FileSystemLoader('.')
 
 pages = [
-    Page(old_name='index_template.html', new_name='index.html', data = { 'title': 'Home' }),
-    Page(old_name='about_template.html', new_name='about.html', data = { 'title': 'About' }),
+    Page(old_name='index_template.html', new_name='index.html', data = { 'title': 'Home'}),
+#    Page(old_name='about_template.html', new_name='about.html', data = { 'title': 'About' }),
     Page(old_name='contacts_template.html', new_name='contacts.html', data = { 'title': 'Contacts' }),
     Page(old_name='faq_template.html', new_name='faq.html', data = { 'title': 'FAQ' }),
-    Page(old_name='help_template.html', new_name='help.html', data = { 'title': 'Help' }),
-    Page(old_name='index_template.html', new_name='index.html', data = { 'title': 'Index' }),
-    Page(old_name='projects_template.html', new_name='projects.html', data = { 'title': 'Projects' })
+#    Page(old_name='help_template.html', new_name='help.html', data = { 'title': 'Help' }),
+#    Page(old_name='projects_template.html', new_name='projects.html', data = { 'title': 'Projects' })
 ]
 
 for page in pages:

@@ -1,10 +1,15 @@
-.navbar { position: relative!important; }
+.navbar {
+    position: fixed!important;
+}
+
+html,body { height:100%; }
 
 .jumbotron {
     background-color: #17a2b8;
-    border-radius: 0;
     color: #fff;
-    padding-left: 9%;
+    padding-left: 9vh;
+    padding-top: 16vh;
+    margin-bottom: 0;
 }
 
 .jumbotron-href, .jumbotron-href:hover {
@@ -14,7 +19,7 @@
 
 .textblock {
     padding-bottom: 5%;
-    padding-top: 5%;
+    padding-top: 1%;
 }
 
 .textheader {
@@ -23,4 +28,14 @@
 
 .textcard {
     padding: 10px 20px;
+}
+
+.content {
+    padding-top: 2%;
+}
+
+.main-photo {
+    position: absolute;
+    top: -35vh;
+    height: 100vh;
 }
