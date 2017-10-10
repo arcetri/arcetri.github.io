@@ -278,7 +278,8 @@
                         <div id="moab-results" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
 
-                                ====================================Empty================================================
+                                The __jobname__.o9999 (and __jobname__.e9999 files, unless you specify "-j oe" in which case only the __jobname__.o9999),
+                                by default, are created in the directly from which you run your msub job.
 
                             </div>
                         </div>
@@ -381,54 +382,66 @@
                             <div class="card-block textcard">
 
                                 <p>
-                                    <code>msub <i>job_batch_script.msub</i></code> - Submit job
+                                    <code>msub <i>job_batch_script.msub</i></code> - submit job
                                     defined in <i>job batch script</i> in current directory
                                 </p>
 
                                 <p>
-                                    <code>msub -l <i>parameters</i></code> - Ask for
+                                    <code>msub -l <i>parameters</i></code> - ask for
                                     interactive SSH session with specified parameters
                                 </p>
 
                                 <p>
-                                    <code>mjobctl -c JobID</code> - Cancel job based on jobID (<code>canceljob JobID</code>
+                                    <code>mjobctl -c JobID</code> - cancel job based on jobID (<code>canceljob JobID</code>
                                     is a handy alias for this command)
                                 </p>
 
                                 <p>
-                                    <code>mjobctl -c -w user=$USER</code> - Cancel all jobs by the user
+                                    <code>mjobctl -c -w user=$USER</code> - cancel all jobs by the user
                                 </p>
 
                                 <p>
-                                    <code>qstat JobID</code> - Show queue info for a current job
+                                    <code>qstat JobID</code> - show queue info for a current job
                                 </p>
 
                                 <p>
-                                    <code>qstat -f JobID</code> - Show detailed queue info about job
+                                    <code>qstat -f JobID</code> - show detailed queue info about job
                                 </p>
 
                                 <p>
-                                    <code>showq</code> - Show queue info about all users
+                                    <code>showq</code> - show queue info about all users
                                 </p>
 
                                 <p>
-                                    <code>checkjob JobID</code> - Show scheduling info about job
-                                </p>
-netstat
-                                <p>
-                                    <code>checkjob -v JobID</code> - Show detailed scheduling info about job
+                                    <code>checkjob JobID</code> - show scheduling info about job
                                 </p>
 
                                 <p>
-                                    <code>checkjob -v -v JobID</code> - Show very detailed scheduling info about job
+                                    <code>checkjob -v JobID</code> - show detailed scheduling info about job
                                 </p>
 
                                 <p>
-                                    <code>showbf</code> - Show available system resources
+                                    <code>checkjob -v -v JobID</code> - show very detailed scheduling info about job
                                 </p>
 
                                 <p>
-                                    <code>showstate</code> -
+                                    <code>showbf</code> - show available system resources
+                                </p>
+
+                                <p>
+                                    <code>showstate</code> - show graphical node usage
+                                </p>
+
+                                <p>
+                                    <code>tracejob JobID</code> - show info about job scheduling
+                                </p>
+
+                                <p>
+                                    <code>pbsnodes -l</code> - show which compute nodes are unaccessible
+                                </p>
+
+                                <p>
+                                    <code>pbsnodes</code> - show detailed information about compute nodes
                                 </p>
 
                                 See more here: <a href="http://docs.adaptivecomputing.com/mwm/7-0/Content/commands/msub.html">docs.adaptivecomputing.com/mwm/7-0/Content/commands/msub.html</a>
