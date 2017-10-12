@@ -202,8 +202,17 @@
 
                         <div id="moab-number" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
+                                <p>
+                                    <code>qstat</code> - list all job numbers
+                                </p>
 
-                                qstat
+                                <p>
+                                    <code>qstat JobID</code> - show queue info for a current job
+                                </p>
+
+                                <p>
+                                    <code>qstat -f JobID</code> - show detailed queue info about job
+                                </p>
 
                             </div>
                         </div>
@@ -321,9 +330,15 @@
                         <div id="moab-cancel" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
 
-                                Use the following command:<br>
-                                <code>$ canceljob <i>JobID</i></code><br>
-                                Where JobID is the unique id of your job (for help finding you JobID, see <a href="#">here</a>)
+                                Use the following commands:<br>
+                                <p>
+                                    <code>$ canceljob <i>JobID</i></code><br>
+                                    Where JobID is the unique id of your job (for help finding you JobID, see
+                                    <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab-number" aria-controls="moab-number">here</a>)
+                                </p>
+                                <p>
+                                    <code>mjobctl -c -w user=$USER</code> - cancel all jobs by the user
+                                </p>
 
                             </div>
                         </div>
