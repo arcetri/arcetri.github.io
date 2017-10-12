@@ -510,99 +510,123 @@
             <div class="textblock">
                 <h1 class="textheader">Graphical desktop</h1>
                 <div id="graphical-accordion" role="tablist" aria-multiselectable="true">
-                    <!--<div class="card">-->
-                        <!--<div class="card-header" role="tab" id="graphical-card-windows">-->
-                            <!--<h5 class="mb-0">-->
-                                <!--<a data-toggle="collapse" data-parent="#graphical-accordion" href="#graphical-windows" aria-controls="graphical-windows">-->
-                                    <!--How do I run Matlab on the Pacini cluster from Windows laptop?-->
-                                <!--</a>-->
-                            <!--</h5>-->
-                        <!--</div>-->
+                    <div class="card">
+                        <div class="card-header" role="tab" id="graphical-card-windows">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#graphical-accordion" href="#graphical-windows" aria-controls="graphical-windows">
+                                    How do I run Matlab on the Pacini cluster from Windows?
+                                </a>
+                            </h5>
+                        </div>
 
-                        <!--<div id="graphical-windows" class="collapse" role="tabpanel" aria-labelledby="headingOne">-->
-                            <!--<div class="card-block textcard">-->
+                        <div id="graphical-windows" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-block textcard">
 
-                                <!--<h4>Installation</h4>-->
-                                <!--Requirements:-->
-                                <!--<ul>-->
-                                    <!--<li>MacOS X 10.6 and up </li>-->
-                                    <!--<li>Xquartz - <a href="https://www.xquartz.org">Download Xquartz for macOS here</a></li>-->
-                                <!--</ul>-->
+                                <h4>Installation</h4>
 
-                                <!--Download X2Go Client-->
-                                <!--<ul>-->
-                                    <!--<li>MacOS X 10.6 and up</li>-->
-                                    <!--<a href="http://code.x2go.org/releases/X2GoClient_latest_macosx.dmg">http://code.x2go.org/releases/X2GoClient_latest_macosx.dmg</a>-->
-                                    <!--<li>MacOS X 10.9 and up</li>-->
-                                    <!--<a href="http://code.x2go.org/releases/X2GoClient_latest_macosx_10_9.dmg">http://code.x2go.org/releases/X2GoClient_latest_macosx_10_9.dmg</a>-->
-                                    <!--<li>Official page</li>-->
-                                    <!--<a href="http://wiki.x2go.org/">http://wiki.x2go.org/</a>-->
-                                <!--</ul>-->
+                                First, you should convert your .ppk key to .ssh key
+                                <ol>
+                                    <li>
+                                        Download PuTTY Key Generator (puttygen.exe) from the following URL:
+                                        <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">
+                                            https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+                                        </a>
+                                    </li><br>
+                                    <li>
+                                        Launch the program and click on the Load button and select your id_rsa.ppk file.<br>
+                                        <img src="img/faq/graphical/putty-1.png">
+                                        <img src="img/faq/graphical/putty-2.png"><br>
+                                    </li><br>
+                                    <li>
+                                        Enter the key's passphrase if prompted.<br>
+                                        <img src="img/faq/graphical/putty-3.png">
+                                    </li><br>
+                                    <li>
+                                        Detail's of the imported key will be displayed.<br>
+                                        <img src="img/faq/graphical/putty-4.png">
+                                    </li><br>
+                                    <li>
+                                        Go to Conversions → Export OpenSSH key from the menu.<br>
+                                        <img src="img/faq/graphical/putty-5.png">
+                                    </li><br>
+                                    <li>
+                                        Save your converted key to a new file named "id_rsa"<br>
+                                        <img src="img/faq/graphical/putty-6.png">
+                                    </li><br>
+                                </ol>
+
+                                Download X2Go Client
+                                <ul>
+                                    <li>Windows</li>
+                                    <a href="http://code.x2go.org/releases/X2GoClient_latest_mswin32-setup.exe">http://code.x2go.org/releases/X2GoClient_latest_mswin32-setup.exe</a>
+                                    <li>Official page</li>
+                                    <a href="http://wiki.x2go.org/">http://wiki.x2go.org/</a>
+                                </ul>
 
 
-                                <!--<h4>If you are using key with password encryption</h4>-->
-                                <!--<img src="img/faq/graphical/osx-1.png" width="70%"><br>-->
-                                <!--<b>Steps:</b>-->
-                                <!--<ol>-->
-                                    <!--<li>Input saved profile name (local identification for your personal use)</li>-->
-                                    <!--<li>Input Pacini domain name</li>-->
-                                    <!--<li>Input your username (also used for SSH)</li>-->
-                                    <!--<li>Tick “Try auto login” checkbox</li>-->
-                                    <!--<li>Make sure you have “MATE” selected as session type</li>-->
-                                    <!--<li>Select “Media” tab for next settings</li>-->
-                                <!--</ol>-->
+                                <h4>If you are using key with password encryption</h4>
+                                <img src="img/faq/graphical/osx-1.png" width="70%"><br>
+                                <b>Steps:</b>
+                                <ol>
+                                    <li>Input saved profile name (local identification for your personal use)</li>
+                                    <li>Input Pacini domain name</li>
+                                    <li>Input your username (also used for SSH)</li>
+                                    <li>Tick “Try auto login” checkbox</li>
+                                    <li>Make sure you have “MATE” selected as session type</li>
+                                    <li>Select “Media” tab for next settings</li>
+                                </ol>
 
-                                <!--<h4>If you are using password authentication or key without password encryption:</h4>-->
-                                <!--<img src="img/faq/graphical/osx-2.png" width="70%"><br>-->
-                                <!--<br><b>Steps:</b>-->
-                                <!--<ol>-->
-                                    <!--<li>Input your private key path</li>-->
-                                    <!--<li>Make sure you have “MATE” selected as session type </li>-->
-                                    <!--<li>Select “Media” tab for next settings</li>-->
-                                <!--</ol>-->
+                                <h4>If you are using password authentication or key without password encryption:</h4>
+                                <img src="img/faq/graphical/osx-2.png" width="70%"><br>
+                                <br><b>Steps:</b>
+                                <ol>
+                                    <li>Input your private key path</li>
+                                    <li>Make sure you have “MATE” selected as session type </li>
+                                    <li>Select “Media” tab for next settings</li>
+                                </ol>
 
-                                <!--<h4>Media settings</h4>-->
-                                <!--<img src="img/faq/graphical/osx-3.png" width="70%"><br>-->
-                                <!--<br><b>Steps:</b>-->
-                                <!--<ol>-->
-                                    <!--<li>Check "Enable sound support"</li>-->
-                                    <!--<li>Check esd radio button</li>-->
-                                    <!--<li>Uncheck client side printing option</li>-->
-                                    <!--<li>Save dialog settings by selecting “OK”</li>-->
-                                <!--</ol>-->
+                                <h4>Media settings</h4>
+                                <img src="img/faq/graphical/osx-3.png" width="70%"><br>
+                                <br><b>Steps:</b>
+                                <ol>
+                                    <li>Check "Enable sound support"</li>
+                                    <li>Check esd radio button</li>
+                                    <li>Uncheck client side printing option</li>
+                                    <li>Save dialog settings by selecting “OK”</li>
+                                </ol>
 
-                                <!--<p>-->
-                                <!--<h4>Connection</h4>-->
-                                <!--Select created profile to connect to Pacini-->
-                                <!--<img src="img/faq/graphical/osx-4.png" width="70%"><br>-->
+                                <p>
+                                <h4>Connection</h4>
+                                Select created profile to connect to Pacini<br>
+                                <img src="img/faq/graphical/osx-4.png" width="70%"><br>
 
-                                <!--<br>Click the session card to start the session-->
-                                <!--<img src="img/faq/graphical/osx-5.png" width="70%"><br>-->
+                                <br>Click the session card to start the session<br>
+                                <img src="img/faq/graphical/osx-5.png" width="70%"><br>
 
-                                <!--<br>You should see full desktop on Pacini-->
-                                <!--<img src="img/faq/graphical/osx-6.png" width="70%"><br>-->
-                                <!--</p>-->
+                                <br>You should see full desktop on Pacini<br>
+                                <img src="img/faq/graphical/osx-6.png" width="70%"><br>
+                                </p>
 
-                                <!--<p>-->
-                                <!--<h4>Matlab</h4>-->
-                                <!--Open Terminal<br>-->
-                                <!--<img src="img/faq/graphical/osx-7.png" width="70%"><br>-->
+                                <p>
+                                <h4>Matlab</h4>
+                                Open Terminal<br>
+                                <img src="img/faq/graphical/osx-7.png" width="70%"><br>
 
-                                <!--<img src="img/faq/graphical/osx-8.png" width="70%"><br>-->
-                                <!--<ol>-->
-                                    <!--<li>Load desired version of Matlab by “module load” command. </li>-->
-                                    <!--<li>Launch Matlab</li>-->
-                                <!--</ol>-->
+                                <img src="img/faq/graphical/osx-8.png" width="70%"><br>
+                                <ol>
+                                    <li>Load desired version of Matlab by “module load” command. </li>
+                                    <li>Launch Matlab</li>
+                                </ol>
 
-                                <!--<img src="img/faq/graphical/osx-9.png" width="70%"><br>-->
-                                <!--Matlab should be up and running by this point.-->
-                                <!--</p>-->
+                                <img src="img/faq/graphical/osx-9.png" width="70%"><br>
+                                Matlab should be up and running by this point.
+                                </p>
 
-                                <!--<h4>To end the session</h4>-->
-                                <!--<img src="img/faq/graphical/osx-10.png" width="70%"><br>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
+                                <h4>To end the session</h4>
+                                <img src="img/faq/graphical/osx-10.png" width="70%"><br>
+                            </div>
+                        </div>
+                    </div>
 
                     <!--<div class="card">-->
                         <!--<div class="card-header" role="tab" id="graphical-card-linux">-->
@@ -760,13 +784,13 @@
 
                                 <p>
                                     <h4>Connection</h4>
-                                    Select created profile to connect to Pacini
+                                    Select created profile to connect to Pacini<br>
                                     <img src="img/faq/graphical/osx-4.png" width="70%"><br>
 
-                                    <br>Click the session card to start the session
+                                    <br>Click the session card to start the session<br>
                                     <img src="img/faq/graphical/osx-5.png" width="70%"><br>
 
-                                    <br>You should see full desktop on Pacini
+                                    <br>You should see full desktop on Pacini<br>
                                     <img src="img/faq/graphical/osx-6.png" width="70%"><br>
                                 </p>
 
