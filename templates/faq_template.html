@@ -16,19 +16,53 @@
                     <div class="card">
                         <div class="card-header" role="tab" id="headingOne">
                             <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#arcetri-accordion" href="#arcetri-account" aria-controls="arcetri-account">
+                                    How do I create an Arcetri account?
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="arcetri-account" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-block textcard">
+                                Write to our email address: arcetri-admin-people@cisco.com
+
+                                To handle your request faster please provide information about:
+                                <ul>
+                                    <li>Name</li>
+                                    <li>Preferred account name</li>
+                                    <li>Email address</li>
+                                    <li>Phone number</li>
+                                    <li>SSH RSA public key (see <a href="#">here</a> how to generate SSH key)</li>
+                                </ul>
+
+                                After your account is created, see how to login to Arcetri.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <h5 class="mb-0">
                                 <a data-toggle="collapse" data-parent="#arcetri-accordion" href="#arcetri-login" aria-controls="arcetri-login">
-                                    How to login to Arcetri?
+                                    How do I login to Arcetri?
                                 </a>
                             </h5>
                         </div>
                         <div id="arcetri-login" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
                                 <ul>
-                                    <li><a href="https://www.cisco.com/c/en/us/support/security/anyconnect-secure-mobility-client/tsd-products-support-series-home.html">Download Cisco AnyConnect</a></li>
+                                    <li>First, you should install Cisco AnyConnect</li>
+                                    <ul>
+                                        <li>Login with username and password we provided you: <a href="https://arcetri-asa.cisco.com">https://arcetri-asa.cisco.com</a></li>
+                                        <img src="img/faq/arcetri/asa-1.png" width="50%">
+                                        <li>Press "Continue"</li>
+                                        <img src="img/faq/arcetri/asa-2.png" width="50%">
+                                        <li>Wait for Java detection and press on AnyConnect VPN download link</li>
+                                        <img src="img/faq/arcetri/asa-3.png" width="50%">
+                                    </ul>
                                     <li>Open it and type arcetri-asa.cisco.com</li>
-                                    <img src="img/faq/arcetri/anyconnect-1.png">
+                                    <img src="img/faq/arcetri/anyconnect-1.png" width="50%"><br><br>
                                     <li>Press ‘Connect’ and enter your login detail</li>
-                                    <img src="img/faq/arcetri/anyconnect-2.png">
+                                    <img src="img/faq/arcetri/anyconnect-2.png" width="50%"><br><br>
                                     <li>Now open a terminal and enter the following command: </li>
                                     <code>$ ssh pacini.cisco.com</code>
                                     <li>Type in your arcetri user name and password and press Enter</li>
@@ -104,7 +138,7 @@
                                 </li>
                                 <li>Franco Pacini Compute nodes consist of 3 types of blades:
                                     <ul>
-                                        <li>talk about B200 M3 IVB</li>
+                                        <li>B200 M3 IVB</li>
                                         <li>B200 M4 HW</li>
                                         <li>B200 BW</li>
                                     </ul>
