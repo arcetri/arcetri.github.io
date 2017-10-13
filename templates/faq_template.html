@@ -42,6 +42,78 @@
                     <div class="card">
                         <div class="card-header" role="tab" id="headingOne">
                             <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#arcetri-accordion" href="#arcetri-key" aria-controls="arcetri-key">
+                                    How can I send SSH key?
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="arcetri-key" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-block textcard">
+                                <p>
+                                    <h4>If you are a Windows user</h4>
+                                    <b>1. Check for existing SSH keys</b><br>
+                                    Open a command prompt, and run<br>
+                                    <code>cd %userprofile%/.ssh</code>
+                                    <ul>
+                                        <li>If you see "No such file or directory", then there aren't any existing keys: go to step 2.</li>
+                                        <li>Check to see if you have a key already:</li>
+                                        <code>dir id_*</code><br>
+                                        If there are existing keys, you may want to use those. Go to step 3 to send us your public SSH key
+                                    </ul>
+
+                                    <b>2. If you don't have SSH key, generate a new SSH key</b>
+                                    If you don't have an existing SSH key that you wish to use, generate one as follows:<br>
+                                    <ul>
+                                        <li>Log in to your local computer as an administrator.</li>
+                                        <li>In a command prompt, run:</li>
+                                        <code>ssh-keygen -t rsa -C "your_email@example.com"</code>
+                                        Associating the key with your email address helps you to identify the key later on.<br>
+                                        <li>Just press Enter to accept the default location and file name. If the .ssh directory doesn't exist, the system creates one for you.</li>
+                                        <li>Enter, and re-enter, a passphrase when prompted.</li>
+                                        <li>You're done! Go to step 3 to send us your public SSH key</li>
+                                    </ul>
+
+                                    <b>3. Send us public SSH key</b>
+                                    Attach your <code>id_rsa.pub</code> file to your account request email.<br>
+                                    <b>WARNING:</b> send <code>id_rsa.pub</code>, not <code>id_rsa</code> file! <code>id_rsa</code> is your private confidential key, similar to your passwords!
+                                </p>
+
+                                <h4>If you are a Unix/OS X user</h4>
+                                <p>
+                                    <b>1. Check for existing SSH keys</b><br>
+                                    Open the terminal, and run<br>
+                                    <code>cd ~/.ssh</code>
+                                    <ul>
+                                        <li>If you see "No such file or directory", then there aren't any existing keys: go to step 2.</li>
+                                        <li>Check to see if you have a key already:</li>
+                                        <code>ls id_*</code><br>
+                                        If there are existing keys, you may want to use those. Go to step 3 to send us your public SSH key
+                                    </ul>
+
+                                    <b>2. If you don't have SSH key, generate a new SSH key</b>
+                                    If you don't have an existing SSH key that you wish to use, generate one as follows:<br>
+                                    <ul>
+                                        <li>Open a terminal on your local computer and enter the following:</li>
+                                        <code>ssh-keygen -t rsa -C "your_email@example.com"</code>
+                                        Associating the key with your email address helps you to identify the key later on.<br>
+                                        <li>
+                                            Just press Enter to accept the default location and file name.
+                                            If the .ssh directory doesn't exist, the system creates one for you.
+                                        </li>
+                                        <li>Enter, and re-enter, a passphrase when prompted.</li>
+                                        <li>You're done! Go to step 3 to send us your public SSH key</li>
+                                    </ul>
+                                    <b>3. Send us public SSH key</b>
+                                    Attach your <code>id_rsa.pub</code> file to your account request email.<br>
+                                    <b>WARNING:</b> send <code>id_rsa.pub</code>, not <code>id_rsa</code> file! <code>id_rsa</code> is your private confidential key, similar to your passwords!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <h5 class="mb-0">
                                 <a data-toggle="collapse" data-parent="#arcetri-accordion" href="#arcetri-login" aria-controls="arcetri-login">
                                     How do I login to Arcetri?
                                 </a>
