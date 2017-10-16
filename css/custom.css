@@ -1,8 +1,10 @@
-.navbar {
-    position: fixed!important;
-}
+.fixed-top { position: fixed!important; }
+
+.fixed-bottom { position: relative!important; }
 
 html,body { height:100%; }
+
+body { padding-bottom: 70px; }
 
 .jumbotron {
     background-color: #17a2b8;
