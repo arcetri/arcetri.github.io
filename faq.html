@@ -298,6 +298,158 @@
                 </div>
             </div>
             <div class="textblock">
+                <h1 class="textheader">Modules</h1>
+                <div id="modules-accordion" role="tablist" aria-multiselectable="true">
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#modules-accordion" href="#modules-what" aria-controls="modules-what">
+                                    What are modules?
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="modules-what" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-block textcard">
+                                <p>
+                                    In general, modules are designed to create user's environment. For example, if you need to use CUDA with version 8.0,
+                                    you can easily load appropriate module via command <code>module load CUDA/8.0</code>
+                                </p>
+                                <p>
+                                    Load CUDA/8.0 module is better than just have it installed by default because some researchers may need 9.0 version
+                                    while others need to have 8.0 CUDA. Creating modules for both versions help to avoid such collisions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#modules-accordion" href="#modules-available" aria-controls="modules-available">
+                                    What modules are available on pacini?
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="modules-available" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-block textcard">
+                                <p>
+                                    You can check available modules via command <code>module avail</code>
+                                </p>
+                                <p>
+                                    Right now pacini has these modules:
+                                    <ul>
+                                        <li>CUDA/8.0</li>
+                                        <li>CUDA/9.0</li>
+                                        <li>gcc/5.4.0</li>
+                                        <li>gcc/6.3.0</li>
+                                        <li>gcc/7.1.0</li>
+                                        <li>go/1.7.6</li>
+                                        <li>go/1.8.3</li>
+                                        <li>intel/2017u4</li>
+                                        <li>libfabric/1.4.2</li>
+                                        <li>matlab/2016b</li>
+                                        <li>matlab/2017a</li>
+                                        <li>meep/1.3</li>
+                                        <li>mpi/openmpi/1.10.7</li>
+                                        <li>mpi/openmpi/2.0.3</li>
+                                        <li>mpi/openmpi/2.1.1</li>
+                                        <li>mpi/openmpi/2.1.1-intel</li>
+                                    </ul>
+                                </p>
+                                <p>
+                                    Feel free to contact us and request a new module: <a href="contacts.html">our contact page</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#modules-accordion" href="#modules-load" aria-controls="modules-load">
+                                    How can I load a module?
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="modules-load" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-block textcard">
+                                You can load a module via command <code>module add <i>MODULE_NAME</i></code>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#modules-accordion" href="#modules-list" aria-controls="modules-list">
+                                    How can I see loaded modules?
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="modules-list" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-block textcard">
+                                You can check loaded modules via command <code>module list</code>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#modules-accordion" href="#modules-purge" aria-controls="modules-purge">
+                                    How can I get rid of loaded modules?
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="modules-purge" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-block textcard">
+                                <code>module rm <i>MODULE_NAME</i></code> command unloads specific module<br>
+                                <code>module purge</code> command unloads all loaded modulefiles
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#modules-accordion" href="#modules-show" aria-controls="modules-show">
+                                    What commands can I use with modules?
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="modules-show" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-block textcard">
+                                Most useful commands are:
+                                <ul>
+                                    <li><code>module add <i>MODULE_NAME</i></code> - load a module</li>
+                                    <li><code>module list</code> - show loaded modules</li>
+                                    <li><code>module rm <i>MODULE_NAME</i></code> - unload a module</li>
+                                    <li><code>module purge</code> - unload all loaded modules</li>
+                                    <li><code>module show <i>MODULE_NAME</i></code> - show information about a module</li>
+                                    <li><code>module avail</code> - list all available modules</li>
+                                    <li><code>module help</code> - give some helpful information about <code>module</code> command</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#modules-accordion" href="#modules-request" aria-controls="modules-request">
+                                    I need a module that is not in a list, what should I do?
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="modules-request" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-block textcard">
+                                Please, feel free to contact us and request a new module: <a href="contacts.html">our contact page</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="textblock">
                 <h1 class="textheader">Moab/Torque</h1>
                 <div id="moab-accordion" role="tablist" aria-multiselectable="true">
                     <div class="card">
