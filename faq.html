@@ -471,7 +471,7 @@
                                         <code>$ sbatch <i>yourfilename</i>.slurm</code>
                                     </ul>
 
-                                    <i>Learn more about Torque parameters <a href="https://slurm.schedmd.com/sbatch.html">here</a></i>
+                                    <i>Learn more about SLURM parameters <a href="https://slurm.schedmd.com/sbatch.html">here</a></i>
                                 </p>
                                 <p>
                                     <h4>Via interactive ssh job</h4>
@@ -503,7 +503,7 @@
                                 <p>
                                     This command will show your jobs' progress in the following format:<br>
                                     
-				     JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+				     JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)<br>
 				     34239 arcetri_c node-rie    prime  R    1:49:52      1 pacini063
 				</p>
 
@@ -552,7 +552,7 @@
 
                                 The SLURM system reserves resources among the pacini compute nodes
                                 and (pacini000 – pacini095) based the resources requested and your job's relative priority.
-                                While you can request a specific node via the msub command, this practice is not recommended.
+                                While you can request a specific node via the sbatch command, this practice is not recommended.
 
                             </div>
                         </div>
@@ -703,7 +703,7 @@
                         <div class="card-header" role="tab" id="slurm-card-msub">
                             <h5 class="mb-0">
                                 <a data-toggle="collapse" data-parent="#slurm-accordion" href="#slurm-msub" aria-controls="slurm-msub">
-                                    How may I use the msub command?
+                                    How may I use SLURM commands?
                                 </a>
                             </h5>
                         </div>
