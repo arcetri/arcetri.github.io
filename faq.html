@@ -450,34 +450,34 @@
                 </div>
             </div>
             <div class="textblock">
-                <h1 class="textheader">Moab/Torque</h1>
-                <div id="moab-accordion" role="tablist" aria-multiselectable="true">
+                <h1 class="textheader">SLURM</h1>
+                <div id="slurm-accordion" role="tablist" aria-multiselectable="true">
                     <div class="card">
-                        <div class="card-header" role="tab" id="moab-card-launch">
+                        <div class="card-header" role="tab" id="slurm-card-launch">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab-launch" aria-controls="moab-launch">
+                                <a data-toggle="collapse" data-parent="#slurm-accordion" href="#slurm-launch" aria-controls="slurm-launch">
                                     How do I launch jobs?
                                 </a>
                             </h5>
                         </div>
 
-                        <div id="moab-launch" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="slurm-launch" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
                                 <p>
                                     <h4>Via batch script</h4>
                                     <ul>
-                                        <li>Create a .msub file with parameters for the job</li>
+                                        <li>Create a .slurm file with parameters for the job</li>
                                         <li>Type in the command</li>
-                                        <code>$ msub <i>yourfilename</i>.msub</code>
+                                        <code>$ sbatch <i>yourfilename</i>.slurm</code>
                                     </ul>
 
-                                    <i>Learn more about Torque parameters <a href="https://www.osc.edu/supercomputing/batch-processing-at-osc/job-scripts">here</a></i>
+                                    <i>Learn more about Torque parameters <a href="https://slurm.schedmd.com/sbatch.html">here</a></i>
                                 </p>
                                 <p>
                                     <h4>Via interactive ssh job</h4>
                                     <ul>
                                         <li>Submit your job using the following format:</li>
-                                        <code>$ msub -I -l nodes=1:nogpu:ppn=1-q interactive -l walltime=01:00 -l pmem=1gb –l pvmem=1gb–N SSH_session</code>
+                                        <code>$ sbatch --ntasks=1 --time=2:00:00 --mem-per-cpu=1G --job-name="$NAME" --qos=normal --export=ALL</code>
                                     </ul>
                                 </p>
                             </div>
@@ -485,53 +485,53 @@
                     </div>
 
                     <div class="card">
-                        <div class="card-header" role="tab" id="moab-card-monitor">
+                        <div class="card-header" role="tab" id="slurm-card-monitor">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab-monitor" aria-controls="moab-monitor">
+                                <a data-toggle="collapse" data-parent="#slurm-accordion" href="#slurm-monitor" aria-controls="slurm-monitor">
                                     How do I monitor my jobs?
                                 </a>
                             </h5>
                         </div>
 
-                        <div id="moab-monitor" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="slurm-monitor" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
 
                                 <p>
                                     After you launch your job you could monitor its progress using the following command:<br>
-                                    <code>$ showstate</code><br>
+                                    <code>$ squeue --job JOB_ID</code><br>
                                 </p>
                                 <p>
-                                    This command will show your all running jobs’ progress in the following format:<br>
-                                    <img src="img/faq/moab/monitor-1.png" width="50%"><br>
-                                    <img src="img/faq/moab/monitor-2.png" width="50%"><br>
-                                    Here you can see list of running jobs, jobIDs and busy nodes map
-                                </p>
+                                    This command will show your jobs' progress in the following format:<br>
+                                    
+				     JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+				     34239 arcetri_c node-rie    prime  R    1:49:52      1 pacini063
+				</p>
 
                             </div>
                         </div>
                     </div>
 
                     <div class="card">
-                        <div class="card-header" role="tab" id="moab-card-number">
+                        <div class="card-header" role="tab" id="slurm-card-number">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab-number" aria-controls="moab-number">
+                                <a data-toggle="collapse" data-parent="#slurm-accordion" href="#slurm-number" aria-controls="slurm-number">
                                     How can I check my job's number?
                                 </a>
                             </h5>
                         </div>
 
-                        <div id="moab-number" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="slurm-number" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
                                 <p>
-                                    <code>qstat</code> - list all job numbers
+                                    <code>squeue</code> - list all job numbers
                                 </p>
 
                                 <p>
-                                    <code>qstat JobID</code> - show queue info for a current job
+                                    <code>sprio -j JobID</code> - show priorities for the current job
                                 </p>
 
                                 <p>
-                                    <code>qstat -f JobID</code> - show detailed queue info about job
+                                    <code>sinfo</code> - show detailed info about the nodes
                                 </p>
 
                             </div>
@@ -539,18 +539,18 @@
                     </div>
 
                     <div class="card">
-                        <div class="card-header" role="tab" id="moab-card-specific">
+                        <div class="card-header" role="tab" id="slurm-card-specific">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab-specific" aria-controls="moab-specific">
+                                <a data-toggle="collapse" data-parent="#slurm-accordion" href="#slurm-specific" aria-controls="slurm-specific">
                                     Why can’t I launch jobs on a specific node?
                                 </a>
                             </h5>
                         </div>
 
-                        <div id="moab-specific" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="slurm-specific" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
 
-                                The Moab/Torque system reserves resources among the pacini compute nodes
+                                The SLURM system reserves resources among the pacini compute nodes
                                 and (pacini000 – pacini095) based the resources requested and your job's relative priority.
                                 While you can request a specific node via the msub command, this practice is not recommended.
 
@@ -559,105 +559,100 @@
                     </div>
 
                     <div class="card">
-                        <div class="card-header" role="tab" id="moab-card-ssh">
+                        <div class="card-header" role="tab" id="slurm-card-ssh">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab-ssh" aria-controls="moab-ssh">
+                                <a data-toggle="collapse" data-parent="#slurm-accordion" href="#slurm-ssh" aria-controls="slurm-ssh">
                                     What can't I ssh into a compute node?
                                 </a>
                             </h5>
                         </div>
 
-                        <div id="moab-ssh" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="slurm-ssh" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
 
                                 Users are not permitted to ssh into a pacini compute node (pacini000 – pacini095) unless
-                                they have a job running on that node via Moab/Torque.
+                                they have a job running on that node via SLURM.
 
                             </div>
                         </div>
                     </div>
 
                     <div class="card">
-                        <div class="card-header" role="tab" id="moab-card-head">
+                        <div class="card-header" role="tab" id="slurm-card-head">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab-head" aria-controls="moab-head">
+                                <a data-toggle="collapse" data-parent="#slurm-accordion" href="#slurm-head" aria-controls="slurm-head">
                                     Why can’t I launch jobs on the head node?
                                 </a>
                             </h5>
                         </div>
 
-                        <div id="moab-head" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="slurm-head" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
                                 The head node’s (pacini) solely purpose is to schedule and monitor jobs on the
                                 compute nodes (pacini000 – pacini095). Before launching a job, you need to execute
-                                msub commands via either a batch script or interactive ssh job
+                                sbatch commands via either a batch script or interactive ssh job
                             </div>
                         </div>
                     </div>
 
                     <div class="card">
-                        <div class="card-header" role="tab" id="moab-card-results">
+                        <div class="card-header" role="tab" id="slurm-card-results">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab-results" aria-controls="moab-results">
+                                <a data-toggle="collapse" data-parent="#slurm-accordion" href="#slurm-results" aria-controls="slurm-results">
                                     Where are the results of my job?
                                 </a>
                             </h5>
                         </div>
 
-                        <div id="moab-results" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="slurm-results" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
 
-                                The __jobname__.o9999 (and __jobname__.e9999 files, unless you specify "-j oe" in which case only the __jobname__.o9999),
-                                by default, are created in the directly from which you run your msub job.
+                                The __jobname__.9999 (and __jobname__.9999 files, unless you specify "-o and -e to be the same" in which case only the __jobname__.9999),
+                                by default, are created in the directly from which you run your sbatch job.
 
                             </div>
                         </div>
                     </div>
 
                     <div class="card">
-                        <div class="card-header" role="tab" id="moab-card-queue">
+                        <div class="card-header" role="tab" id="slurm-card-queue">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab-queue" aria-controls="moab-queue">
+                                <a data-toggle="collapse" data-parent="#slurm-accordion" href="#slurm-queue" aria-controls="slurm-queue">
                                     What if my job is still in the queue?
                                 </a>
                             </h5>
                         </div>
 
-                        <div id="moab-queue" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="slurm-queue" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
 
                                 Your job is in the queue and is still not executing due to one of the following reasons:
                                 <ol>
                                     <li>The amount of resources that you have requested is currently unavailable</li>
                                     <li>A job with higher priority than yours is running</li>
-                                    <li>Moab maybe still executing your request</li>
-                                    <li>Occassionaly due to the reboot of the system Moab puts all jobs in the queue,
-                                        in which case, you must contact the Arcetri team and re-run your job</li>
+                                    <li>SLURM maybe still executing your request</li>
                                 </ol>
                             </div>
                         </div>
                     </div>
 
                     <div class="card">
-                        <div class="card-header" role="tab" id="moab-card-cancel">
+                        <div class="card-header" role="tab" id="slurm-card-cancel">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab-cancel" aria-controls="moab-cancel">
+                                <a data-toggle="collapse" data-parent="#slurm-accordion" href="#slurm-cancel" aria-controls="slurm-cancel">
                                     How may I cancel my job?
                                 </a>
                             </h5>
                         </div>
 
-                        <div id="moab-cancel" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="slurm-cancel" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
 
                                 Use the following commands:<br>
                                 <p>
-                                    <code>$ canceljob <i>JobID</i></code><br>
+                                    <code>$ scancel <i>JobID</i></code><br>
                                     Where JobID is the unique id of your job (for help finding you JobID, see
-                                    <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab-number" aria-controls="moab-number">here</a>)
-                                </p>
-                                <p>
-                                    <code>mjobctl -c -w user=$USER</code> - cancel all jobs by the user
+                                    <a data-toggle="collapse" data-parent="#slurm-accordion" href="#slurm-number" aria-controls="slurm-number">here</a>)
                                 </p>
 
                             </div>
@@ -665,21 +660,21 @@
                     </div>
 
                     <div class="card">
-                        <div class="card-header" role="tab" id="moab-card-resources">
+                        <div class="card-header" role="tab" id="slurm-card-resources">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab-resources" aria-controls="moab-resources">
+                                <a data-toggle="collapse" data-parent="#slurm-accordion" href="#slurm-resources" aria-controls="slurm-resources">
                                     What resources may I request for my job?
                                 </a>
                             </h5>
                         </div>
 
-                        <div id="moab-resources" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="slurm-resources" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
 
                                 <h4>Arcetri resources</h4>
                                 <ul>
                                     <li>96 compute nodes in total</li>
-                                    <li>16 nodes with Tesla GPUs: <code>pacini080</code> - <code>pacini095</code></li>
+                                    <li>32 nodes with Tesla GPUs: <code>pacini063</code> - <code>pacini095</code></li>
                                     <li>256GB of RAM each</li>
                                 </ul>
 
@@ -705,102 +700,55 @@
                     </div>
 
                     <div class="card">
-                        <div class="card-header" role="tab" id="moab-card-msub">
+                        <div class="card-header" role="tab" id="slurm-card-msub">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab-msub" aria-controls="moab-msub">
+                                <a data-toggle="collapse" data-parent="#slurm-accordion" href="#slurm-msub" aria-controls="slurm-msub">
                                     How may I use the msub command?
                                 </a>
                             </h5>
                         </div>
 
-                        <div id="moab-msub" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="slurm-msub" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
 
                                 <p>
-                                    <code>msub <i>job_batch_script.msub</i></code> - submit job
+                                    <code>sbatch <i>job_batch_script.msub</i></code> - submit job
                                     defined in <i>job batch script</i> in current directory
                                 </p>
 
                                 <p>
-                                    <code>msub -l <i>parameters</i></code> - ask for
+                                    <code>sbatch <i>parameters</i></code> - ask for
                                     interactive SSH session with specified parameters
-                                </p>
-
-                                <p>
-                                    <code>mjobctl -c JobID</code> - cancel job based on jobID (<code>canceljob JobID</code>
-                                    is a handy alias for this command)
-                                </p>
-
-                                <p>
-                                    <code>mjobctl -c -w user=$USER</code> - cancel all jobs by the user
-                                </p>
-
-                                <p>
-                                    <code>qstat JobID</code> - show queue info for a current job
-                                </p>
-
-                                <p>
-                                    <code>qstat -f JobID</code> - show detailed queue info about job
                                 </p>
 
                                 <p>
                                     <code>showq</code> - show queue info about all users
                                 </p>
 
-                                <p>
-                                    <code>checkjob JobID</code> - show scheduling info about job
-                                </p>
 
                                 <p>
-                                    <code>checkjob -v JobID</code> - show detailed scheduling info about job
+                                    <code>sinfo</code> - show detailed information about compute nodes
                                 </p>
 
-                                <p>
-                                    <code>checkjob -v -v JobID</code> - show very detailed scheduling info about job
-                                </p>
-
-                                <p>
-                                    <code>showbf</code> - show available system resources
-                                </p>
-
-                                <p>
-                                    <code>showstate</code> - show graphical node usage
-                                </p>
-
-                                <p>
-                                    <code>tracejob JobID</code> - show info about job scheduling
-                                </p>
-
-                                <p>
-                                    <code>pbsnodes -l</code> - show which compute nodes are unaccessible
-                                </p>
-
-                                <p>
-                                    <code>pbsnodes</code> - show detailed information about compute nodes
-                                </p>
-
-                                See more here: <a href="http://docs.adaptivecomputing.com/mwm/7-0/Content/commands/msub.html">docs.adaptivecomputing.com/mwm/7-0/Content/commands/msub.html</a>
+                                See more here: <a href="https://slurm.schedmd.com/pdfs/summary.pdf">here</a>
 
                             </div>
                         </div>
                     </div>
 
                     <div class="card">
-                        <div class="card-header" role="tab" id="moab-card-more">
+                        <div class="card-header" role="tab" id="slurm-card-more">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#moab-accordion" href="#moab-more" aria-controls="moab-more">
-                                    Where can I read more about Moab/TORQUE?
+                                <a data-toggle="collapse" data-parent="#slurm-accordion" href="#slurm-more" aria-controls="slurm-more">
+                                    Where can I read more about SLURM?
                                 </a>
                             </h5>
                         </div>
 
-                        <div id="moab-more" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="slurm-more" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
                                 <p>
-                                    Read more about Moab: <a href="http://www.adaptivecomputing.com/wp-content/media/pdf/ClusterSuiteTutorial_IhliN.pdf">adaptivecomputing.com/wp-content/media/pdf/ClusterSuiteTutorial_IhliN.pdf</a>
-                                </p>
-                                <p>
-                                    Read more about TORQUE: <a href="http://www.adaptivecomputing.com/wp-content/media/pdf/TorqueTutorial_NielsonK.pdf">adaptivecomputing.com/wp-content/media/pdf/TorqueTutorial_NielsonK.pdf</a>
+                                    Read more about SLURM: <a href="https://slurm.schedmd.com/srun.html">here</a>
                                 </p>
                             </div>
                         </div>
