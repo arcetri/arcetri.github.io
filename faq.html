@@ -240,27 +240,10 @@
                         </div>
                         <div id="arcetri-structure" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
-                                <img src="img/faq/arcetri/structure-1.png" width="70%"><br>
+                                <img src="img/faq/arcetri/structure-1.png" width="100%"><br>
                             </div>
                             <ul>
                                 <li>You may access to a Pacini head node (pacini.cisco.com) via the ASA firewall (arcetri-asa.cisco.com).</li>
-                                <li>The Pacini Head node is a Cisco UCS C240 M4 Rack Server
-                                    <a href="https://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-c240-m4-rack-server/index.html">www.cisco.com/c/en/us/products/servers-unified-computing/ucs-c240-m4-rack-server/index.html</a>
-                                </li>
-                                <li>The nodes of the Pacini cluster are connected via the Fabric Interconnect (FI): Cisco UCS 6332 Fabric Interconnect
-                                    <a href="https://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-6332-fabric-interconnect/index.html">https://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-6332-fabric-interconnect/index.html</a>
-                                </li>
-                                <li>Franco Pacini Compute nodes consist of 3 types of blades:
-                                    <ul>
-                                        <li>B200 M3 IVB</li>
-                                        <li>B200 M4 HW</li>
-                                        <li>B200 BW</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    Cisco UCS B200 M4 Blade Server
-                                    <a href="https://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-b200-m4-blade-server/index.html">https://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-b200-m4-blade-server/index.html</a>
-                                </li>
                             </ul>
                         </div>
                     </div>
@@ -312,11 +295,14 @@
                             <div class="card-block textcard">
                                 <p>
                                     In general, modules are designed to create user's environment. For example, if you need to use CUDA with version 8.0,
-                                    you can easily load appropriate module via command <code>module load CUDA/8.0</code>
+                                    you can easily load appropriate module via command <code>module load tensorflow</code>
                                 </p>
                                 <p>
-                                    Load CUDA/8.0 module is better than just have it installed by default because some researchers may need 9.0 version
-                                    while others need to have 8.0 CUDA. Creating modules for both versions help to avoid such collisions.
+				    In some cases you may wish to load a specific version of a module.
+				    For example: <code>module load tensorflow/1.10</code>.
+				    Without the "/version", the default recommended module will be loaded.
+				    Depending on specific specific version is not recommended
+				    as old versions are retired and purged from system from time to time.
                                 </p>
                             </div>
                         </div>
@@ -335,30 +321,16 @@
                                 <p>
                                     You can check available modules via command <code>module avail</code>
                                 </p>
-                                <p>
-                                    Right now pacini has these modules:
-                                    <ul>
-                                        <li>CUDA/8.0</li>
-                                        <li>CUDA/9.0</li>
-                                        <li>gcc/5.4.0</li>
-                                        <li>gcc/6.3.0</li>
-                                        <li>gcc/7.1.0</li>
-                                        <li>go/1.7.6</li>
-                                        <li>go/1.8.3</li>
-                                        <li>intel/2017u4</li>
-                                        <li>libfabric/1.4.2</li>
-                                        <li>matlab/2016b</li>
-                                        <li>matlab/2017a</li>
-                                        <li>meep/1.3</li>
-                                        <li>mpi/openmpi/1.10.7</li>
-                                        <li>mpi/openmpi/2.0.3</li>
-                                        <li>mpi/openmpi/2.1.1</li>
-                                        <li>mpi/openmpi/2.1.1-intel</li>
-                                    </ul>
-                                </p>
-                                <p>
-                                    Feel free to contact us and request a new module: <a href="contacts.html">our contact page</a>
-                                </p>
+				<p>
+				    The string <b>(default)</b> indicates that the particular module/version is
+				    the default module that is loaded if only the module name is loaded.
+				</p>
+				<p>
+				    For example, <b>CUDA/9.0(default)</b> indicates that <b>CUDA/9.0</b> is
+				    currenrtly the default module that is loaded if one loads just <b>CUDA</b>.
+				    Using just the module name without the <b>/version</b> is recommended
+				    to be sure you are using the best version that is available.
+				</p>
                             </div>
                         </div>
                     </div>
@@ -374,6 +346,12 @@
                         <div id="modules-load" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
                                 You can load a module via command <code>module add <i>MODULE_NAME</i></code>
+				<p>
+				     We recommend ust the module name without the <b>/version</b>
+				     to be sure you are using the best version that is available.
+				     For example, using the default <code>module add CUDA</code> is recommended
+				     over a version specific <code>module add CUDA/9.0</code> command.
+				</p>
                             </div>
                         </div>
                     </div>
@@ -429,6 +407,74 @@
                                     <li><code>module avail</code> - list all available modules</li>
                                     <li><code>module help</code> - give some helpful information about <code>module</code> command</li>
                                 </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#modules-accordion" href="#modules-modulecmd" aria-controls="modules-show">
+                                    How can I use module command within a shell script?
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="modules-modulecmd" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-block textcard">
+				<p>
+                                The module command is a shell alias that is available from an interactive shell.
+				The alias causes a <b>eval</b> to be performed at the interactive shell level
+				that can display and/or modify shell environment variables of the interactive shell.
+				</p>
+				<p>
+				This shell script <b>WILL NOT</B> load a modules:
+				</p>
+				<ul>
+				#!/bin/bash<br>
+				#<br>
+				# DO NOT DO THIS -- This will NOT properly load the mpi and CUDA default modules<br>
+				<br>
+				..<br>
+				module load mpi CUDA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# WRONG !!!<br>
+				mpirun ..<br>
+				..<br>
+				</ul>
+				<p>
+				In shell scripts, one must explicitly eval the output of <b>/usr/bin/modulecmd</b>.
+				Instead of using:
+				<ul>
+				<code>module cmd <i>arg ..</i></code>
+				</ul>
+				<p>
+				in a shell script one must use:
+				</p>
+				<ul>
+				<code>eval $(/usr/bin/modulecmd bash cmd <i>arg ..</i>)</code>
+				</ul>
+				<p>
+				where <b>bash</b> is the name of your shell.
+				</p>
+				<ul>
+				NOTE: The bash shell is the default recommended shell.
+				</ul>
+				<p>
+				To be sure that a shell script is using only the modules you intent to use,
+				it is recommended that you first purge any previous modules that may have
+				been exported.
+				</p>
+				This shell script <b>WILL</B> load a modules:
+				</p>
+				<ul>
+				#!/bin/bash<br>
+				#<br>
+				# This will properly load the mpi and CUDA default modules<br>
+				<br>
+				..<br>
+				eval $(/usr/bin/modulecmd bash purge)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# same as module purge<br>
+				eval $(/usr/bin/modulecmd bash load mpi CUDA)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# same as module load mpi CUDA<br>
+				mpirun ..<br>
+				..<br>
+				</ul>
                             </div>
                         </div>
                     </div>
@@ -502,7 +548,7 @@
                                 </p>
                                 <p>
                                     This command will show your jobs' progress in the following format:<br>
-                                    
+
 				     JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)<br>
 				     34239 arcetri_c node-rie    prime  R    1:49:52      1 pacini063
 				</p>
@@ -762,7 +808,7 @@
                         <div class="card-header" role="tab" id="graphical-card-windows">
                             <h5 class="mb-0">
                                 <a data-toggle="collapse" data-parent="#graphical-accordion" href="#graphical-windows" aria-controls="graphical-windows">
-                                    How do I run Matlab on the Pacini cluster from Windows?
+                                    How do I access a graphical desktop on the Pacini cluster from Windows?
                                 </a>
                             </h5>
                         </div>
@@ -855,21 +901,14 @@
                                 <img src="img/faq/graphical/osx-6.png" width="70%"><br>
                                 </p>
 
-                                <p>
-                                <h4>Matlab</h4>
-                                Open Terminal<br>
+				<p>
+                                <h4>Open a Terminal window</h4>
+				<br>You may access a shell prompt via the Terminal desktop application.<br>
                                 <img src="img/faq/graphical/osx-7.png" width="70%"><br>
-
+				For example:<br>
                                 <img src="img/faq/graphical/osx-8.png" width="70%"><br>
-                                <ol>
-                                    <li>Load desired version of Matlab by “module load” command. </li>
-                                    <li>Launch Matlab</li>
-                                </ol>
 
-                                <img src="img/faq/graphical/osx-9.png" width="70%"><br>
-                                Matlab should be up and running by this point.
-                                </p>
-
+				<p>
                                 <h4>To end the session</h4>
                                 <img src="img/faq/graphical/osx-10.png" width="70%"><br>
                             </div>
@@ -973,7 +1012,7 @@
                         <div class="card-header" role="tab" id="graphical-card-macos">
                             <h5 class="mb-0">
                                 <a data-toggle="collapse" data-parent="#graphical-accordion" href="#graphical-macos" aria-controls="graphical-macos">
-                                    How do I run Matlab on the Pacini cluster from macOS?
+                                    How do I access a graphical desktop on the Pacini cluster from macOS?
                                 </a>
                             </h5>
                         </div>
@@ -1042,20 +1081,48 @@
                                     <img src="img/faq/graphical/osx-6.png" width="70%"><br>
                                 </p>
 
-                                <p>
-                                    <h4>Matlab</h4>
-                                    Open Terminal<br>
-                                    <img src="img/faq/graphical/osx-7.png" width="70%"><br>
+				<p>
+                                <h4>Open a Terminal window</h4>
+				<br>You may access a shell prompt via the Terminal desktop application.<br>
+                                <img src="img/faq/graphical/osx-7.png" width="70%"><br>
+				For example:<br>
+                                <img src="img/faq/graphical/osx-8.png" width="70%"><br>
 
-                                    <img src="img/faq/graphical/osx-8.png" width="70%"><br>
-                                    <ol>
-                                        <li>Load desired version of Matlab by “module load” command. </li>
-                                        <li>Launch Matlab</li>
-                                    </ol>
+				<p>
+                                <h4>To end the session</h4>
+                                <img src="img/faq/graphical/osx-10.png" width="70%"><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="graphical-card-matlab">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#graphical-accordion" href="#graphical-matlab" aria-controls="graphical-matlab">
+                                    How do I use Matlab on the Pacini cluster?
+                                </a>
+                            </h5>
+                        </div>
 
-                                    <img src="img/faq/graphical/osx-9.png" width="70%"><br>
-                                    Matlab should be up and running by this point.
-                                </p>
+                        <div id="graphical-matlab" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-block textcard">
+
+				<h4>Start a graphical session</h4>
+				First, access a graphical desktop on the Pacini cluster.
+
+				<p>
+				<h4>Open a graphical terminal</h4>
+				<img src="img/faq/graphical/osx-7.png" width="70%"><br>
+
+				<p>
+				<h4>module load</h4>
+				<img src="img/faq/graphical/osx-8.png" width="70%"><br>
+				<ol>
+				    <li>Load desired version of Matlab by “module load” command. </li>
+				    <li>Launch Matlab</li>
+				</ol>
+
+				<img src="img/faq/graphical/osx-9.png" width="70%"><br>
+				Matlab should be up and running by this point.
 
                                 <h4>To end the session</h4>
                                 <img src="img/faq/graphical/osx-10.png" width="70%"><br>
