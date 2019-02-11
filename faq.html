@@ -59,7 +59,7 @@
                         <div class="card-header" role="tab" id="headingOne">
                             <h5 class="mb-0">
                                 <a data-toggle="collapse" data-parent="#arcetri-accordion" href="#arcetri-account" aria-controls="arcetri-account">
-                                    How do I create an Arcetri account?
+                                    How can I obtain an Arcetri account?
                                 </a>
                             </h5>
                         </div>
@@ -75,8 +75,14 @@
                                     <li>Phone number</li>
                                     <li>SSH RSA public key (see <a href="#">here</a> how to generate SSH key)</li>
                                 </ul>
-
+				<p>
+				Once we have created your account and notified you that it is ready,
+				you need to <A HREF="contacts.html">call us</A> so that we can give you
+				your VPN password over the phone.
+				</p>
+				<p>
                                 After your account is created, see how to login to Arcetri.
+				</p>
                             </div>
                         </div>
                     </div>
@@ -85,7 +91,7 @@
                         <div class="card-header" role="tab" id="headingOne">
                             <h5 class="mb-0">
                                 <a data-toggle="collapse" data-parent="#arcetri-accordion" href="#arcetri-key" aria-controls="arcetri-key">
-                                    How can I send SSH key?
+                                    How can I send admins my SSH public key?
                                 </a>
                             </h5>
                         </div>
@@ -177,9 +183,19 @@
                                     <img src="img/faq/arcetri/anyconnect-1.png" width="50%"><br><br>
                                     <li>Press ‘Connect’ and enter your login detail</li>
                                     <img src="img/faq/arcetri/anyconnect-2.png" width="50%"><br><br>
-                                    <li>Now open a terminal and enter the following command: </li>
-                                    <code>$ ssh pacini.cisco.com</code>
-                                    <li>Type in your arcetri user name and password and press Enter</li>
+                                    <li>Type in your arcetri user name and VPN password and press Enter</li>
+                                    <li>Now open a terminal and enter the following command:</li>
+                                    <code>$ ssh pacini.cisco.com</code><br><br>
+				    <p>
+				    <b>NOTE:</b> The ssh command should <B>NOT</B> ask for a password, instead ssh
+				    will attempt to use your SSH private key to login to pacini.cisco.com.
+				    </p>
+				    <p>
+				    <b>NOTE:</b> If ssh asks you for a password, it most likely means that the private
+				    ssh key on the host where ssh is running is not matched with the
+				    public ssh key that we installed when your account was created.
+				    Please <A HREF="contacts.html">contact us</A> for help if ssh asks for a password.
+				    </p>
                                 </ul>
                             </div>
                         </div>
