@@ -445,7 +445,7 @@
 				<p>
 				This shell script <b>WILL NOT</B> load a modules:
 				</p>
-				<ul>
+				<ul><i>
 				#!/bin/bash<br>
 				#<br>
 				# DO NOT DO THIS -- This will NOT properly load the mpi and CUDA default modules<br>
@@ -454,7 +454,7 @@
 				module load mpi CUDA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# WRONG !!!<br>
 				mpirun ..<br>
 				..<br>
-				</ul>
+				</i></ul>
 				<p>
 				In shell scripts, one must explicitly eval the output of <b>/usr/bin/modulecmd</b>.
 				Instead of using:
@@ -471,26 +471,39 @@
 				where <b>bash</b> is the name of your shell.
 				</p>
 				<ul>
-				NOTE: The bash shell is the default recommended shell.
+				NOTE: The bash shell is the default and recommended shell.
 				</ul>
 				<p>
 				To be sure that a shell script is using only the modules you intent to use,
 				it is recommended that you first purge any previous modules that may have
 				been exported.
 				</p>
-				This shell script <b>WILL</B> load a modules:
-				</p>
-				<ul>
-				#!/bin/bash<br>
-				#<br>
-				# This will properly load the mpi and CUDA default modules<br>
-				<br>
-				..<br>
-				eval $(/usr/bin/modulecmd bash purge)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# same as module purge<br>
-				eval $(/usr/bin/modulecmd bash load mpi CUDA)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# same as module load mpi CUDA<br>
-				mpirun ..<br>
-				..<br>
-				</ul>
+				<p>
+				Under certain conditions the <b>MODULEPATH</b> environment variable is not set.
+				We recommend that you source <b>/etc/profile</b> if that happens:<br>
+<ul><pre>if [[ -z $MODULEPATH ]]; then
+&nbsp;&nbsp;&nbsp;source /etc/profile
+fi</pre></ul></p>
+				<p>
+				This shell script <b>WILL</b> load modules:<br>
+<ul><pre>#!/bin/bash
+#
+# How to use modules in a bash shell script
+..
+
+# setup mpi and CUDA modules early in your code
+#
+if [[ -z $MODULEPATH ]]; then
+&nbsp;&nbsp;&nbsp;source /etc/profile
+fi
+eval $(/usr/bin/modulecmd bash purge)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# equivalent to: module purge
+eval $(/usr/bin/modulecmd bash load mpi CUDA)&nbsp;&nbsp;&nbsp;&nbsp;# equivalent to: module load mpi CUDA
+
+..
+# then for example:
+mpirun ..
+..
+</pre></ul></p>
                             </div>
                         </div>
                     </div>
@@ -792,8 +805,39 @@
                                     <code>sinfo</code> - show detailed information about compute nodes
                                 </p>
 
-                                See more here: <a href="https://slurm.schedmd.com/pdfs/summary.pdf">here</a>
+                                See also this <a href="https://slurm.schedmd.com/pdfs/summary.pdf">SLURM summary</a>.
 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" role="tab" id="slurm-card-example">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#slurm-accordion" href="#slurm-example" aria-controls="slurm-example">
+                                    Where can I find an example an Open MPI job run under SLRUM?
+                                </a>
+                            </h5>
+                        </div>
+
+                        <div id="slurm-example" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-block textcard">
+				<p>
+				We recommend you run the Open MPI SLURM test program:
+				<ul><code>/usr/global/bin/openmpi-slurm-test</code></ul>
+				</p>
+				<p>
+				We recommend you study the SLRUM job that the Open MPI SLURM test program runs by default:
+				<ul><b>/usr/global/lib/openmpi-slurm-test/slurm-openmpi.slurm</b></ul>
+				</p>
+				<p>
+				The Open MPI SLURM test makes use of files under:
+				<ul><b>/usr/global/lib/openmpi-slurm-test/</b></ul>
+				</p>
+				<p>
+				The source code for the Open MPI SLURM test test program is found under:
+				<ul><b>/usr/global/src/bin/openmpi-slurm-test/</b></ul>
+				</p>
                             </div>
                         </div>
                     </div>
@@ -810,13 +854,15 @@
                         <div id="slurm-more" class="collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="card-block textcard">
                                 <p>
-                                    Read more about SLURM: <a href="https://slurm.schedmd.com/srun.html">here</a>
+				    Looking at the <a href="https://slurm.schedmd.com/tutorials.html">SLURM tutorials</a>
+				    is a good place to find more information.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="textblock">
                 <h1 class="textheader">Graphical desktop</h1>
                 <div id="graphical-accordion" role="tablist" aria-multiselectable="true">
