@@ -491,7 +491,7 @@ fi</pre></ul></p>
 # How to use modules in a bash shell script
 ..
 
-# setup mpi and CUDA modules early in your code
+# setup modules very early in your shell script
 #
 if [[ -z $MODULEPATH ]]; then
 &nbsp;&nbsp;&nbsp;source /etc/profile
@@ -856,6 +856,11 @@ mpirun ..
                                 <p>
 				    Looking at the <a href="https://slurm.schedmd.com/tutorials.html">SLURM tutorials</a>
 				    is a good place to find more information.
+                                </p>
+                                <p>
+				    Try the Open MPI SLURM test program.
+				    See the above <b><i>Where can I find an example an Open MPI job run under SLRUM?</i></b> FAQ
+				    for more information.
                                 </p>
                             </div>
                         </div>
