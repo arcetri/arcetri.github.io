@@ -63,28 +63,26 @@
                                 </a>
                             </h5>
                         </div>
-                        <div id="arcetri-account" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
-                                Write to our email address: arcetri-admin-people@cisco.com<br>
+			<div class="card-block textcard">
+			    Write to our email address: arcetri-admin-people@cisco.com<br>
 
-                                To handle your request faster please provide information about:
-                                <ul>
-                                    <li>Name</li>
-                                    <li>Preferred account name</li>
-                                    <li>Email address</li>
-                                    <li>Phone number</li>
-                                    <li>SSH RSA public key (see <a href="#">here</a> how to generate SSH key)</li>
-                                </ul>
-				<p>
-				Once we have created your account and notified you that it is ready,
-				you need to <A HREF="contacts.html">call us</A> so that we can give you
-				your VPN password over the phone.
-				</p>
-				<p>
-                                After your account is created, see how to login to Arcetri.
-				</p>
-                            </div>
-                        </div>
+			    To handle your request faster please provide information about:
+			    <ul>
+				<li>Name</li>
+				<li>Preferred account name</li>
+				<li>Email address</li>
+				<li>Phone number</li>
+				<li>SSH RSA public key (see <a href="#">here</a> how to generate SSH key)</li>
+			    </ul>
+			    <p>
+			    Once we have created your account and notified you that it is ready,
+			    you need to <A HREF="contacts.html">call us</A> so that we can give you
+			    your VPN password over the phone.
+			    </p>
+			    <p>
+			    After your account is created, see how to login to Arcetri.
+			    </p>
+			</div>
                     </div>
 
                     <div class="card">
@@ -95,68 +93,66 @@
                                 </a>
                             </h5>
                         </div>
-                        <div id="arcetri-key" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
-                                <p>
-                                    <h4>If you are a Windows user</h4>
-                                    <b>1. Check for existing SSH keys</b><br>
-                                    Open a command prompt, and run<br>
-                                    <code>cd %userprofile%/.ssh</code>
-                                    <ul>
-                                        <li>If you see "No such file or directory", then there aren't any existing keys: go to step 2.</li>
-                                        <li>Check to see if you have a key already:</li>
-                                        <code>dir id_*</code><br>
-                                        If there are existing keys, you may want to use those. Go to step 3 to send us your public SSH key
-                                    </ul>
+			<div class="card-block textcard">
+			    <p>
+				<h4>If you are a Windows user</h4>
+				<b>1. Check for existing SSH keys</b><br>
+				Open a command prompt, and run<br>
+				<code>cd %userprofile%/.ssh</code>
+				<ul>
+				    <li>If you see "No such file or directory", then there aren't any existing keys: go to step 2.</li>
+				    <li>Check to see if you have a key already:</li>
+				    <code>dir id_*</code><br>
+				    If there are existing keys, you may want to use those. Go to step 3 to send us your public SSH key
+				</ul>
 
-                                    <b>2. If you don't have SSH key, generate a new SSH key</b>
-                                    If you don't have an existing SSH key that you wish to use, generate one as follows:<br>
-                                    <ul>
-                                        <li>Log in to your local computer as an administrator.</li>
-                                        <li>In a command prompt, run:</li>
-                                        <code>ssh-keygen -t rsa -C "your_email@example.com"</code>
-                                        Associating the key with your email address helps you to identify the key later on.<br>
-                                        <li>Just press Enter to accept the default location and file name. If the .ssh directory doesn't exist, the system creates one for you.</li>
-                                        <li>Enter, and re-enter, a passphrase when prompted.</li>
-                                        <li>You're done! Go to step 3 to send us your public SSH key</li>
-                                    </ul>
+				<b>2. If you don't have SSH key, generate a new SSH key</b>
+				If you don't have an existing SSH key that you wish to use, generate one as follows:<br>
+				<ul>
+				    <li>Log in to your local computer as an administrator.</li>
+				    <li>In a command prompt, run:</li>
+				    <code>ssh-keygen -t rsa -C "your_email@example.com"</code>
+				    Associating the key with your email address helps you to identify the key later on.<br>
+				    <li>Just press Enter to accept the default location and file name. If the .ssh directory doesn't exist, the system creates one for you.</li>
+				    <li>Enter, and re-enter, a passphrase when prompted.</li>
+				    <li>You're done! Go to step 3 to send us your public SSH key</li>
+				</ul>
 
-                                    <b>3. Send us public SSH key</b>
-                                    Attach your <code>id_rsa.pub</code> file to your account request email.<br>
-                                    <b>WARNING:</b> send <code>id_rsa.pub</code>, not <code>id_rsa</code> file! <code>id_rsa</code> is your private confidential key, similar to your passwords!
-                                </p>
+				<b>3. Send us public SSH key</b>
+				Attach your <code>id_rsa.pub</code> file to your account request email.<br>
+				<b>WARNING:</b> send <code>id_rsa.pub</code>, not <code>id_rsa</code> file! <code>id_rsa</code> is your private confidential key, similar to your passwords!
+			    </p>
 
-                                <h4>If you are a Unix/OS X user</h4>
-                                <p>
-                                    <b>1. Check for existing SSH keys</b><br>
-                                    Open the terminal, and run<br>
-                                    <code>cd ~/.ssh</code>
-                                    <ul>
-                                        <li>If you see "No such file or directory", then there aren't any existing keys: go to step 2.</li>
-                                        <li>Check to see if you have a key already:</li>
-                                        <code>ls id_*</code><br>
-                                        If there are existing keys, you may want to use those. Go to step 3 to send us your public SSH key
-                                    </ul>
+			    <h4>If you are a Unix/OS X user</h4>
+			    <p>
+				<b>1. Check for existing SSH keys</b><br>
+				Open the terminal, and run<br>
+				<code>cd ~/.ssh</code>
+				<ul>
+				    <li>If you see "No such file or directory", then there aren't any existing keys: go to step 2.</li>
+				    <li>Check to see if you have a key already:</li>
+				    <code>ls id_*</code><br>
+				    If there are existing keys, you may want to use those. Go to step 3 to send us your public SSH key
+				</ul>
 
-                                    <b>2. If you don't have SSH key, generate a new SSH key</b>
-                                    If you don't have an existing SSH key that you wish to use, generate one as follows:<br>
-                                    <ul>
-                                        <li>Open a terminal on your local computer and enter the following:</li>
-                                        <code>ssh-keygen -t rsa -C "your_email@example.com"</code>
-                                        Associating the key with your email address helps you to identify the key later on.<br>
-                                        <li>
-                                            Just press Enter to accept the default location and file name.
-                                            If the .ssh directory doesn't exist, the system creates one for you.
-                                        </li>
-                                        <li>Enter, and re-enter, a passphrase when prompted.</li>
-                                        <li>You're done! Go to step 3 to send us your public SSH key</li>
-                                    </ul>
-                                    <b>3. Send us public SSH key</b>
-                                    Attach your <code>id_rsa.pub</code> file to your account request email.<br>
-                                    <b>WARNING:</b> send <code>id_rsa.pub</code>, not <code>id_rsa</code> file! <code>id_rsa</code> is your private confidential key, similar to your passwords!
-                                </p>
-                            </div>
-                        </div>
+				<b>2. If you don't have SSH key, generate a new SSH key</b>
+				If you don't have an existing SSH key that you wish to use, generate one as follows:<br>
+				<ul>
+				    <li>Open a terminal on your local computer and enter the following:</li>
+				    <code>ssh-keygen -t rsa -C "your_email@example.com"</code>
+				    Associating the key with your email address helps you to identify the key later on.<br>
+				    <li>
+					Just press Enter to accept the default location and file name.
+					If the .ssh directory doesn't exist, the system creates one for you.
+				    </li>
+				    <li>Enter, and re-enter, a passphrase when prompted.</li>
+				    <li>You're done! Go to step 3 to send us your public SSH key</li>
+				</ul>
+				<b>3. Send us public SSH key</b>
+				Attach your <code>id_rsa.pub</code> file to your account request email.<br>
+				<b>WARNING:</b> send <code>id_rsa.pub</code>, not <code>id_rsa</code> file! <code>id_rsa</code> is your private confidential key, similar to your passwords!
+			    </p>
+			</div>
                     </div>
 
                     <div class="card">
@@ -167,38 +163,36 @@
                                 </a>
                             </h5>
                         </div>
-                        <div id="arcetri-login" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
-                                <ul>
-                                    <li>First, you should install Cisco AnyConnect</li>
-                                    <ul>
-                                        <li>Login with username and password we provided you: <a href="https://arcetri-asa.cisco.com">https://arcetri-asa.cisco.com</a></li>
-                                        <img src="img/faq/arcetri/asa-1.png" width="50%">
-                                        <li>Press "Continue"</li>
-                                        <img src="img/faq/arcetri/asa-2.png" width="50%">
-                                        <li>Wait for Java detection and press on AnyConnect VPN download link</li>
-                                        <img src="img/faq/arcetri/asa-3.png" width="50%">
-                                    </ul>
-                                    <li>Open it and type arcetri-asa.cisco.com</li>
-                                    <img src="img/faq/arcetri/anyconnect-1.png" width="50%"><br><br>
-                                    <li>Press ‘Connect’ and enter your login detail</li>
-                                    <img src="img/faq/arcetri/anyconnect-2.png" width="50%"><br><br>
-                                    <li>Type in your arcetri user name and VPN password and press Enter</li>
-                                    <li>Now open a terminal and enter the following command:</li>
-                                    <code>$ ssh pacini.cisco.com</code><br><br>
-				    <p>
-				    <b>NOTE:</b> The ssh command should <B>NOT</B> ask for a password, instead ssh
-				    will attempt to use your SSH private key to login to pacini.cisco.com.
-				    </p>
-				    <p>
-				    <b>NOTE:</b> If ssh asks you for a password, it most likely means that the private
-				    ssh key on the host where ssh is running is not matched with the
-				    public ssh key that we installed when your account was created.
-				    Please <A HREF="contacts.html">contact us</A> for help if ssh asks for a password.
-				    </p>
-                                </ul>
-                            </div>
-                        </div>
+			<div class="card-block textcard">
+			    <ul>
+				<li>First, you should install Cisco AnyConnect</li>
+				<ul>
+				    <li>Login with username and password we provided you: <a href="https://arcetri-asa.cisco.com">https://arcetri-asa.cisco.com</a></li>
+				    <img src="img/faq/arcetri/asa-1.png" width="50%">
+				    <li>Press "Continue"</li>
+				    <img src="img/faq/arcetri/asa-2.png" width="50%">
+				    <li>Wait for Java detection and press on AnyConnect VPN download link</li>
+				    <img src="img/faq/arcetri/asa-3.png" width="50%">
+				</ul>
+				<li>Open it and type arcetri-asa.cisco.com</li>
+				<img src="img/faq/arcetri/anyconnect-1.png" width="50%"><br><br>
+				<li>Press ‘Connect’ and enter your login detail</li>
+				<img src="img/faq/arcetri/anyconnect-2.png" width="50%"><br><br>
+				<li>Type in your arcetri user name and VPN password and press Enter</li>
+				<li>Now open a terminal and enter the following command:</li>
+				<code>$ ssh pacini.cisco.com</code><br><br>
+				<p>
+				<b>NOTE:</b> The ssh command should <B>NOT</B> ask for a password, instead ssh
+				will attempt to use your SSH private key to login to pacini.cisco.com.
+				</p>
+				<p>
+				<b>NOTE:</b> If ssh asks you for a password, it most likely means that the private
+				ssh key on the host where ssh is running is not matched with the
+				public ssh key that we installed when your account was created.
+				Please <A HREF="contacts.html">contact us</A> for help if ssh asks for a password.
+				</p>
+			    </ul>
+			</div>
                     </div>
 
                     <div class="card">
@@ -209,42 +203,70 @@
                                 </a>
                             </h5>
                         </div>
-                        <div id="arcetri-contact" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
-                                Visit the <a href="contacts.html">contacts page</a>. We will be happy to assist you!
-                            </div>
-                        </div>
+			<div class="card-block textcard">
+			    Visit the <a href="contacts.html">contacts page</a>. We will be happy to assist you!
+			</div>
                     </div>
 
-                    <!--<div class="card">-->
-                        <!--<div class="card-header" role="tab" id="headingOne">-->
-                            <!--<h5 class="mb-0">-->
-                                <!--<a data-toggle="collapse" data-parent="#arcetri-accordion" href="#arcetri-names" aria-controls="arcetri-names">-->
-                                    <!--What is the meaning behind the names, Pacini, Franco and Arcetri?-->
-                                <!--</a>-->
-                            <!--</h5>-->
-                        <!--</div>-->
-                        <!--<div id="arcetri-names" class="collapse" role="tabpanel" aria-labelledby="headingOne">-->
-                            <!--<div class="card-block textcard">-->
-                                <!--====================================Empty================================================-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#arcetri-accordion" href="#arcetri-names" aria-controls="arcetri-names">
+                                    What is the meaning behind the names, Pacini, Franco and Arcetri?
+                                </a>
+                            </h5>
+                        </div>
+			<div class="card-block textcard">
+			    <p>
+			    Arcetri is location in Florance Italy.
+			    The Arcetri cluser named after Arcetri Astrophysical Observatory
+			    </p>
+			    <p>
+			    (<a href="https://en.wikipedia.org/wiki/Arcetri_Observatory">Osservatorio Astrofisico di Arcetri)</a>.
+			    The hosts franco and pacini are named in honor of
+			    <a href="https://en.wikipedia.org/wiki/Franco_Pacini">Franco Pacini</A>,
+			    a famous astronomer who was also the director of the Arcetri Astrophysical Observatory.
+			    </p>
+			    <p>
+			    The full formal name of the Arcetri cluster is:
+			    </p>
+			    <ul>
+			    <li>
+			    Sistema condiviso in Cisco per calcoli ad alte prestazioni in onore di Franco Pacini,
+			    direttore dell'osservatorio astrofisico di Arcetri
+			    </ul>
+			    <p>
+			    which, translated from Italian into English reads:
+			    </p>
+			    <p>
+			    <ul>
+			    <li>
+			    Shared system for High-Performance Computations at Cisco in honor of Franco Pacini,
+			    director of the Arcetri Astrophysical Observatory
+			    </ul>
+			    </p>
+			    <p>
+			    As an astronomer, <a href="https://en.wikipedia.org/wiki/Landon_Curt_Noll">Landon Curt Noll</a>
+			    had the honor of observing the 2004 Transit of Venus, under Franco Pacini,
+			    where he helped <a href-"http://www.isthe.com/chongo/tech/astro/venus2004.html">measure
+			    the distance to the Sun</a> as 149,596,765 km ± 3543 km (0.0237% uncertainty: 1 part in 42224).
+			    </p>
+			</div>
+                    </div>
 
-                    <!--<div class="card">-->
-                        <!--<div class="card-header" role="tab" id="headingOne">-->
-                            <!--<h5 class="mb-0">-->
-                                <!--<a data-toggle="collapse" data-parent="#arcetri-accordion" href="#arcetri-differences" aria-controls="arcetri-differences">-->
-                                    <!--What is the difference between Pacini and Arcetri?-->
-                                <!--</a>-->
-                            <!--</h5>-->
-                        <!--</div>-->
-                        <!--<div id="arcetri-differences" class="collapse" role="tabpanel" aria-labelledby="headingOne">-->
-                            <!--<div class="card-block textcard">-->
-                                <!--====================================Empty================================================-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#arcetri-accordion" href="#arcetri-differences" aria-controls="arcetri-differences">
+                                    What is the difference between Pacini and Arcetri?
+                                </a>
+                            </h5>
+                        </div>
+			<div class="card-block textcard">
+			    The term arcetri refers to the entire cluster whereas pacini refers to a head node inside arcetri.
+			    There is also a head node named fracno that services as a backup and spare head node.
+			</div>
+                    </div>
 
                     <div class="card">
                         <div class="card-header" role="tab" id="headingOne">
@@ -254,14 +276,12 @@
                                 </a>
                             </h5>
                         </div>
-                        <div id="arcetri-structure" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
-                                <img src="img/faq/arcetri/structure-1.png" width="100%"><br>
-                            </div>
-                            <ul>
-                                <li>You may access to a Pacini head node (pacini.cisco.com) via the ASA firewall (arcetri-asa.cisco.com).</li>
-                            </ul>
-                        </div>
+			<div class="card-block textcard">
+			    <img src="img/faq/arcetri/structure-1.png" width="100%"><br>
+			</div>
+			<ul>
+			    <li>You may access to a Pacini head node (pacini.cisco.com) via the ASA firewall (arcetri-asa.cisco.com).</li>
+			</ul>
                     </div>
 
                     <div class="card">
@@ -273,26 +293,24 @@
                             </h5>
                         </div>
 
-                        <div id="arcetri-filesystems" class="collapse" role="tabpanel" aria-labelledby="arcetri-card-filesystems">
-                            <div class="card-block textcard">
+			<div class="card-block textcard">
 
-                                <p>
-                                    <h4><code>/home/</code></h4>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;<code>/username</code> - mode 0700 - no other user/group access
-                                </p>
-                                <p>
-                                    <h4><code>/usr/global/</code></h4>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;<code>/{bin, sbin, lib, include, ...}</code> - common software for Pacini cluster - mod by admin only<br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;<code>/_group_name_</code> - writable for group for software/libs<br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;<code>/src/{bin, sbin, lib, ...}</code> - source for common software - mod by admin only<br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;<code>/src/_group_name_</code> - writable for group for source code
-                                </p>
-                                <p>
-                                    <h4><code>/shared/</code></h4>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;<code>/_group_name_</code> - writable by group for source code
-                                </p>
-                            </div>
-                        </div>
+			    <p>
+				<h4><code>/home/</code></h4>
+				&nbsp;&nbsp;&nbsp;&nbsp;<code>/username</code> - mode 0700 - no other user/group access
+			    </p>
+			    <p>
+				<h4><code>/usr/global/</code></h4>
+				&nbsp;&nbsp;&nbsp;&nbsp;<code>/{bin, sbin, lib, include, ...}</code> - common software for Pacini cluster - mod by admin only<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<code>/_group_name_</code> - writable for group for software/libs<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<code>/src/{bin, sbin, lib, ...}</code> - source for common software - mod by admin only<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<code>/src/_group_name_</code> - writable for group for source code
+			    </p>
+			    <p>
+				<h4><code>/shared/</code></h4>
+				&nbsp;&nbsp;&nbsp;&nbsp;<code>/_group_name_</code> - writable by group for source code
+			    </p>
+			</div>
                     </div>
                 </div>
             </div>
@@ -307,21 +325,19 @@
                                 </a>
                             </h5>
                         </div>
-                        <div id="modules-what" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
-                                <p>
-                                    In general, modules are designed to create user's environment. For example, if you need to use CUDA with version 8.0,
-                                    you can easily load appropriate module via command <code>module load tensorflow</code>
-                                </p>
-                                <p>
-				    In some cases you may wish to load a specific version of a module.
-				    For example: <code>module load tensorflow/1.10</code>.
-				    Without the "/version", the default recommended module will be loaded.
-				    Depending on specific specific version is not recommended
-				    as old versions are retired and purged from system from time to time.
-                                </p>
-                            </div>
-                        </div>
+			<div class="card-block textcard">
+			    <p>
+				In general, modules are designed to create user's environment. For example, if you need to use CUDA with version 8.0,
+				you can easily load appropriate module via command <code>module load tensorflow</code>
+			    </p>
+			    <p>
+				In some cases you may wish to load a specific version of a module.
+				For example: <code>module load tensorflow/1.10</code>.
+				Without the "/version", the default recommended module will be loaded.
+				Depending on specific specific version is not recommended
+				as old versions are retired and purged from system from time to time.
+			    </p>
+			</div>
                     </div>
 
                     <div class="card">
@@ -332,23 +348,21 @@
                                 </a>
                             </h5>
                         </div>
-                        <div id="modules-available" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
-                                <p>
-                                    You can check available modules via command <code>module avail</code>
-                                </p>
-				<p>
-				    The string <b>(default)</b> indicates that the particular module/version is
-				    the default module that is loaded if only the module name is loaded.
-				</p>
-				<p>
-				    For example, <b>CUDA/9.0(default)</b> indicates that <b>CUDA/9.0</b> is
-				    currenrtly the default module that is loaded if one loads just <b>CUDA</b>.
-				    Using just the module name without the <b>/version</b> is recommended
-				    to be sure you are using the best version that is available.
-				</p>
-                            </div>
-                        </div>
+			<div class="card-block textcard">
+			    <p>
+				You can check available modules via command <code>module avail</code>
+			    </p>
+			    <p>
+				The string <b>(default)</b> indicates that the particular module/version is
+				the default module that is loaded if only the module name is loaded.
+			    </p>
+			    <p>
+				For example, <b>CUDA/9.0(default)</b> indicates that <b>CUDA/9.0</b> is
+				currenrtly the default module that is loaded if one loads just <b>CUDA</b>.
+				Using just the module name without the <b>/version</b> is recommended
+				to be sure you are using the best version that is available.
+			    </p>
+			</div>
                     </div>
 
                     <div class="card">
@@ -359,17 +373,15 @@
                                 </a>
                             </h5>
                         </div>
-                        <div id="modules-load" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
-                                You can load a module via command <code>module add <i>MODULE_NAME</i></code>
-				<p>
-				     We recommend ust the module name without the <b>/version</b>
-				     to be sure you are using the best version that is available.
-				     For example, using the default <code>module add CUDA</code> is recommended
-				     over a version specific <code>module add CUDA/9.0</code> command.
-				</p>
-                            </div>
-                        </div>
+			<div class="card-block textcard">
+			    You can load a module via command <code>module add <i>MODULE_NAME</i></code>
+			    <p>
+				 We recommend ust the module name without the <b>/version</b>
+				 to be sure you are using the best version that is available.
+				 For example, using the default <code>module add CUDA</code> is recommended
+				 over a version specific <code>module add CUDA/9.0</code> command.
+			    </p>
+			</div>
                     </div>
 
                     <div class="card">
@@ -380,11 +392,9 @@
                                 </a>
                             </h5>
                         </div>
-                        <div id="modules-list" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
-                                You can check loaded modules via command <code>module list</code>
-                            </div>
-                        </div>
+			<div class="card-block textcard">
+			    You can check loaded modules via command <code>module list</code>
+			</div>
                     </div>
 
                     <div class="card">
@@ -395,12 +405,10 @@
                                 </a>
                             </h5>
                         </div>
-                        <div id="modules-purge" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
-                                <code>module rm <i>MODULE_NAME</i></code> command unloads specific module<br>
-                                <code>module purge</code> command unloads all loaded modulefiles
-                            </div>
-                        </div>
+			<div class="card-block textcard">
+			    <code>module rm <i>MODULE_NAME</i></code> command unloads specific module<br>
+			    <code>module purge</code> command unloads all loaded modulefiles
+			</div>
                     </div>
 
                     <div class="card">
@@ -411,20 +419,18 @@
                                 </a>
                             </h5>
                         </div>
-                        <div id="modules-show" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
-                                Most useful commands are:
-                                <ul>
-                                    <li><code>module add <i>MODULE_NAME</i></code> - load a module</li>
-                                    <li><code>module list</code> - show loaded modules</li>
-                                    <li><code>module rm <i>MODULE_NAME</i></code> - unload a module</li>
-                                    <li><code>module purge</code> - unload all loaded modules</li>
-                                    <li><code>module show <i>MODULE_NAME</i></code> - show information about a module</li>
-                                    <li><code>module avail</code> - list all available modules</li>
-                                    <li><code>module help</code> - give some helpful information about <code>module</code> command</li>
-                                </ul>
-                            </div>
-                        </div>
+			<div class="card-block textcard">
+			    Most useful commands are:
+			    <ul>
+				<li><code>module add <i>MODULE_NAME</i></code> - load a module</li>
+				<li><code>module list</code> - show loaded modules</li>
+				<li><code>module rm <i>MODULE_NAME</i></code> - unload a module</li>
+				<li><code>module purge</code> - unload all loaded modules</li>
+				<li><code>module show <i>MODULE_NAME</i></code> - show information about a module</li>
+				<li><code>module avail</code> - list all available modules</li>
+				<li><code>module help</code> - give some helpful information about <code>module</code> command</li>
+			    </ul>
+			</div>
                     </div>
 
                     <div class="card">
@@ -435,57 +441,56 @@
                                 </a>
                             </h5>
                         </div>
-                        <div id="modules-modulecmd" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
-				<p>
-                                The module command is a shell alias that is available from an interactive shell.
-				The alias causes a <b>eval</b> to be performed at the interactive shell level
-				that can display and/or modify shell environment variables of the interactive shell.
-				</p>
-				<p>
-				This shell script <b>WILL NOT</B> load a modules:
-				</p>
-				<ul><i>
-				#!/bin/bash<br>
-				#<br>
-				# DO NOT DO THIS -- This will NOT properly load the mpi and CUDA default modules<br>
-				<br>
-				..<br>
-				module load mpi CUDA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# WRONG !!!<br>
-				mpirun ..<br>
-				..<br>
-				</i></ul>
-				<p>
-				In shell scripts, one must explicitly eval the output of <b>/usr/bin/modulecmd</b>.
-				Instead of using:
-				<ul>
-				<code>module cmd <i>arg ..</i></code>
-				</ul>
-				<p>
-				in a shell script one must use:
-				</p>
-				<ul>
-				<code>eval $(/usr/bin/modulecmd bash cmd <i>arg ..</i>)</code>
-				</ul>
-				<p>
-				where <b>bash</b> is the name of your shell.
-				</p>
-				<ul>
-				NOTE: The bash shell is the default and recommended shell.
-				</ul>
-				<p>
-				To be sure that a shell script is using only the modules you intent to use,
-				it is recommended that you first purge any previous modules that may have
-				been exported.
-				</p>
-				<p>
-				Under certain conditions the <b>MODULEPATH</b> environment variable is not set.
-				We recommend that you source <b>/etc/profile</b> if that happens:<br>
+			<div class="card-block textcard">
+			    <p>
+			    The module command is a shell alias that is available from an interactive shell.
+			    The alias causes a <b>eval</b> to be performed at the interactive shell level
+			    that can display and/or modify shell environment variables of the interactive shell.
+			    </p>
+			    <p>
+			    This shell script <b>WILL NOT</B> load a modules:
+			    </p>
+			    <ul><i>
+			    #!/bin/bash<br>
+			    #<br>
+			    # DO NOT DO THIS -- This will NOT properly load the mpi and CUDA default modules<br>
+			    <br>
+			    ..<br>
+			    module load mpi CUDA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# WRONG !!!<br>
+			    mpirun ..<br>
+			    ..<br>
+			    </i></ul>
+			    <p>
+			    In shell scripts, one must explicitly eval the output of <b>/usr/bin/modulecmd</b>.
+			    Instead of using:
+			    <ul>
+			    <code>module cmd <i>arg ..</i></code>
+			    </ul>
+			    <p>
+			    in a shell script one must use:
+			    </p>
+			    <ul>
+			    <code>eval $(/usr/bin/modulecmd bash cmd <i>arg ..</i>)</code>
+			    </ul>
+			    <p>
+			    where <b>bash</b> is the name of your shell.
+			    </p>
+			    <ul>
+			    NOTE: The bash shell is the default and recommended shell.
+			    </ul>
+			    <p>
+			    To be sure that a shell script is using only the modules you intent to use,
+			    it is recommended that you first purge any previous modules that may have
+			    been exported.
+			    </p>
+			    <p>
+			    Under certain conditions the <b>MODULEPATH</b> environment variable is not set.
+			    We recommend that you source <b>/etc/profile</b> if that happens:<br>
 <ul><pre>if [[ -z $MODULEPATH ]]; then
 &nbsp;&nbsp;&nbsp;source /etc/profile
 fi</pre></ul></p>
-				<p>
-				This shell script <b>WILL</b> load modules:<br>
+			    <p>
+			    This shell script <b>WILL</b> load modules:<br>
 <ul><pre>#!/bin/bash
 #
 # How to use modules in a bash shell script
@@ -504,8 +509,7 @@ eval $(/usr/bin/modulecmd bash load mpi CUDA)&nbsp;&nbsp;&nbsp;&nbsp;# equivalen
 mpirun ..
 ..
 </pre></ul></p>
-                            </div>
-                        </div>
+			</div>
                     </div>
 
                     <div class="card">
@@ -516,11 +520,9 @@ mpirun ..
                                 </a>
                             </h5>
                         </div>
-                        <div id="modules-request" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
-                                Please, feel free to contact us and request a new module: <a href="contacts.html">our contact page</a>
-                            </div>
-                        </div>
+			<div class="card-block textcard">
+			    Please, feel free to contact us and request a new module: <a href="contacts.html">our contact page</a>
+			</div>
                     </div>
                 </div>
             </div>
@@ -536,27 +538,25 @@ mpirun ..
                             </h5>
                         </div>
 
-                        <div id="slurm-launch" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
-                                <p>
-                                    <h4>Via batch script</h4>
-                                    <ul>
-                                        <li>Create a .slurm file with parameters for the job</li>
-                                        <li>Type in the command</li>
-                                        <code>$ sbatch <i>yourfilename</i>.slurm</code>
-                                    </ul>
+			<div class="card-block textcard">
+			    <p>
+				<h4>Via batch script</h4>
+				<ul>
+				    <li>Create a .slurm file with parameters for the job</li>
+				    <li>Type in the command</li>
+				    <code>$ sbatch <i>yourfilename</i>.slurm</code>
+				</ul>
 
-                                    <i>Learn more about SLURM parameters <a href="https://slurm.schedmd.com/sbatch.html">here</a></i>
-                                </p>
-                                <p>
-                                    <h4>Via interactive ssh job</h4>
-                                    <ul>
-                                        <li>Submit your job using the following format:</li>
-                                        <code>$ sbatch --ntasks=1 --time=2:00:00 --mem-per-cpu=1G --job-name="$NAME" --qos=normal --export=ALL</code>
-                                    </ul>
-                                </p>
-                            </div>
-                        </div>
+				<i>Learn more about SLURM parameters <a href="https://slurm.schedmd.com/sbatch.html">here</a></i>
+			    </p>
+			    <p>
+				<h4>Via interactive ssh job</h4>
+				<ul>
+				    <li>Submit your job using the following format:</li>
+				    <code>$ sbatch --ntasks=1 --time=2:00:00 --mem-per-cpu=1G --job-name="$NAME" --qos=normal --export=ALL</code>
+				</ul>
+			    </p>
+			</div>
                     </div>
 
                     <div class="card">
@@ -568,22 +568,20 @@ mpirun ..
                             </h5>
                         </div>
 
-                        <div id="slurm-monitor" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
+			<div class="card-block textcard">
 
-                                <p>
-                                    After you launch your job you could monitor its progress using the following command:<br>
-                                    <code>$ squeue --job JOB_ID</code><br>
-                                </p>
-                                <p>
-                                    This command will show your jobs' progress in the following format:<br>
+			    <p>
+				After you launch your job you could monitor its progress using the following command:<br>
+				<code>$ squeue --job JOB_ID</code><br>
+			    </p>
+			    <p>
+				This command will show your jobs' progress in the following format:<br>
 
-				     JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)<br>
-				     34239 arcetri_c node-rie    prime  R    1:49:52      1 pacini063
-				</p>
+				 JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)<br>
+				 34239 arcetri_c node-rie    prime  R    1:49:52      1 pacini063
+			    </p>
 
-                            </div>
-                        </div>
+			</div>
                     </div>
 
                     <div class="card">
@@ -595,22 +593,20 @@ mpirun ..
                             </h5>
                         </div>
 
-                        <div id="slurm-number" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
-                                <p>
-                                    <code>squeue</code> - list all job numbers
-                                </p>
+			<div class="card-block textcard">
+			    <p>
+				<code>squeue</code> - list all job numbers
+			    </p>
 
-                                <p>
-                                    <code>sprio -j JobID</code> - show priorities for the current job
-                                </p>
+			    <p>
+				<code>sprio -j JobID</code> - show priorities for the current job
+			    </p>
 
-                                <p>
-                                    <code>sinfo</code> - show detailed info about the nodes
-                                </p>
+			    <p>
+				<code>sinfo</code> - show detailed info about the nodes
+			    </p>
 
-                            </div>
-                        </div>
+			</div>
                     </div>
 
                     <div class="card">
@@ -622,15 +618,13 @@ mpirun ..
                             </h5>
                         </div>
 
-                        <div id="slurm-specific" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
+			<div class="card-block textcard">
 
-                                The SLURM system reserves resources among the pacini compute nodes
-                                and (pacini000 – pacini095) based the resources requested and your job's relative priority.
-                                While you can request a specific node via the sbatch command, this practice is not recommended.
+			    The SLURM system reserves resources among the pacini compute nodes
+			    and (pacini000 – pacini095) based the resources requested and your job's relative priority.
+			    While you can request a specific node via the sbatch command, this practice is not recommended.
 
-                            </div>
-                        </div>
+			</div>
                     </div>
 
                     <div class="card">
@@ -642,14 +636,12 @@ mpirun ..
                             </h5>
                         </div>
 
-                        <div id="slurm-ssh" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
+			<div class="card-block textcard">
 
-                                Users are not permitted to ssh into a pacini compute node (pacini000 – pacini095) unless
-                                they have a job running on that node via SLURM.
+			    Users are not permitted to ssh into a pacini compute node (pacini000 – pacini095) unless
+			    they have a job running on that node via SLURM.
 
-                            </div>
-                        </div>
+			</div>
                     </div>
 
                     <div class="card">
@@ -661,13 +653,11 @@ mpirun ..
                             </h5>
                         </div>
 
-                        <div id="slurm-head" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
-                                The head node’s (pacini) solely purpose is to schedule and monitor jobs on the
-                                compute nodes (pacini000 – pacini095). Before launching a job, you need to execute
-                                sbatch commands via either a batch script or interactive ssh job
-                            </div>
-                        </div>
+			<div class="card-block textcard">
+			    The head node’s (pacini) solely purpose is to schedule and monitor jobs on the
+			    compute nodes (pacini000 – pacini095). Before launching a job, you need to execute
+			    sbatch commands via either a batch script or interactive ssh job
+			</div>
                     </div>
 
                     <div class="card">
@@ -679,14 +669,12 @@ mpirun ..
                             </h5>
                         </div>
 
-                        <div id="slurm-results" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
+			<div class="card-block textcard">
 
-                                The __jobname__.9999 (and __jobname__.9999 files, unless you specify "-o and -e to be the same" in which case only the __jobname__.9999),
-                                by default, are created in the directly from which you run your sbatch job.
+			    The __jobname__.9999 (and __jobname__.9999 files, unless you specify "-o and -e to be the same" in which case only the __jobname__.9999),
+			    by default, are created in the directly from which you run your sbatch job.
 
-                            </div>
-                        </div>
+			</div>
                     </div>
 
                     <div class="card">
@@ -698,17 +686,15 @@ mpirun ..
                             </h5>
                         </div>
 
-                        <div id="slurm-queue" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
+			<div class="card-block textcard">
 
-                                Your job is in the queue and is still not executing due to one of the following reasons:
-                                <ol>
-                                    <li>The amount of resources that you have requested is currently unavailable</li>
-                                    <li>A job with higher priority than yours is running</li>
-                                    <li>SLURM maybe still executing your request</li>
-                                </ol>
-                            </div>
-                        </div>
+			    Your job is in the queue and is still not executing due to one of the following reasons:
+			    <ol>
+				<li>The amount of resources that you have requested is currently unavailable</li>
+				<li>A job with higher priority than yours is running</li>
+				<li>SLURM maybe still executing your request</li>
+			    </ol>
+			</div>
                     </div>
 
                     <div class="card">
@@ -720,18 +706,16 @@ mpirun ..
                             </h5>
                         </div>
 
-                        <div id="slurm-cancel" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
+			<div class="card-block textcard">
 
-                                Use the following commands:<br>
-                                <p>
-                                    <code>$ scancel <i>JobID</i></code><br>
-                                    Where JobID is the unique id of your job (for help finding you JobID, see
-                                    <a data-toggle="collapse" data-parent="#slurm-accordion" href="#slurm-number" aria-controls="slurm-number">here</a>)
-                                </p>
+			    Use the following commands:<br>
+			    <p>
+				<code>$ scancel <i>JobID</i></code><br>
+				Where JobID is the unique id of your job (for help finding you JobID, see
+				<a data-toggle="collapse" data-parent="#slurm-accordion" href="#slurm-number" aria-controls="slurm-number">here</a>)
+			    </p>
 
-                            </div>
-                        </div>
+			</div>
                     </div>
 
                     <div class="card">
@@ -743,35 +727,33 @@ mpirun ..
                             </h5>
                         </div>
 
-                        <div id="slurm-resources" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
+			<div class="card-block textcard">
 
-                                <h4>Arcetri resources</h4>
-                                <ul>
-                                    <li>96 compute nodes in total</li>
-                                    <li>32 nodes with Tesla GPUs: <code>pacini063</code> - <code>pacini095</code></li>
-                                    <li>256GB of RAM each</li>
-                                </ul>
+			    <h4>Arcetri resources</h4>
+			    <ul>
+				<li>96 compute nodes in total</li>
+				<li>32 nodes with Tesla GPUs: <code>pacini063</code> - <code>pacini095</code></li>
+				<li>256GB of RAM each</li>
+			    </ul>
 
-                                <b>Compute nodes are divided in three groups:</b><br>
+			    <b>Compute nodes are divided in three groups:</b><br>
 
-                                IB group
-                                <ul>
-                                    <li>32 nodes: <code>pacini000</code> - <code>pacini031</code></li>
-                                    <li>20 CPU cores per node</li>
-                                </ul>
-                                HW group
-                                <ul>
-                                    <li>32 nodes: <code>pacini032</code> - <code>pacini063</code></li>
-                                    <li>24 CPU cores per node</li>
-                                </ul>
-                                BW group
-                                <ul>
-                                    <li>32 nodes: <code>pacini064</code> - <code>pacini095</code></li>
-                                    <li>28 CPU cores per node</li>
-                                </ul>
-                            </div>
-                        </div>
+			    IB group
+			    <ul>
+				<li>32 nodes: <code>pacini000</code> - <code>pacini031</code></li>
+				<li>20 CPU cores per node</li>
+			    </ul>
+			    HW group
+			    <ul>
+				<li>32 nodes: <code>pacini032</code> - <code>pacini063</code></li>
+				<li>24 CPU cores per node</li>
+			    </ul>
+			    BW group
+			    <ul>
+				<li>32 nodes: <code>pacini064</code> - <code>pacini095</code></li>
+				<li>28 CPU cores per node</li>
+			    </ul>
+			</div>
                     </div>
 
                     <div class="card">
@@ -783,32 +765,30 @@ mpirun ..
                             </h5>
                         </div>
 
-                        <div id="slurm-msub" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
+			<div class="card-block textcard">
 
-                                <p>
-                                    <code>sbatch <i>job_batch_script.msub</i></code> - submit job
-                                    defined in <i>job batch script</i> in current directory
-                                </p>
+			    <p>
+				<code>sbatch <i>job_batch_script.msub</i></code> - submit job
+				defined in <i>job batch script</i> in current directory
+			    </p>
 
-                                <p>
-                                    <code>sbatch <i>parameters</i></code> - ask for
-                                    interactive SSH session with specified parameters
-                                </p>
+			    <p>
+				<code>sbatch <i>parameters</i></code> - ask for
+				interactive SSH session with specified parameters
+			    </p>
 
-                                <p>
-                                    <code>showq</code> - show queue info about all users
-                                </p>
+			    <p>
+				<code>showq</code> - show queue info about all users
+			    </p>
 
 
-                                <p>
-                                    <code>sinfo</code> - show detailed information about compute nodes
-                                </p>
+			    <p>
+				<code>sinfo</code> - show detailed information about compute nodes
+			    </p>
 
-                                See also this <a href="https://slurm.schedmd.com/pdfs/summary.pdf">SLURM summary</a>.
+			    See also this <a href="https://slurm.schedmd.com/pdfs/summary.pdf">SLURM summary</a>.
 
-                            </div>
-                        </div>
+			</div>
                     </div>
 
                     <div class="card">
@@ -820,30 +800,28 @@ mpirun ..
                             </h5>
                         </div>
 
-                        <div id="slurm-example" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
-				<p>
-				We recommend you run the Open MPI SLURM test program:
-				<ul><code>/usr/global/bin/openmpi-slurm-test</code></ul>
-				</p>
-				<p>
-				We recommend you study the SLURM job that the Open MPI SLURM test program runs by default:
-				<ul><b>/usr/global/lib/openmpi-slurm-test/slurm-openmpi.slurm</b></ul>
-				This SLURM job shows how to set some important SLURM parameters,
-				sets up the required modules,
-				report on the environment (useful for debugging),
-				and then finally runs the Open MPI code via mpirun.
-				</p>
-				<p>
-				The Open MPI SLURM test makes use of files under:
-				<ul><b>/usr/global/lib/openmpi-slurm-test/</b></ul>
-				</p>
-				<p>
-				The source code for the Open MPI SLURM test test program is found under:
-				<ul><b>/usr/global/src/bin/openmpi-slurm-test/</b></ul>
-				</p>
-                            </div>
-                        </div>
+			<div class="card-block textcard">
+			    <p>
+			    We recommend you run the Open MPI SLURM test program:
+			    <ul><code>/usr/global/bin/openmpi-slurm-test</code></ul>
+			    </p>
+			    <p>
+			    We recommend you study the SLURM job that the Open MPI SLURM test program runs by default:
+			    <ul><b>/usr/global/lib/openmpi-slurm-test/slurm-openmpi.slurm</b></ul>
+			    This SLURM job shows how to set some important SLURM parameters,
+			    sets up the required modules,
+			    report on the environment (useful for debugging),
+			    and then finally runs the Open MPI code via mpirun.
+			    </p>
+			    <p>
+			    The Open MPI SLURM test makes use of files under:
+			    <ul><b>/usr/global/lib/openmpi-slurm-test/</b></ul>
+			    </p>
+			    <p>
+			    The source code for the Open MPI SLURM test test program is found under:
+			    <ul><b>/usr/global/src/bin/openmpi-slurm-test/</b></ul>
+			    </p>
+			</div>
                     </div>
 
                     <div class="card">
@@ -855,19 +833,17 @@ mpirun ..
                             </h5>
                         </div>
 
-                        <div id="slurm-more" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
-                                <p>
-				    Looking at the <a href="https://slurm.schedmd.com/tutorials.html">SLURM tutorials</a>
-				    is a good place to find more information.
-                                </p>
-                                <p>
-				    Try the Open MPI SLURM test program.
-				    See the above <b><i>Where can I find an example of an Open MPI job run under SLURM?</i></b> FAQ
-				    for more information.
-                                </p>
-                            </div>
-                        </div>
+			<div class="card-block textcard">
+			    <p>
+				Looking at the <a href="https://slurm.schedmd.com/tutorials.html">SLURM tutorials</a>
+				is a good place to find more information.
+			    </p>
+			    <p>
+				Try the Open MPI SLURM test program.
+				See the above <b><i>Where can I find an example of an Open MPI job run under SLURM?</i></b> FAQ
+				for more information.
+			    </p>
+			</div>
                     </div>
                 </div>
             </div>
@@ -884,106 +860,104 @@ mpirun ..
                             </h5>
                         </div>
 
-                        <div id="graphical-windows" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
+			<div class="card-block textcard">
 
-                                <h4>Installation</h4>
+			    <h4>Installation</h4>
 
-                                First, you should convert your .ppk key to .ssh key
-                                <ol>
-                                    <li>
-                                        Download PuTTY Key Generator (puttygen.exe) from the following URL:
-                                        <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">
-                                            https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
-                                        </a>
-                                    </li><br>
-                                    <li>
-                                        Launch the program and click on the Load button and select your id_rsa.ppk file.<br>
-                                        <img src="img/faq/graphical/putty-1.png">
-                                        <img src="img/faq/graphical/putty-2.png"><br>
-                                    </li><br>
-                                    <li>
-                                        Enter the key's passphrase if prompted.<br>
-                                        <img src="img/faq/graphical/putty-3.png">
-                                    </li><br>
-                                    <li>
-                                        Detail's of the imported key will be displayed.<br>
-                                        <img src="img/faq/graphical/putty-4.png">
-                                    </li><br>
-                                    <li>
-                                        Go to Conversions → Export OpenSSH key from the menu.<br>
-                                        <img src="img/faq/graphical/putty-5.png">
-                                    </li><br>
-                                    <li>
-                                        Save your converted key to a new file named "id_rsa"<br>
-                                        <img src="img/faq/graphical/putty-6.png">
-                                    </li><br>
-                                </ol>
+			    First, you should convert your .ppk key to .ssh key
+			    <ol>
+				<li>
+				    Download PuTTY Key Generator (puttygen.exe) from the following URL:
+				    <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">
+					https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+				    </a>
+				</li><br>
+				<li>
+				    Launch the program and click on the Load button and select your id_rsa.ppk file.<br>
+				    <img src="img/faq/graphical/putty-1.png">
+				    <img src="img/faq/graphical/putty-2.png"><br>
+				</li><br>
+				<li>
+				    Enter the key's passphrase if prompted.<br>
+				    <img src="img/faq/graphical/putty-3.png">
+				</li><br>
+				<li>
+				    Detail's of the imported key will be displayed.<br>
+				    <img src="img/faq/graphical/putty-4.png">
+				</li><br>
+				<li>
+				    Go to Conversions → Export OpenSSH key from the menu.<br>
+				    <img src="img/faq/graphical/putty-5.png">
+				</li><br>
+				<li>
+				    Save your converted key to a new file named "id_rsa"<br>
+				    <img src="img/faq/graphical/putty-6.png">
+				</li><br>
+			    </ol>
 
-                                Download X2Go Client
-                                <ul>
-                                    <li>Windows</li>
-                                    <a href="http://code.x2go.org/releases/X2GoClient_latest_mswin32-setup.exe">http://code.x2go.org/releases/X2GoClient_latest_mswin32-setup.exe</a>
-                                    <li>Official page</li>
-                                    <a href="http://wiki.x2go.org/">http://wiki.x2go.org/</a>
-                                </ul>
+			    Download X2Go Client
+			    <ul>
+				<li>Windows</li>
+				<a href="http://code.x2go.org/releases/X2GoClient_latest_mswin32-setup.exe">http://code.x2go.org/releases/X2GoClient_latest_mswin32-setup.exe</a>
+				<li>Official page</li>
+				<a href="http://wiki.x2go.org/">http://wiki.x2go.org/</a>
+			    </ul>
 
 
-                                <h4>If you are using key with password encryption</h4>
-                                <img src="img/faq/graphical/osx-1.png" width="70%"><br>
-                                <b>Steps:</b>
-                                <ol>
-                                    <li>Input saved profile name (local identification for your personal use)</li>
-                                    <li>Input Pacini domain name</li>
-                                    <li>Input your username (also used for SSH)</li>
-                                    <li>Tick “Try auto login” checkbox</li>
-                                    <li>Make sure you have “MATE” selected as session type</li>
-                                    <li>Select “Media” tab for next settings</li>
-                                </ol>
+			    <h4>If you are using key with password encryption</h4>
+			    <img src="img/faq/graphical/osx-1.png" width="70%"><br>
+			    <b>Steps:</b>
+			    <ol>
+				<li>Input saved profile name (local identification for your personal use)</li>
+				<li>Input Pacini domain name</li>
+				<li>Input your username (also used for SSH)</li>
+				<li>Tick “Try auto login” checkbox</li>
+				<li>Make sure you have “MATE” selected as session type</li>
+				<li>Select “Media” tab for next settings</li>
+			    </ol>
 
-                                <h4>If you are using password authentication or key without password encryption:</h4>
-                                <img src="img/faq/graphical/osx-2.png" width="70%"><br>
-                                <br><b>Steps:</b>
-                                <ol>
-                                    <li>Input your private key path</li>
-                                    <li>Make sure you have “MATE” selected as session type </li>
-                                    <li>Select “Media” tab for next settings</li>
-                                </ol>
+			    <h4>If you are using password authentication or key without password encryption:</h4>
+			    <img src="img/faq/graphical/osx-2.png" width="70%"><br>
+			    <br><b>Steps:</b>
+			    <ol>
+				<li>Input your private key path</li>
+				<li>Make sure you have “MATE” selected as session type </li>
+				<li>Select “Media” tab for next settings</li>
+			    </ol>
 
-                                <h4>Media settings</h4>
-                                <img src="img/faq/graphical/osx-3.png" width="70%"><br>
-                                <br><b>Steps:</b>
-                                <ol>
-                                    <li>Check "Enable sound support"</li>
-                                    <li>Check esd radio button</li>
-                                    <li>Uncheck client side printing option</li>
-                                    <li>Save dialog settings by selecting “OK”</li>
-                                </ol>
+			    <h4>Media settings</h4>
+			    <img src="img/faq/graphical/osx-3.png" width="70%"><br>
+			    <br><b>Steps:</b>
+			    <ol>
+				<li>Check "Enable sound support"</li>
+				<li>Check esd radio button</li>
+				<li>Uncheck client side printing option</li>
+				<li>Save dialog settings by selecting “OK”</li>
+			    </ol>
 
-                                <p>
-                                <h4>Connection</h4>
-                                Select created profile to connect to Pacini<br>
-                                <img src="img/faq/graphical/osx-4.png" width="70%"><br>
+			    <p>
+			    <h4>Connection</h4>
+			    Select created profile to connect to Pacini<br>
+			    <img src="img/faq/graphical/osx-4.png" width="70%"><br>
 
-                                <br>Click the session card to start the session<br>
-                                <img src="img/faq/graphical/osx-5.png" width="70%"><br>
+			    <br>Click the session card to start the session<br>
+			    <img src="img/faq/graphical/osx-5.png" width="70%"><br>
 
-                                <br>You should see full desktop on Pacini<br>
-                                <img src="img/faq/graphical/osx-6.png" width="70%"><br>
-                                </p>
+			    <br>You should see full desktop on Pacini<br>
+			    <img src="img/faq/graphical/osx-6.png" width="70%"><br>
+			    </p>
 
-				<p>
-                                <h4>Open a Terminal window</h4>
-				<br>You may access a shell prompt via the Terminal desktop application.<br>
-                                <img src="img/faq/graphical/osx-7.png" width="70%"><br>
-				For example:<br>
-                                <img src="img/faq/graphical/osx-8.png" width="70%"><br>
+			    <p>
+			    <h4>Open a Terminal window</h4>
+			    <br>You may access a shell prompt via the Terminal desktop application.<br>
+			    <img src="img/faq/graphical/osx-7.png" width="70%"><br>
+			    For example:<br>
+			    <img src="img/faq/graphical/osx-8.png" width="70%"><br>
 
-				<p>
-                                <h4>To end the session</h4>
-                                <img src="img/faq/graphical/osx-10.png" width="70%"><br>
-                            </div>
-                        </div>
+			    <p>
+			    <h4>To end the session</h4>
+			    <img src="img/faq/graphical/osx-10.png" width="70%"><br>
+			</div>
                     </div>
 
                     <div class="card">
@@ -995,89 +969,87 @@ mpirun ..
                             </h5>
                         </div>
 
-                        <div id="graphical-linux" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
+			<div class="card-block textcard">
 
-                                <h4>Installation</h4>
-                                Requirements:
-                                <ul>
-                                    <li>MacOS X 10.6 and up </li>
-                                    <li>Xquartz - <a href="https://www.xquartz.org">Download Xquartz for macOS here</a></li>
-                                </ul>
+			    <h4>Installation</h4>
+			    Requirements:
+			    <ul>
+				<li>MacOS X 10.6 and up </li>
+				<li>Xquartz - <a href="https://www.xquartz.org">Download Xquartz for macOS here</a></li>
+			    </ul>
 
-                                Download X2Go Client
-                                <ul>
-                                    <li>MacOS X 10.6 and up</li>
-                                    <a href="http://code.x2go.org/releases/X2GoClient_latest_macosx.dmg">http://code.x2go.org/releases/X2GoClient_latest_macosx.dmg</a>
-                                    <li>MacOS X 10.9 and up</li>
-                                    <a href="http://code.x2go.org/releases/X2GoClient_latest_macosx_10_9.dmg">http://code.x2go.org/releases/X2GoClient_latest_macosx_10_9.dmg</a>
-                                    <li>Official page</li>
-                                    <a href="http://wiki.x2go.org/">http://wiki.x2go.org/</a>
-                                </ul>
+			    Download X2Go Client
+			    <ul>
+				<li>MacOS X 10.6 and up</li>
+				<a href="http://code.x2go.org/releases/X2GoClient_latest_macosx.dmg">http://code.x2go.org/releases/X2GoClient_latest_macosx.dmg</a>
+				<li>MacOS X 10.9 and up</li>
+				<a href="http://code.x2go.org/releases/X2GoClient_latest_macosx_10_9.dmg">http://code.x2go.org/releases/X2GoClient_latest_macosx_10_9.dmg</a>
+				<li>Official page</li>
+				<a href="http://wiki.x2go.org/">http://wiki.x2go.org/</a>
+			    </ul>
 
 
-                                <h4>If you are using key with password encryption</h4>
-                                <img src="img/faq/graphical/osx-1.png" width="70%"><br>
-                                <b>Steps:</b>
-                                <ol>
-                                    <li>Input saved profile name (local identification for your personal use)</li>
-                                    <li>Input Pacini domain name</li>
-                                    <li>Input your username (also used for SSH)</li>
-                                    <li>Tick “Try auto login” checkbox</li>
-                                    <li>Make sure you have “MATE” selected as session type</li>
-                                    <li>Select “Media” tab for next settings</li>
-                                </ol>
+			    <h4>If you are using key with password encryption</h4>
+			    <img src="img/faq/graphical/osx-1.png" width="70%"><br>
+			    <b>Steps:</b>
+			    <ol>
+				<li>Input saved profile name (local identification for your personal use)</li>
+				<li>Input Pacini domain name</li>
+				<li>Input your username (also used for SSH)</li>
+				<li>Tick “Try auto login” checkbox</li>
+				<li>Make sure you have “MATE” selected as session type</li>
+				<li>Select “Media” tab for next settings</li>
+			    </ol>
 
-                                <h4>If you are using password authentication or key without password encryption:</h4>
-                                <img src="img/faq/graphical/osx-2.png" width="70%"><br>
-                                <br><b>Steps:</b>
-                                <ol>
-                                    <li>Input your private key path</li>
-                                    <li>Make sure you have “MATE” selected as session type </li>
-                                    <li>Select “Media” tab for next settings</li>
-                                </ol>
+			    <h4>If you are using password authentication or key without password encryption:</h4>
+			    <img src="img/faq/graphical/osx-2.png" width="70%"><br>
+			    <br><b>Steps:</b>
+			    <ol>
+				<li>Input your private key path</li>
+				<li>Make sure you have “MATE” selected as session type </li>
+				<li>Select “Media” tab for next settings</li>
+			    </ol>
 
-                                <h4>Media settings</h4>
-                                <img src="img/faq/graphical/osx-3.png" width="70%"><br>
-                                <br><b>Steps:</b>
-                                <ol>
-                                    <li>Check "Enable sound support"</li>
-                                    <li>Check esd radio button</li>
-                                    <li>Uncheck client side printing option</li>
-                                    <li>Save dialog settings by selecting “OK”</li>
-                                </ol>
+			    <h4>Media settings</h4>
+			    <img src="img/faq/graphical/osx-3.png" width="70%"><br>
+			    <br><b>Steps:</b>
+			    <ol>
+				<li>Check "Enable sound support"</li>
+				<li>Check esd radio button</li>
+				<li>Uncheck client side printing option</li>
+				<li>Save dialog settings by selecting “OK”</li>
+			    </ol>
 
-                                <p>
-                                <h4>Connection</h4>
-                                Select created profile to connect to Pacini
-                                <img src="img/faq/graphical/osx-4.png" width="70%"><br>
+			    <p>
+			    <h4>Connection</h4>
+			    Select created profile to connect to Pacini
+			    <img src="img/faq/graphical/osx-4.png" width="70%"><br>
 
-                                <br>Click the session card to start the session
-                                <img src="img/faq/graphical/osx-5.png" width="70%"><br>
+			    <br>Click the session card to start the session
+			    <img src="img/faq/graphical/osx-5.png" width="70%"><br>
 
-                                <br>You should see full desktop on Pacini
-                                <img src="img/faq/graphical/osx-6.png" width="70%"><br>
-                                </p>
+			    <br>You should see full desktop on Pacini
+			    <img src="img/faq/graphical/osx-6.png" width="70%"><br>
+			    </p>
 
-                                <p>
-                                <h4>Matlab</h4>
-                                Open Terminal<br>
-                                <img src="img/faq/graphical/osx-7.png" width="70%"><br>
+			    <p>
+			    <h4>Matlab</h4>
+			    Open Terminal<br>
+			    <img src="img/faq/graphical/osx-7.png" width="70%"><br>
 
-                                <img src="img/faq/graphical/osx-8.png" width="70%"><br>
-                                <ol>
-                                    <li>Load desired version of Matlab by “module load” command. </li>
-                                    <li>Launch Matlab</li>
-                                </ol>
+			    <img src="img/faq/graphical/osx-8.png" width="70%"><br>
+			    <ol>
+				<li>Load desired version of Matlab by “module load” command. </li>
+				<li>Launch Matlab</li>
+			    </ol>
 
-                                <img src="img/faq/graphical/osx-9.png" width="70%"><br>
-                                Matlab should be up and running by this point.
-                                </p>
+			    <img src="img/faq/graphical/osx-9.png" width="70%"><br>
+			    Matlab should be up and running by this point.
+			    </p>
 
-                                <h4>To end the session</h4>
-                                <img src="img/faq/graphical/osx-10.png" width="70%"><br>
-                            </div>
-                        </div>
+			    <h4>To end the session</h4>
+			    <img src="img/faq/graphical/osx-10.png" width="70%"><br>
+			</div>
                     </div>
                     <div class="card">
                         <div class="card-header" role="tab" id="graphical-card-macos">
@@ -1088,82 +1060,80 @@ mpirun ..
                             </h5>
                         </div>
 
-                        <div id="graphical-macos" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
+			<div class="card-block textcard">
 
-                                <h4>Installation</h4>
-                                Requirements:
-                                <ul>
-                                    <li>MacOS X 10.6 and up </li>
-                                    <li>Xquartz - <a href="https://www.xquartz.org">Download Xquartz for macOS here</a></li>
-                                </ul>
+			    <h4>Installation</h4>
+			    Requirements:
+			    <ul>
+				<li>MacOS X 10.6 and up </li>
+				<li>Xquartz - <a href="https://www.xquartz.org">Download Xquartz for macOS here</a></li>
+			    </ul>
 
-                                Download X2Go Client
-                                <ul>
-                                    <li>MacOS X 10.6 and up</li>
-                                    <a href="http://code.x2go.org/releases/X2GoClient_latest_macosx.dmg">http://code.x2go.org/releases/X2GoClient_latest_macosx.dmg</a>
-                                    <li>MacOS X 10.9 and up</li>
-                                    <a href="http://code.x2go.org/releases/X2GoClient_latest_macosx_10_9.dmg">http://code.x2go.org/releases/X2GoClient_latest_macosx_10_9.dmg</a>
-                                    <li>Official page</li>
-                                    <a href="http://wiki.x2go.org/">http://wiki.x2go.org/</a>
-                                </ul>
+			    Download X2Go Client
+			    <ul>
+				<li>MacOS X 10.6 and up</li>
+				<a href="http://code.x2go.org/releases/X2GoClient_latest_macosx.dmg">http://code.x2go.org/releases/X2GoClient_latest_macosx.dmg</a>
+				<li>MacOS X 10.9 and up</li>
+				<a href="http://code.x2go.org/releases/X2GoClient_latest_macosx_10_9.dmg">http://code.x2go.org/releases/X2GoClient_latest_macosx_10_9.dmg</a>
+				<li>Official page</li>
+				<a href="http://wiki.x2go.org/">http://wiki.x2go.org/</a>
+			    </ul>
 
 
-                                <h4>If you are using key with password encryption</h4>
-                                <img src="img/faq/graphical/osx-1.png" width="70%"><br>
-                                <b>Steps:</b>
-                                <ol>
-                                    <li>Input saved profile name (local identification for your personal use)</li>
-                                    <li>Input Pacini domain name</li>
-                                    <li>Input your username (also used for SSH)</li>
-                                    <li>Tick “Try auto login” checkbox</li>
-                                    <li>Make sure you have “MATE” selected as session type</li>
-                                    <li>Select “Media” tab for next settings</li>
-                                </ol>
+			    <h4>If you are using key with password encryption</h4>
+			    <img src="img/faq/graphical/osx-1.png" width="70%"><br>
+			    <b>Steps:</b>
+			    <ol>
+				<li>Input saved profile name (local identification for your personal use)</li>
+				<li>Input Pacini domain name</li>
+				<li>Input your username (also used for SSH)</li>
+				<li>Tick “Try auto login” checkbox</li>
+				<li>Make sure you have “MATE” selected as session type</li>
+				<li>Select “Media” tab for next settings</li>
+			    </ol>
 
-                                <h4>If you are using password authentication or key without password encryption:</h4>
-                                <img src="img/faq/graphical/osx-2.png" width="70%"><br>
-                                <br><b>Steps:</b>
-                                <ol>
-                                    <li>Input your private key path</li>
-                                    <li>Make sure you have “MATE” selected as session type </li>
-                                    <li>Select “Media” tab for next settings</li>
-                                </ol>
+			    <h4>If you are using password authentication or key without password encryption:</h4>
+			    <img src="img/faq/graphical/osx-2.png" width="70%"><br>
+			    <br><b>Steps:</b>
+			    <ol>
+				<li>Input your private key path</li>
+				<li>Make sure you have “MATE” selected as session type </li>
+				<li>Select “Media” tab for next settings</li>
+			    </ol>
 
-                                <h4>Media settings</h4>
-                                <img src="img/faq/graphical/osx-3.png" width="70%"><br>
-                                <br><b>Steps:</b>
-                                <ol>
-                                    <li>Check "Enable sound support"</li>
-                                    <li>Check esd radio button</li>
-                                    <li>Uncheck client side printing option</li>
-                                    <li>Save dialog settings by selecting “OK”</li>
-                                </ol>
+			    <h4>Media settings</h4>
+			    <img src="img/faq/graphical/osx-3.png" width="70%"><br>
+			    <br><b>Steps:</b>
+			    <ol>
+				<li>Check "Enable sound support"</li>
+				<li>Check esd radio button</li>
+				<li>Uncheck client side printing option</li>
+				<li>Save dialog settings by selecting “OK”</li>
+			    </ol>
 
-                                <p>
-                                    <h4>Connection</h4>
-                                    Select created profile to connect to Pacini<br>
-                                    <img src="img/faq/graphical/osx-4.png" width="70%"><br>
+			    <p>
+				<h4>Connection</h4>
+				Select created profile to connect to Pacini<br>
+				<img src="img/faq/graphical/osx-4.png" width="70%"><br>
 
-                                    <br>Click the session card to start the session<br>
-                                    <img src="img/faq/graphical/osx-5.png" width="70%"><br>
+				<br>Click the session card to start the session<br>
+				<img src="img/faq/graphical/osx-5.png" width="70%"><br>
 
-                                    <br>You should see full desktop on Pacini<br>
-                                    <img src="img/faq/graphical/osx-6.png" width="70%"><br>
-                                </p>
+				<br>You should see full desktop on Pacini<br>
+				<img src="img/faq/graphical/osx-6.png" width="70%"><br>
+			    </p>
 
-				<p>
-                                <h4>Open a Terminal window</h4>
-				<br>You may access a shell prompt via the Terminal desktop application.<br>
-                                <img src="img/faq/graphical/osx-7.png" width="70%"><br>
-				For example:<br>
-                                <img src="img/faq/graphical/osx-8.png" width="70%"><br>
+			    <p>
+			    <h4>Open a Terminal window</h4>
+			    <br>You may access a shell prompt via the Terminal desktop application.<br>
+			    <img src="img/faq/graphical/osx-7.png" width="70%"><br>
+			    For example:<br>
+			    <img src="img/faq/graphical/osx-8.png" width="70%"><br>
 
-				<p>
-                                <h4>To end the session</h4>
-                                <img src="img/faq/graphical/osx-10.png" width="70%"><br>
-                            </div>
-                        </div>
+			    <p>
+			    <h4>To end the session</h4>
+			    <img src="img/faq/graphical/osx-10.png" width="70%"><br>
+			</div>
                     </div>
                     <div class="card">
                         <div class="card-header" role="tab" id="graphical-card-matlab">
@@ -1174,31 +1144,29 @@ mpirun ..
                             </h5>
                         </div>
 
-                        <div id="graphical-matlab" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
+			<div class="card-block textcard">
 
-				<h4>Start a graphical session</h4>
-				First, access a graphical desktop on the Pacini cluster.
+			    <h4>Start a graphical session</h4>
+			    First, access a graphical desktop on the Pacini cluster.
 
-				<p>
-				<h4>Open a graphical terminal</h4>
-				<img src="img/faq/graphical/osx-7.png" width="70%"><br>
+			    <p>
+			    <h4>Open a graphical terminal</h4>
+			    <img src="img/faq/graphical/osx-7.png" width="70%"><br>
 
-				<p>
-				<h4>module load</h4>
-				<img src="img/faq/graphical/osx-8.png" width="70%"><br>
-				<ol>
-				    <li>Load desired version of Matlab by “module load” command. </li>
-				    <li>Launch Matlab</li>
-				</ol>
+			    <p>
+			    <h4>module load</h4>
+			    <img src="img/faq/graphical/osx-8.png" width="70%"><br>
+			    <ol>
+				<li>Load desired version of Matlab by “module load” command. </li>
+				<li>Launch Matlab</li>
+			    </ol>
 
-				<img src="img/faq/graphical/osx-9.png" width="70%"><br>
-				Matlab should be up and running by this point.
+			    <img src="img/faq/graphical/osx-9.png" width="70%"><br>
+			    Matlab should be up and running by this point.
 
-                                <h4>To end the session</h4>
-                                <img src="img/faq/graphical/osx-10.png" width="70%"><br>
-                            </div>
-                        </div>
+			    <h4>To end the session</h4>
+			    <img src="img/faq/graphical/osx-10.png" width="70%"><br>
+			</div>
                     </div>
                 </div>
             </div>
@@ -1214,17 +1182,15 @@ mpirun ..
                             </h5>
                         </div>
 
-                        <div id="python-libraries" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
-                                First, you should
-                                <a data-toggle="collapse" data-parent="#python-accordion" href="#python-new" aria-controls="python-new">
-                                    create
-                                </a> and
-                                <a data-toggle="collapse" data-parent="#python-accordion" href="#python-activate" aria-controls="python-activate">
-                                    activate
-                                </a> your virtual environment. <br/> After that type into your command line: <code>$ pip install SomePackage</code>
-                            </div>
-                        </div>
+			<div class="card-block textcard">
+			    First, you should
+			    <a data-toggle="collapse" data-parent="#python-accordion" href="#python-new" aria-controls="python-new">
+				create
+			    </a> and
+			    <a data-toggle="collapse" data-parent="#python-accordion" href="#python-activate" aria-controls="python-activate">
+				activate
+			    </a> your virtual environment. <br/> After that type into your command line: <code>$ pip install SomePackage</code>
+			</div>
                     </div>
 
                     <div class="card">
@@ -1236,13 +1202,11 @@ mpirun ..
                             </h5>
                         </div>
 
-                        <div id="python-new" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
-                                <code>$ virtualenv <i>my_project</i></code><br/>
-                                The name of the virtual environment (in this case, it was <i>my_project</i>) can be anything; omitting the name will place the files in the current directory instead.
-                                <br>
-                            </div>
-                        </div>
+			<div class="card-block textcard">
+			    <code>$ virtualenv <i>my_project</i></code><br/>
+			    The name of the virtual environment (in this case, it was <i>my_project</i>) can be anything; omitting the name will place the files in the current directory instead.
+			    <br>
+			</div>
                     </div>
 
                     <div class="card">
@@ -1254,16 +1218,14 @@ mpirun ..
                             </h5>
                         </div>
 
-                        <div id="python-activate" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
-                                <code>$ source <i>my_project</i>/bin/activate</code><br>
-                                Where <i>my_project</i> is the environment folder.<br>
-                                The name of the current virtual environment will now appear on the
-                                left of the prompt (e.g. <code>(my_project)UserName$</code>) to let you know that it’s active.
-                                From now on, any package that you install using pip will be placed in the my_project folder, isolated from the global Python installation.
-                                <br>
-                            </div>
-                        </div>
+			<div class="card-block textcard">
+			    <code>$ source <i>my_project</i>/bin/activate</code><br>
+			    Where <i>my_project</i> is the environment folder.<br>
+			    The name of the current virtual environment will now appear on the
+			    left of the prompt (e.g. <code>(my_project)UserName$</code>) to let you know that it’s active.
+			    From now on, any package that you install using pip will be placed in the my_project folder, isolated from the global Python installation.
+			    <br>
+			</div>
                     </div>
 
                     <div class="card">
@@ -1275,12 +1237,10 @@ mpirun ..
                             </h5>
                         </div>
 
-                        <div id="python-deactivate" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
-                                <code>$ deactivate</code><br>
-                                This puts you back to the system’s default Python interpreter with all its installed libraries.
-                            </div>
-                        </div>
+			<div class="card-block textcard">
+			    <code>$ deactivate</code><br>
+			    This puts you back to the system’s default Python interpreter with all its installed libraries.
+			</div>
                     </div>
 
                     <div class="card">
@@ -1292,17 +1252,15 @@ mpirun ..
                             </h5>
                         </div>
 
-                        <div id="python-version" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
-                                There are two ways to specify Python version inside a virtual environment:
-                                <ul>
-                                    <li>While creating an environment:</li>
-                                    <code>$ virtualenv -p /usr/bin/python2.7 <i>my_project</i></code>
-                                    <li>Or change the interpreter globally with an env variable in ~/.bashrc</li>
-                                    <code>$ export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2.7</code>
-                                </ul>
-                            </div>
-                        </div>
+			<div class="card-block textcard">
+			    There are two ways to specify Python version inside a virtual environment:
+			    <ul>
+				<li>While creating an environment:</li>
+				<code>$ virtualenv -p /usr/bin/python2.7 <i>my_project</i></code>
+				<li>Or change the interpreter globally with an env variable in ~/.bashrc</li>
+				<code>$ export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2.7</code>
+			    </ul>
+			</div>
                     </div>
 
                     <div class="card">
@@ -1314,11 +1272,9 @@ mpirun ..
                             </h5>
                         </div>
 
-                        <div id="python-more" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="card-block textcard">
-                                See the Hitchhiker's "Guide to Python" here: <a href="http://docs.python-guide.org/en/latest/dev/virtualenvs/">docs.python-guide.org/en/latest/dev/virtualenvs/</a>
-                            </div>
-                        </div>
+			<div class="card-block textcard">
+			    See the Hitchhiker's "Guide to Python" here: <a href="http://docs.python-guide.org/en/latest/dev/virtualenvs/">docs.python-guide.org/en/latest/dev/virtualenvs/</a>
+			</div>
                     </div>
                 </div>
             </div>
