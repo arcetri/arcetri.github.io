@@ -41,8 +41,6 @@
     </div>
 </nav>
 
-
-
 <div class="jumbotron jumbotron-fluid">
     <h1 class="display-3">Frequently asked questions</h1>
     <a name="top"></a>
@@ -57,9 +55,9 @@
 	<h1 class="textheader">Master FAQ Index</h1>
 	    <ul>
 	    <li> <a href="#Arcetri-index">Arcetri FAQ</a>
+	    <li> <a href="#Graphical-desktop-index">Graphical desktop FAQ</a>
 	    <li> <a href="#Modules-index">Modules FAQ</a>
 	    <li> <a href="#SLURM-index">SLURM FAQ</a>
-	    <li> <a href="#Graphical-desktop-index">Graphical desktop FAQ</a>
 	    <a name="Arcetri-index"></a>
 	    <li> <a href="#Python-index">Python FAQ</a>
 	    </ul>
@@ -67,22 +65,31 @@
 	    <div class="textblock">
 
 		<h1 class="textheader">Arcetri FAQ</h1>
+		<p> <a href="#top">(jump to top)</p>
 		<ul>
-		<li> <a href="#top">(jump to top)</a>
 		<li> <a href="#arcetri-account">How can I obtain an Arcetri account?</a>
-		<li> <a href="#arcetri-key">How can I send admins my SSH public key?</a>
+		<li> <a href="#unix-arcetri-key">How do I use Unix/Linux/macOS to generate SSH keys?</a>
+		<li> <a href="#windows-arcetri-key">How do I use Windows to generate SSH keys?</a>
 		<li> <a href="#arcetri-login">How do I login to Arcetri?</a>
 		<li> <a href="#arcetri-contact">Who do I contact if I need help with Arcetri?</a>
 		<li> <a href="#arcetri-names">What is the meaning behind the names, Pacini, Franco and Arcetri?</a>
 		<li> <a href="#arcetri-differences">What is the difference between Pacini and Arcetri?</a>
-		<a name="Modules-index"></a>
+		<a name="Graphical-desktop-index"></a>
 		<li> <a href="#arcetri-structure">What is the structure of Arcetri?</a>
-		<li> <a href="#arcetri-filesystems">What should I know about filesystems on Pacini?</a>
+		<li> <a href="#arcetri-filesystems">What should I know about filesystems on pacini?</a>
+		</ul>
+
+		<h1 class="textheader">Graphical desktop FAQ</h1>
+		<p> <a href="#top">(jump to top)</p>
+		<ul>
+		<a name="Modules-index"></a>
+		<li> <a href="#graphical-X2Go">How do I open a graphical window on pacini?</a>
+		<li> <a href="#graphical-matlab">How do I use Matlab on the Pacini cluster?</a>
 		</ul>
 
 		<h1 class="textheader">Modules FAQ</h1>
+		<p> <a href="#top">(jump to top)</p>
 		<ul>
-		<li> <a href="#top">(jump to top)</a>
 		<li> <a href="#modules-what">What are modules?</a>
 		<li> <a href="#modules-available">What modules are available on pacini?</a>
 		<li> <a href="#modules-load">How can I load a module?</a>
@@ -95,8 +102,8 @@
 		</ul>
 
 		<h1 class="textheader">SLURM FAQ</h1>
+		<p> <a href="#top">(jump to top)</p>
 		<ul>
-		<li> <a href="#top">(jump to top)</a>
 		<li> <a href="#slurm-launch">How do I launch jobs?</a>
 		<li> <a href="#slurm-monitor">How do I monitor my jobs?</a>
 		<li> <a href="#slurm-number">How can I check my job's number?</a>
@@ -108,24 +115,14 @@
 		<li> <a href="#slurm-cancel">How may I cancel my job?</a>
 		<li> <a href="#slurm-resources">What resources may I request for my job?</a>
 		<li> <a href="#slurm-msub">How may I use SLURM commands?</a>
-		<a name="Graphical-desktop-index"></a>
+		<a name="Python-index"></a>
 		<li> <a href="#slurm-example">Where can I find an example of an Open MPI job run under SLURM?</a>
 		<li> <a href="#slurm-more">Where can I read more about SLURM?</a>
 		</ul>
 
-		<h1 class="textheader">Graphical desktop FAQ</h1>
-		<ul>
-		<li> <a href="#top">(jump to top)</a>
-		<li> <a href="#graphical-windows">How do I access a graphical desktop on the Pacini cluster from Windows?</a>
-		<li> <a href="#graphical-linux">How do I run Matlab on the Pacini cluster from Linux system?</a>
-		<a name="Python-index"></a>
-		<li> <a href="#graphical-macos">How do I access a graphical desktop on the Pacini cluster from macOS?</a>
-		<li> <a href="#graphical-matlab">How do I use Matlab on the Pacini cluster?</a>
-		</ul>
-
 		<h1 class="textheader">Python FAQ</h1>
+		<p> <a href="#top">(jump to top)</p>
 		<ul>
-		<li> <a href="#top">(jump to top)</a>
 		<li> <a href="#python-libraries">How to install new python libraries?</a>
 		<li> <a href="#python-new">How to create a new virtual environment?</a>
 		<li> <a href="#python-activate">How to activate my environment?</a>
@@ -136,6 +133,8 @@
 	    </div>
 
 <!-- -->
+
+	    <h1 class="textheader">Full FAQ Follows</h1>
 
 	    <div class="textblock">
 		<a name="arcetri-account"></a>
@@ -158,9 +157,12 @@
 			    <li>Preferred account name</li>
 			    <li>Email address</li>
 			    <li>Phone number</li>
-			    <li>SSH RSA public key
-			        (see <a href="#arcetri-key">How can I send admins my SSH public key?</a>
-			        for how to generate SSH key)</li>
+			    <li>SSH RSA public key</li>
+			</ul>
+			<p>For information on how to generate and/or find your SSH RSA public key, see:</p>
+			<ul>
+			<li> <a href="#unix-arcetri-key">How do I use Unix/Linux/macOS to generate SSH keys?</a></li>
+			<li> <a href="#windows-arcetri-key">How do I use Windows to generate SSH keys?</a></li>
 			</ul>
 			<p>
 			Once we have created your account and notified you that it is ready,
@@ -168,7 +170,7 @@
 			your VPN password over the phone.
 			</p>
 			<p>
-			<a name="arcetri-key"></a>
+			<a name="windows-arcetri-key"></a>
 			After your account is created, see how to login to Arcetri.
 			</p>
 		    </div>
@@ -177,43 +179,15 @@
 		<div class="card">
 		    <div class="card-header" role="tab" id="headingOne">
 			<h5 class="mb-0">
-			    <a href="#arcetri-key">
-				How can I send admins my SSH public key?
+			    <a href="#unix-arcetri-key">
+				How do I use Unix/Linux/macOS to generate SSH keys?
 			    </a>
 			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#top">(jump to top)</a>
 			</h5>
 		    </div>
 		    <div class="card-block textcard">
-			<p>
-			    <h4>If you are a Windows user</h4>
-			    <b>1. Check for existing SSH keys</b><br>
-			    Open a command prompt, and run<br>
-			    <code>cd %userprofile%/.ssh</code>
-			    <ul>
-				<li>If you see "No such file or directory", then there aren't any existing keys: go to step 2.</li>
-				<li>Check to see if you have a key already:</li>
-				<code>dir id_*</code><br>
-				If there are existing keys, you may want to use those. Go to step 3 to send us your public SSH key
-			    </ul>
 
-			    <b>2. If you don't have SSH key, generate a new SSH key</b>
-			    If you don't have an existing SSH key that you wish to use, generate one as follows:<br>
-			    <ul>
-				<li>Log in to your local computer as an administrator.</li>
-				<li>In a command prompt, run:</li>
-				<code>ssh-keygen -t rsa -C "your_email@example.com"</code>
-				Associating the key with your email address helps you to identify the key later on.<br>
-				<li>Just press Enter to accept the default location and file name. If the .ssh directory doesn't exist, the system creates one for you.</li>
-				<li>Enter, and re-enter, a passphrase when prompted.</li>
-				<li>You're done! Go to step 3 to send us your public SSH key</li>
-			    </ul>
-
-			    <b>3. Send us public SSH key</b>
-			    Attach your <code>id_rsa.pub</code> file to your account request email.<br>
-			    <b>WARNING:</b> send <code>id_rsa.pub</code>, not <code>id_rsa</code> file! <code>id_rsa</code> is your private confidential key, similar to your passwords!
-			</p>
-
-			<h4>If you are a Unix/OS X user</h4>
+			<h4>If you are a Unix/Linux/macOS user</h4>
 			<p>
 			    <b>1. Check for existing SSH keys</b><br>
 			    Open the terminal, and run<br>
@@ -242,6 +216,81 @@
 			    Attach your <code>id_rsa.pub</code> file to your account request email.<br>
 			    <a name="arcetri-login"></a>
 			    <b>WARNING:</b> send <code>id_rsa.pub</code>, not <code>id_rsa</code> file! <code>id_rsa</code> is your private confidential key, similar to your passwords!
+			</p>
+		    </div>
+		</div>
+
+		<div class="card">
+		    <div class="card-header" role="tab" id="headingOne">
+			<h5 class="mb-0">
+			    <a href="#windows-arcetri-key">
+				How do I use Windows to generate SSH keys?
+			    </a>
+			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#top">(jump to top)</a>
+			</h5>
+		    </div>
+		    <div class="card-block textcard">
+			<p>
+			    <h4>If you are a Windows user</h4>
+			    <b>1. Check for existing SSH keys</b><br>
+			    Open a command prompt, and run<br>
+			    <code>cd %userprofile%/.ssh</code>
+			    <ul>
+				<li>If you see "No such file or directory", then there aren't any existing keys: go to step 2.</li>
+				<li>Check to see if you have a key already:</li>
+				<code>dir id_*</code><br>
+				If there are existing keys, you may want to use those. Go to step 3 to send us your public SSH key
+			    </ul>
+
+			    <b>2. Use PuTTY's Key Generator generate SSH keys</b>
+			    <ol type="A">
+
+			    <li> If you don't have an existing SSH key that you wish to use,
+			    you will need to use PuTTY generarte your SSH keys.</li>
+
+			    <li> If you do not have PuTTY installed, you need to download and install the
+			    <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">latest
+			    version of PuTTY</a></li>
+
+			    <li>Once you have downloaded and installed PuTTY, you need to run the
+			    PuTTY Key Generator: <code>puttygen.exe</code></li>
+
+			    <li>
+				Launch the program and click on the Load button and select your id_rsa.ppk file.<br>
+				<img src="img/faq/graphical/putty-1.png">
+				<img src="img/faq/graphical/putty-2.png"><br>
+			    </li><br>
+			    <li>
+				Enter the key's passphrase if prompted.<br>
+				<img src="img/faq/graphical/putty-3.png">
+			    </li><br>
+			    <li>
+				Detail's of the imported key will be displayed.<br>
+				<img src="img/faq/graphical/putty-4.png">
+			    </li><br>
+			    <li>
+				Go to Conversions → Export OpenSSH key from the menu.<br>
+				<img src="img/faq/graphical/putty-5.png">
+			    </li><br>
+			    <li>
+				Save your converted key to a new file named "id_rsa"<br>
+				<img src="img/faq/graphical/putty-6.png">
+			    </li><br>
+
+			    </ol>
+
+			    <b>3. Send us public SSH key</b>
+			    <p>
+			    You can attach your <code>id_rsa.pub</code> file to your account request email,
+			    or you can copy and paste the public key that you is available in:
+			    </p>
+			    <p>
+			    <b>Step 2: F. Detail's of the imported key will be displayed.</b> (see above)
+			    </p>
+			    <p>
+			    <a name="unix-arcetri-key"></a>
+			    <b>WARNING:</b> Send <code>id_rsa.pub</code>, not <code>id_rsa</code> file!
+			    <code>id_rsa</code> is your private confidential key, similar to your passwords!
 			</p>
 		    </div>
 		</div>
@@ -389,7 +438,7 @@
 		    <div class="card-header" role="tab" id="arcetri-card-filesystems">
 			<h5 class="mb-0">
 			    <a href="#arcetri-filesystems">
-				What should I know about filesystems on Pacini?
+				What should I know about filesystems on pacini?
 			    </a>
 			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#top">(jump to top)</a>
 			</h5>
@@ -410,9 +459,131 @@
 			</p>
 			<p>
 			    <h4><code>/shared/</code></h4>
-			    <a name="modules-what"></a>
+			    <a name="graphical-X2Go"></a>
 			    &nbsp;&nbsp;&nbsp;&nbsp;<code>/_group_name_</code> - writable by group for source code
 			</p>
+		    </div>
+		</div>
+	    </div>
+
+<!-- -->
+
+	    <div class="textblock">
+		<h1 class="textheader">Graphical desktop</h1>
+
+		<div class="card">
+		    <div class="card-header" role="tab" id="graphical-card-matlab">
+			<h5 class="mb-0">
+			    <a href="#graphical-X2Go">
+				How do I open a graphical window on pacini?
+			    </a>
+			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#top">(jump to top)</a>
+			</h5>
+		    </div>
+
+		    <div class="card-block textcard">
+
+			<h4>OS Requirements</h4>
+			<ul>
+			    <li>macOS 10.9 or later - macOS 10.15 or later recommended</li>
+			    <li>Windows 7 or later - Windows 10 or later recommended</li>
+			</ul>
+
+			<h4>Installation</h4>
+			<ul>
+			    <li><B>macOS only:</B>
+			    Xquartz 2.7.11 or later -
+			    <a href="https://www.xquartz.org">Download Xquartz for macOS</a></li>
+			    <li>X2Go 4.1.2.2 or later -
+			    <a href="http://wiki.x2go.org/">Download X2Go</a></li>
+			</ul>
+
+			<h4>X2Go configuration</h4>
+			<p>Run <b>X2Go</b> and configure as follows:</p>
+			<img src="img/faq/graphical/osx-1.png" width="70%">
+			<br><b>X2Go configuration steps:</b>
+			<ol>
+			    <li>Name the session</li>
+			    <li>Enter the Host: <B>pacini.cisco.com</B></li>
+			    <li>Enter your pacini username</li>
+			    <li>Check [x] <B>Try auto login (via SSH Agent or default SSH key)</B></li>
+			    <li>Set the session type to <B>KDE</B></li>
+			    <li>Select <B>Media</B> tab for next settings</li>
+			</ol>
+
+			<h4>X2Go Media settings</h4>
+			<p>In addition to the above X2Go configuration, configure X2Go media as follows:</p>
+			<img src="img/faq/graphical/osx-3.png" width="70%">
+			<br><b>X2Go Media setting steps:</b>
+			<ol>
+			    <li>Check [x] <B>Enable sound support</B></li>
+			    <li>Check (*) <B>esd</B></li>
+			    <li>Uncheck [ ] <B>client side printing support</B></li>
+			    <li>Check [x] <B>Use SSH port forwarding to tunnel ...</B></li>
+			    <li>Save dialog settings by clicking the ((<B>OK</B>)) button</li>
+			</ol>
+
+			<p>
+			<h4>Connection</h4>
+			Select created profile to connect to Pacini<br>
+			<img src="img/faq/graphical/osx-4.png" width="70%"><br>
+
+			<br>Click the session card to start the session<br>
+			<img src="img/faq/graphical/osx-5.png" width="70%"><br>
+
+			<br>You should see full desktop on pacini<br>
+			<img src="img/faq/graphical/osx-6.png" width="70%"><br>
+			</p>
+
+			<p>
+			<h4>Open a Terminal window</h4>
+			<br>You may access a shell prompt via the Terminal desktop application.<br>
+			<img src="img/faq/graphical/osx-7.png" width="70%"><br>
+			For example:<br>
+			<img src="img/faq/graphical/osx-8.png" width="70%"><br>
+
+			<p>
+			<h4>To end the session</h4>
+			<img src="img/faq/graphical/osx-10.png" width="70%"><br>
+			<a name="graphical-matlab"></a>
+			<p>click ((Yes))</p>
+		    </div>
+		</div>
+
+		<div class="card">
+		    <div class="card-header" role="tab" id="graphical-card-matlab">
+			<h5 class="mb-0">
+			    <a href="#graphical-matlab">
+				How do I use Matlab on the Pacini cluster?
+			    </a>
+			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#top">(jump to top)</a>
+			</h5>
+		    </div>
+
+		    <div class="card-block textcard">
+
+			<h4>Start a graphical session</h4>
+			First, access a graphical desktop on the Pacini cluster.
+
+			<p>
+			<h4>Open a graphical terminal</h4>
+			<img src="img/faq/graphical/osx-7.png" width="70%"><br>
+
+			<p>
+			<h4>module load</h4>
+			<img src="img/faq/graphical/osx-8.png" width="70%"><br>
+			<ol>
+			    <li>Load desired version of Matlab by “module load” command. </li>
+			    <li>Launch Matlab</li>
+			</ol>
+
+			<img src="img/faq/graphical/osx-9.png" width="70%"><br>
+			Matlab should be up and running by this point.
+
+			<h4>To end the session</h4>
+			<img src="img/faq/graphical/osx-10.png" width="70%"><br>
+			<a name="modules-what"></a>
+			<p>Click ((Yes))</p>
 		    </div>
 		</div>
 	    </div>
@@ -979,349 +1150,12 @@ mpirun ..
 			    Looking at the <a href="https://slurm.schedmd.com/tutorials.html">SLURM tutorials</a>
 			    is a good place to find more information.
 			</p>
-			<a name="graphical-windows"></a>
+			<a name="python-libraries"></a>
 			<p>
 			    Try the Open MPI SLURM test program.
 			    See the above <b><i>Where can I find an example of an Open MPI job run under SLURM?</i></b> FAQ
 			    for more information.
 			</p>
-		    </div>
-		</div>
-	    </div>
-
-<!-- -->
-
-	    <div class="textblock">
-		<h1 class="textheader">Graphical desktop</h1>
-		<div class="card">
-		    <div class="card-header" role="tab" id="graphical-card-windows">
-			<h5 class="mb-0">
-			    <a href="#graphical-windows">
-				How do I access a graphical desktop on the Pacini cluster from Windows?
-			    </a>
-			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#top">(jump to top)</a>
-			</h5>
-		    </div>
-
-		    <div class="card-block textcard">
-
-			<h4>Installation</h4>
-
-			First, you should convert your .ppk key to .ssh key
-			<ol>
-			    <li>
-				Download PuTTY Key Generator (puttygen.exe) from the following URL:
-				<a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">
-				    https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
-				</a>
-			    </li><br>
-			    <li>
-				Launch the program and click on the Load button and select your id_rsa.ppk file.<br>
-				<img src="img/faq/graphical/putty-1.png">
-				<img src="img/faq/graphical/putty-2.png"><br>
-			    </li><br>
-			    <li>
-				Enter the key's passphrase if prompted.<br>
-				<img src="img/faq/graphical/putty-3.png">
-			    </li><br>
-			    <li>
-				Detail's of the imported key will be displayed.<br>
-				<img src="img/faq/graphical/putty-4.png">
-			    </li><br>
-			    <li>
-				Go to Conversions → Export OpenSSH key from the menu.<br>
-				<img src="img/faq/graphical/putty-5.png">
-			    </li><br>
-			    <li>
-				Save your converted key to a new file named "id_rsa"<br>
-				<img src="img/faq/graphical/putty-6.png">
-			    </li><br>
-			</ol>
-
-			Download X2Go Client
-			<ul>
-			    <li>Windows</li>
-			    <a href="http://code.x2go.org/releases/X2GoClient_latest_mswin32-setup.exe">http://code.x2go.org/releases/X2GoClient_latest_mswin32-setup.exe</a>
-			    <li>Official page</li>
-			    <a href="http://wiki.x2go.org/">http://wiki.x2go.org/</a>
-			</ul>
-
-
-			<h4>If you are using key with password encryption</h4>
-			<img src="img/faq/graphical/osx-1.png" width="70%"><br>
-			<b>Steps:</b>
-			<ol>
-			    <li>Input saved profile name (local identification for your personal use)</li>
-			    <li>Input Pacini domain name</li>
-			    <li>Input your username (also used for SSH)</li>
-			    <li>Tick “Try auto login” checkbox</li>
-			    <li>Make sure you have “MATE” selected as session type</li>
-			    <li>Select “Media” tab for next settings</li>
-			</ol>
-
-			<h4>If you are using password authentication or key without password encryption:</h4>
-			<img src="img/faq/graphical/osx-2.png" width="70%"><br>
-			<br><b>Steps:</b>
-			<ol>
-			    <li>Input your private key path</li>
-			    <li>Make sure you have “MATE” selected as session type </li>
-			    <li>Select “Media” tab for next settings</li>
-			</ol>
-
-			<h4>Media settings</h4>
-			<img src="img/faq/graphical/osx-3.png" width="70%"><br>
-			<br><b>Steps:</b>
-			<ol>
-			    <li>Check "Enable sound support"</li>
-			    <li>Check esd radio button</li>
-			    <li>Uncheck client side printing option</li>
-			    <li>Save dialog settings by selecting “OK”</li>
-			</ol>
-
-			<p>
-			<h4>Connection</h4>
-			Select created profile to connect to Pacini<br>
-			<img src="img/faq/graphical/osx-4.png" width="70%"><br>
-
-			<br>Click the session card to start the session<br>
-			<img src="img/faq/graphical/osx-5.png" width="70%"><br>
-
-			<br>You should see full desktop on Pacini<br>
-			<img src="img/faq/graphical/osx-6.png" width="70%"><br>
-			</p>
-
-		    <p>
-		    <h4>Open a Terminal window</h4>
-			<br>You may access a shell prompt via the Terminal desktop application.<br>
-			<img src="img/faq/graphical/osx-7.png" width="70%"><br>
-			For example:<br>
-			<img src="img/faq/graphical/osx-8.png" width="70%"><br>
-
-			<p>
-			<h4>To end the session</h4>
-			<img src="img/faq/graphical/osx-10.png" width="70%"><br>
-			<a name="graphical-linux"></a>
-			<h4>Click ((Yes))</h4>
-		    </div>
-		</div>
-
-		<div class="card">
-		    <div class="card-header" role="tab" id="graphical-card-linux">
-			<h5 class="mb-0">
-			    <a href="#graphical-linux">
-				How do I run Matlab on the Pacini cluster from Linux system?
-			    </a>
-			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#top">(jump to top)</a>
-			</h5>
-		    </div>
-
-		    <div class="card-block textcard">
-
-			<h4>Installation</h4>
-			Requirements:
-			<ul>
-			    <li>MacOS X 10.6 and up </li>
-			    <li>Xquartz - <a href="https://www.xquartz.org">Download Xquartz for macOS</a></li>
-			</ul>
-
-			Download X2Go Client
-			<ul>
-			    <li>MacOS X 10.6 and up</li>
-			    <a href="http://code.x2go.org/releases/X2GoClient_latest_macosx.dmg">http://code.x2go.org/releases/X2GoClient_latest_macosx.dmg</a>
-			    <li>MacOS X 10.9 and up</li>
-			    <a href="http://code.x2go.org/releases/X2GoClient_latest_macosx_10_9.dmg">http://code.x2go.org/releases/X2GoClient_latest_macosx_10_9.dmg</a>
-			    <li>Official page</li>
-			    <a href="http://wiki.x2go.org/">http://wiki.x2go.org/</a>
-			</ul>
-
-
-			<h4>If you are using key with password encryption</h4>
-			<img src="img/faq/graphical/osx-1.png" width="70%"><br>
-			<b>Steps:</b>
-			<ol>
-			    <li>Input saved profile name (local identification for your personal use)</li>
-			    <li>Input Pacini domain name</li>
-			    <li>Input your username (also used for SSH)</li>
-			    <li>Tick “Try auto login” checkbox</li>
-			    <li>Make sure you have “MATE” selected as session type</li>
-			    <li>Select “Media” tab for next settings</li>
-			</ol>
-
-			<h4>If you are using password authentication or key without password encryption:</h4>
-			<img src="img/faq/graphical/osx-2.png" width="70%"><br>
-			<br><b>Steps:</b>
-			<ol>
-			    <li>Input your private key path</li>
-			    <li>Make sure you have “MATE” selected as session type </li>
-			    <li>Select “Media” tab for next settings</li>
-			</ol>
-
-			<h4>Media settings</h4>
-			<img src="img/faq/graphical/osx-3.png" width="70%"><br>
-			<br><b>Steps:</b>
-			<ol>
-			    <li>Check "Enable sound support"</li>
-			    <li>Check esd radio button</li>
-			    <li>Uncheck client side printing option</li>
-			    <li>Save dialog settings by selecting “OK”</li>
-			</ol>
-
-			<p>
-			<h4>Connection</h4>
-			Select created profile to connect to Pacini
-			<img src="img/faq/graphical/osx-4.png" width="70%"><br>
-
-			<br>Click the session card to start the session
-			<img src="img/faq/graphical/osx-5.png" width="70%"><br>
-
-			<br>You should see full desktop on Pacini
-			<img src="img/faq/graphical/osx-6.png" width="70%"><br>
-			</p>
-
-			<p>
-			<h4>Matlab</h4>
-			Open Terminal<br>
-			<img src="img/faq/graphical/osx-7.png" width="70%"><br>
-
-			<img src="img/faq/graphical/osx-8.png" width="70%"><br>
-			<ol>
-			    <li>Load desired version of Matlab by “module load” command. </li>
-			    <li>Launch Matlab</li>
-			</ol>
-
-			<img src="img/faq/graphical/osx-9.png" width="70%"><br>
-			Matlab should be up and running by this point.
-			</p>
-
-			<h4>To end the session</h4>
-			<img src="img/faq/graphical/osx-10.png" width="70%"><br>
-			<a name="graphical-macos"></a>
-			<h4>Click ((Yes))</h4>
-		    </div>
-		</div>
-
-		<div class="card">
-		    <div class="card-header" role="tab" id="graphical-card-macos">
-			<h5 class="mb-0">
-			    <a href="#graphical-macos">
-				How do I access a graphical desktop on the Pacini cluster from macOS?
-			    </a>
-			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#top">(jump to top)</a>
-			</h5>
-		    </div>
-
-		    <div class="card-block textcard">
-
-			<h4>Installation</h4>
-			Requirements:
-			<ul>
-			    <li>MacOS X 10.6 and up </li>
-			    <li>Xquartz - <a href="https://www.xquartz.org">Download Xquartz for macOS</a></li>
-			</ul>
-
-			Download X2Go Client
-			<ul>
-			    <li>MacOS X 10.6 and up</li>
-			    <a href="http://code.x2go.org/releases/X2GoClient_latest_macosx.dmg">http://code.x2go.org/releases/X2GoClient_latest_macosx.dmg</a>
-			    <li>MacOS X 10.9 and up</li>
-			    <a href="http://code.x2go.org/releases/X2GoClient_latest_macosx_10_9.dmg">http://code.x2go.org/releases/X2GoClient_latest_macosx_10_9.dmg</a>
-			    <li>Official page</li>
-			    <a href="http://wiki.x2go.org/">http://wiki.x2go.org/</a>
-			</ul>
-
-
-			<h4>If you are using key with password encryption</h4>
-			<img src="img/faq/graphical/osx-1.png" width="70%"><br>
-			<b>Steps:</b>
-			<ol>
-			    <li>Input saved profile name (local identification for your personal use)</li>
-			    <li>Input Pacini domain name</li>
-			    <li>Input your username (also used for SSH)</li>
-			    <li>Tick “Try auto login” checkbox</li>
-			    <li>Make sure you have “MATE” selected as session type</li>
-			    <li>Select “Media” tab for next settings</li>
-			</ol>
-
-			<h4>If you are using password authentication or key without password encryption:</h4>
-			<img src="img/faq/graphical/osx-2.png" width="70%"><br>
-			<br><b>Steps:</b>
-			<ol>
-			    <li>Input your private key path</li>
-			    <li>Make sure you have “MATE” selected as session type </li>
-			    <li>Select “Media” tab for next settings</li>
-			</ol>
-
-			<h4>Media settings</h4>
-			<img src="img/faq/graphical/osx-3.png" width="70%"><br>
-			<br><b>Steps:</b>
-			<ol>
-			    <li>Check "Enable sound support"</li>
-			    <li>Check esd radio button</li>
-			    <li>Uncheck client side printing option</li>
-			    <li>Save dialog settings by selecting “OK”</li>
-			</ol>
-
-			<p>
-			    <h4>Connection</h4>
-			    Select created profile to connect to Pacini<br>
-			    <img src="img/faq/graphical/osx-4.png" width="70%"><br>
-
-			    <br>Click the session card to start the session<br>
-			    <img src="img/faq/graphical/osx-5.png" width="70%"><br>
-
-			    <br>You should see full desktop on Pacini<br>
-			    <img src="img/faq/graphical/osx-6.png" width="70%"><br>
-			</p>
-
-			<p>
-			<h4>Open a Terminal window</h4>
-			<br>You may access a shell prompt via the Terminal desktop application.<br>
-			<img src="img/faq/graphical/osx-7.png" width="70%"><br>
-			For example:<br>
-			<img src="img/faq/graphical/osx-8.png" width="70%"><br>
-
-			<p>
-			<h4>To end the session</h4>
-			<img src="img/faq/graphical/osx-10.png" width="70%"><br>
-			<a name="graphical-matlab"></a>
-			<h4>Click ((Yes))</h4>
-		    </div>
-		</div>
-
-		<div class="card">
-		    <div class="card-header" role="tab" id="graphical-card-matlab">
-			<h5 class="mb-0">
-			    <a href="#graphical-matlab">
-				How do I use Matlab on the Pacini cluster?
-			    </a>
-			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#top">(jump to top)</a>
-			</h5>
-		    </div>
-
-		    <div class="card-block textcard">
-
-			<h4>Start a graphical session</h4>
-			First, access a graphical desktop on the Pacini cluster.
-
-			<p>
-			<h4>Open a graphical terminal</h4>
-			<img src="img/faq/graphical/osx-7.png" width="70%"><br>
-
-			<p>
-			<h4>module load</h4>
-			<img src="img/faq/graphical/osx-8.png" width="70%"><br>
-			<ol>
-			    <li>Load desired version of Matlab by “module load” command. </li>
-			    <li>Launch Matlab</li>
-			</ol>
-
-			<img src="img/faq/graphical/osx-9.png" width="70%"><br>
-			Matlab should be up and running by this point.
-
-			<h4>To end the session</h4>
-			<img src="img/faq/graphical/osx-10.png" width="70%"><br>
-			<a name="python-libraries"></a>
-			<h4>Click ((Yes))</h4>
 		    </div>
 		</div>
 	    </div>
