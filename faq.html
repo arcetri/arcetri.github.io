@@ -65,7 +65,7 @@
 	    <div class="textblock">
 
 		<h1 class="textheader">Arcetri FAQ</h1>
-		<p> <a href="#top">(jump to top)</p>
+		<p><a href="#top">(jump to top)</a></p>
 		<ul>
 		<li> <a href="#arcetri-account">How can I obtain an Arcetri account?</a>
 		<li> <a href="#unix-arcetri-key">How do I use Unix/Linux/macOS to generate SSH keys?</a>
@@ -80,15 +80,15 @@
 		</ul>
 
 		<h1 class="textheader">Graphical desktop FAQ</h1>
-		<p> <a href="#top">(jump to top)</p>
+		<p><a href="#top">(jump to top)</a></p>
 		<ul>
 		<a name="Modules-index"></a>
-		<li> <a href="#graphical-X2Go">How do I open a graphical window on pacini?</a>
+		<li> <a href="#graphical-X2Go">How do I open a graphical desktop on pacini?</a>
 		<li> <a href="#graphical-matlab">How do I use Matlab on the Pacini cluster?</a>
 		</ul>
 
 		<h1 class="textheader">Modules FAQ</h1>
-		<p> <a href="#top">(jump to top)</p>
+		<p><a href="#top">(jump to top)</a></p>
 		<ul>
 		<li> <a href="#modules-what">What are modules?</a>
 		<li> <a href="#modules-available">What modules are available on pacini?</a>
@@ -102,7 +102,7 @@
 		</ul>
 
 		<h1 class="textheader">SLURM FAQ</h1>
-		<p> <a href="#top">(jump to top)</p>
+		<p><a href="#top">(jump to top)</a></p>
 		<ul>
 		<li> <a href="#slurm-launch">How do I launch jobs?</a>
 		<li> <a href="#slurm-monitor">How do I monitor my jobs?</a>
@@ -121,7 +121,7 @@
 		</ul>
 
 		<h1 class="textheader">Python FAQ</h1>
-		<p> <a href="#top">(jump to top)</p>
+		<p><a href="#top">(jump to top)</a></p>
 		<ul>
 		<li> <a href="#python-libraries">How to install new python libraries?</a>
 		<li> <a href="#python-new">How to create a new virtual environment?</a>
@@ -475,7 +475,7 @@
 		    <div class="card-header" role="tab" id="graphical-card-matlab">
 			<h5 class="mb-0">
 			    <a href="#graphical-X2Go">
-				How do I open a graphical window on pacini?
+				How do I open a graphical desktop on pacini?
 			    </a>
 			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#top">(jump to top)</a>
 			</h5>
@@ -483,10 +483,23 @@
 
 		    <div class="card-block textcard">
 
+			<p>To start an graphical desktop on pacini, you need to use <b>X2Go</b>
+			   and connect to pacini over ssh.</p>
+
 			<h4>OS Requirements</h4>
 			<ul>
-			    <li>macOS 10.9 or later - macOS 10.15 or later recommended</li>
-			    <li>Windows 7 or later - Windows 10 or later recommended</li>
+			    <li>macOS 10.9 or later -
+			        macOS 10.15 or later recommended</li>
+			    <li>Linux with X Windows -
+			        Red Hat Enterprise Linux (RHEL) 7.8 or later recommended<br>
+			        If not RHEL7.8 then one of:
+				<ul>
+				<li> Fedora 20 or later
+				<li> CentOS 8 or later
+				</ul>
+			    </li>
+			    <li>Windows 7 or later -
+			        Windows 10 or later recommended</li>
 			</ul>
 
 			<h4>Installation</h4>
@@ -494,12 +507,13 @@
 			    <li><B>macOS only:</B>
 			    Xquartz 2.7.11 or later -
 			    <a href="https://www.xquartz.org">Download Xquartz for macOS</a></li>
-			    <li>X2Go 4.1.2.2 or later -
+			    <li>X2Go Client 4.1.2.2 or later -
 			    <a href="http://wiki.x2go.org/">Download X2Go</a></li>
 			</ul>
 
-			<h4>X2Go configuration</h4>
-			<p>Run <b>X2Go</b> and configure as follows:</p>
+			<p>
+			<h4>X2Go Client configuration</h4>
+			<p>Run <b>X2Go</b> and setup a pacini profile as follows:</p>
 			<img src="img/faq/graphical/osx-1.png" width="70%">
 			<br><b>X2Go configuration steps:</b>
 			<ol>
@@ -511,7 +525,8 @@
 			    <li>Select <B>Media</B> tab for next settings</li>
 			</ol>
 
-			<h4>X2Go Media settings</h4>
+			<p>
+			<h4>X2Go Client Media settings</h4>
 			<p>In addition to the above X2Go configuration, configure X2Go media as follows:</p>
 			<img src="img/faq/graphical/osx-3.png" width="70%">
 			<br><b>X2Go Media setting steps:</b>
@@ -524,8 +539,20 @@
 			</ol>
 
 			<p>
-			<h4>Connection</h4>
-			Select created profile to connect to Pacini<br>
+			<h4>macOS only suggestion: pre-launch XQuartz</h4>
+			<p>While not strictly nessicary, it is helpful to have
+			  XQuartz running before you attempt to use the X2Go client.
+			  When the X2Go client makes, over ssh, a connection to pacini,
+			  it will want to start a graphical window.
+			  Pre-starting XQuartz helps avoid a connection timeout
+			  should XQuartz take too long to initialize and start.</p>
+
+			<p>
+			<h4>X2Go client connection over ssh</h4>
+			<p>Run the X2Go client and select the pacini profile.</p>
+			<p>NOTE: The pacini profile was created in the
+			   <b>X2Go Client configuration</b> step above.</p>
+			<p>NOTE: The X2Go client on macOS is called <b>x2goclient</b>.</p>
 			<img src="img/faq/graphical/osx-4.png" width="70%"><br>
 
 			<br>Click the session card to start the session<br>
