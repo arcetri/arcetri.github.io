@@ -72,8 +72,8 @@
 		<li> <a href="#windows-arcetri-key">How do I use Windows to generate SSH keys?</a>
 		<li> <a href="#arcetri-login">How do I login to the pacini head node on Arcetri?</a>
 		<li> <a href="#arcetri-contact">Who do I contact if I need help with Arcetri?</a>
-		<li> <a href="#arcetri-names">What is the meaning behind the names, Pacini, Franco and Arcetri?</a>
-		<li> <a href="#arcetri-differences">What is the difference between Pacini and Arcetri?</a>
+		<li> <a href="#arcetri-names">What is the meaning behind the names, pacini, franco and Arcetri?</a>
+		<li> <a href="#arcetri-differences">What is the difference between pacini and Arcetri?</a>
 		<a name="Graphical-desktop-index"></a>
 		<li> <a href="#arcetri-structure">What is the structure of Arcetri?</a>
 		<li> <a href="#arcetri-filesystems">What should I know about filesystems on pacini?</a>
@@ -84,14 +84,14 @@
 		<ul>
 		<a name="Modules-index"></a>
 		<li> <a href="#graphical-X2Go">How do I open a graphical desktop on pacini?</a>
-		<li> <a href="#graphical-matlab">How do I use Matlab on the Pacini cluster?</a>
+		<li> <a href="#graphical-matlab">How do I use Matlab on pacini?</a>
 		</ul>
 
 		<h1 class="textheader">Modules FAQ</h1>
 		<p><a href="#top">(jump to top)</a></p>
 		<ul>
 		<li> <a href="#modules-what">What are modules?</a>
-		<li> <a href="#modules-available">What modules are available on pacini?</a>
+		<li> <a href="#modules-available">What modules are available on the Arcetri cluster?</a>
 		<li> <a href="#modules-load">How can I load a module?</a>
 		<li> <a href="#modules-list">How can I see loaded modules?</a>
 		<li> <a href="#modules-purge">How can I get rid of loaded modules?</a>
@@ -124,11 +124,11 @@
 		<p><a href="#top">(jump to top)</a></p>
 		<ul>
 		<li> <a href="#python-libraries">How to install new python libraries?</a>
-		<li> <a href="#python-new">How to create a new virtual environment?</a>
-		<li> <a href="#python-activate">How to activate my environment?</a>
-		<li> <a href="#python-deactivate">How to deactivate virtual environment?</a>
+		<li> <a href="#python-new">How to create a new python virtual environment?</a>
+		<li> <a href="#python-activate">How to activate my python environment?</a>
+		<li> <a href="#python-deactivate">How to deactivate python virtual environment?</a>
 		<li> <a href="#python-version">How to specify Python version inside an environment?</a>
-		<li> <a href="#python-more">Where can I read more about virtual environments?</a>
+		<li> <a href="#python-more">Where can I read more about python virtual environments?</a>
 		</ul>
 	    </div>
 
@@ -356,7 +356,7 @@
 		    <div class="card-header" role="tab" id="headingOne">
 			<h5 class="mb-0">
 			    <a href="#arcetri-names">
-				What is the meaning behind the names, Pacini, Franco and Arcetri?
+				What is the meaning behind the names, pacini, franco and Arcetri?
 			    </a>
 			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#top">(jump to top)</a>
 			</h5>
@@ -404,7 +404,7 @@
 		    <div class="card-header" role="tab" id="headingOne">
 			<h5 class="mb-0">
 			    <a href="#arcetri-differences">
-				What is the difference between Pacini and Arcetri?
+				What is the difference between pacini and Arcetri?
 			    </a>
 			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#top">(jump to top)</a>
 			</h5>
@@ -430,7 +430,7 @@
 		    </div>
 		    <ul>
 			<a name="arcetri-filesystems"></a>
-			<li>You may access to a Pacini head node (pacini.cisco.com) via the ASA firewall (arcetri-asa.cisco.com).</li>
+			<li>You may access to a pacini head node (pacini.cisco.com) via the ASA firewall (arcetri-asa.cisco.com).</li>
 		    </ul>
 		</div>
 
@@ -438,7 +438,7 @@
 		    <div class="card-header" role="tab" id="arcetri-card-filesystems">
 			<h5 class="mb-0">
 			    <a href="#arcetri-filesystems">
-				What should I know about filesystems on pacini?
+				What should I know about filesystems on the Arcetri cluster?
 			    </a>
 			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#top">(jump to top)</a>
 			</h5>
@@ -452,7 +452,7 @@
 			</p>
 			<p>
 			    <h4><code>/usr/global/</code></h4>
-			    &nbsp;&nbsp;&nbsp;&nbsp;<code>/{bin, sbin, lib, include, ...}</code> - common software for Pacini cluster - mod by admin only<br>
+			    &nbsp;&nbsp;&nbsp;&nbsp;<code>/{bin, sbin, lib, include, ...}</code> - common software for Arcetri cluster - mod by admin only<br>
 			    &nbsp;&nbsp;&nbsp;&nbsp;<code>/_group_name_</code> - writable for group for software/libs<br>
 			    &nbsp;&nbsp;&nbsp;&nbsp;<code>/src/{bin, sbin, lib, ...}</code> - source for common software - mod by admin only<br>
 			    &nbsp;&nbsp;&nbsp;&nbsp;<code>/src/_group_name_</code> - writable for group for source code
@@ -514,10 +514,10 @@
 			<p>
 			<h4>X2Go Client configuration</h4>
 			<p>Run <b>X2Go</b> and setup a pacini profile as follows:</p>
-			<img src="img/faq/graphical/osx-1.png" width="70%">
+			<img src="img/faq/graphical/osx-1.png" width="70%"><br>
 			<br><b>X2Go configuration steps:</b>
 			<ol>
-			    <li>Name the session</li>
+			    <li>Name the session: <b>pacini</b></li>
 			    <li>Enter the Host: <B>pacini.cisco.com</B></li>
 			    <li>Enter your pacini username</li>
 			    <li>Check [x] <B>Try auto login (via SSH Agent or default SSH key)</B></li>
@@ -528,8 +528,8 @@
 			<p>
 			<h4>X2Go Client Media settings</h4>
 			<p>In addition to the above X2Go configuration, configure X2Go media as follows:</p>
-			<img src="img/faq/graphical/osx-3.png" width="70%">
-			<br><b>X2Go Media setting steps:</b>
+			<img src="img/faq/graphical/osx-3.png" width="70%"><br><br>
+			<p><b>X2Go Media setting steps:</b></p>
 			<ol>
 			    <li>Check [x] <B>Enable sound support</B></li>
 			    <li>Check (*) <B>esd</B></li>
@@ -567,7 +567,7 @@
 			<p>NOTE: The X2Go client on macOS is called <b>x2goclient</b>.</p>
 			<img src="img/faq/graphical/osx-4.png" width="70%"><br><br>
 
-			<p>Double click the <b>Pacini</b> session card to start the session</p>
+			<p>Double click the <b>pacini</b> session card to start the session</p>
 			<img src="img/faq/graphical/osx-5.png" width="70%"><br><br>
 
 			<p>Be <b>patient</b> as the X2Go client launches a KDE desktop
@@ -597,7 +597,7 @@
 			   show you a Login / Password field.</p>
 			<a name="graphical-matlab"></a>
 			<p>Because we do NOT use a password based ssh, this field will not work.
-			   Just click ((<b>Cancel</b>)) to restore the Pacini profile.</p>
+			   Just click ((<b>Cancel</b>)) to restore the pacini profile.</p>
 			<img src="img/faq/graphical/osx-11.png" width="70%">
 		    </div>
 		</div>
@@ -606,7 +606,7 @@
 		    <div class="card-header" role="tab" id="graphical-card-matlab">
 			<h5 class="mb-0">
 			    <a href="#graphical-matlab">
-				How do I use Matlab on the Pacini cluster?
+				How do I use Matlab on pacini?
 			    </a>
 			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#top">(jump to top)</a>
 			</h5>
@@ -615,7 +615,7 @@
 		    <div class="card-block textcard">
 
 			<h4>Start a graphical session</h4>
-			First, access a graphical desktop on the Pacini cluster.
+			First, access a graphical desktop on the pacini cluster.
 
 			<p>
 			<h4>Open a graphical terminal</h4>
@@ -626,6 +626,8 @@
 			<img src="img/faq/graphical/osx-8.png" width="70%"><br><br>
 			<p>You need to be sure the matlab module is loaded
 			   before you run matlab.</p>
+			<p> See <a href="#modules-what">What are modules?</a> for
+			    more information on modules.</p>
 
 			<p>
 			<h4>run matlab</h4>
@@ -1231,7 +1233,8 @@ mpirun ..
 			    activate
 			</a>
 			<a name="python-new"></a>
-			your virtual environment. <br/> After that type into your command line: <code>$ pip install SomePackage</code>
+			your python virtual environment.<br/>
+			After that type into your command line: <code>$ pip install SomePackage</code>
 		    </div>
 		</div>
 
@@ -1239,7 +1242,7 @@ mpirun ..
 		    <div class="card-header" role="tab" id="python-card-new">
 			<h5 class="mb-0">
 			    <a href="#python-new">
-				How to create a new virtual environment?
+				How to create a new python virtual environment?
 			    </a>
 			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#top">(jump to top)</a>
 			</h5>
@@ -1248,7 +1251,9 @@ mpirun ..
 		    <div class="card-block textcard">
 			<code>$ virtualenv <i>my_project</i></code><br/>
 			<a name="python-activate"></a>
-			The name of the virtual environment (in this case, it was <i>my_project</i>) can be anything; omitting the name will place the files in the current directory instead.
+			The name of the python virtual environment
+			(in this case, it was <i>my_project</i>) can be anything;
+			omitting the name will place the files in the current directory instead.
 			<br>
 		    </div>
 		</div>
@@ -1257,7 +1262,7 @@ mpirun ..
 		    <div class="card-header" role="tab" id="python-card-activate">
 			<h5 class="mb-0">
 			    <a href="#python-activate">
-				How to activate my environment?
+				How to activate my python virtual environment?
 			    </a>
 			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#top">(jump to top)</a>
 			</h5>
@@ -1266,7 +1271,7 @@ mpirun ..
 		    <div class="card-block textcard">
 			<code>$ source <i>my_project</i>/bin/activate</code><br>
 			Where <i>my_project</i> is the environment folder.<br>
-			The name of the current virtual environment will now appear on the
+			The name of the current python virtual environment will now appear on the
 			left of the prompt (e.g. <code>(my_project)UserName$</code>) to let you know that it’s active.
 			<a name="python-deactivate"></a>
 			From now on, any package that you install using pip will be placed in the my_project folder, isolated from the global Python installation.
@@ -1278,7 +1283,7 @@ mpirun ..
 		    <div class="card-header" role="tab" id="python-card-deactivate">
 			<h5 class="mb-0">
 			    <a href="#python-deactivate">
-				How to deactivate virtual environment?
+				How to deactivate a python virtual environment?
 			    </a>
 			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#top">(jump to top)</a>
 			</h5>
@@ -1302,13 +1307,13 @@ mpirun ..
 		    </div>
 
 		    <div class="card-block textcard">
-			There are two ways to specify Python version inside a virtual environment:
+			There are two ways to specify Python version inside a python virtual environment:
 			<ul>
 			    <li>While creating an environment:</li>
-			    <code>$ virtualenv -p /usr/bin/python2.7 <i>my_project</i></code>
+			    <code>$ virtualenv -p /usr/bin/python3.6 <i>my_project</i></code>
 			    <li>Or change the interpreter globally with an env variable in ~/.bashrc</li>
 			    <a name="python-more"></a>
-			    <code>$ export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2.7</code>
+			    <code>$ export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.6</code>
 			</ul>
 		    </div>
 		</div>
@@ -1317,15 +1322,18 @@ mpirun ..
 		    <div class="card-header" role="tab" id="python-card-more">
 			<h5 class="mb-0">
 			    <a href="#python-more">
-				Where can I read more about virtual environments?
+				Where can I read more about python virtual environments?
 			    </a>
 			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#top">(jump to top)</a>
 			</h5>
 		    </div>
 
 		    <div class="card-block textcard">
-			See the Hitchhiker's <b>Guide to Python</b>:
-			<a href="http://docs.python-guide.org/en/latest/dev/virtualenvs/">docs.python-guide.org/en/latest/dev/virtualenvs/</a>
+			<p>Python term virtual does NOT refer to a virtual machine.
+			   Think of python virtual environments as just an execution
+			   enviroment, similar to modules.</p>
+			<p>See the Hitchhiker's <b>Guide to Python</b>:
+			<a href="http://docs.python-guide.org/en/latest/dev/virtualenvs/">docs.python-guide.org/en/latest/dev/virtualenvs/</a></p>
 		    </div>
 		</div>
 	    </div>
