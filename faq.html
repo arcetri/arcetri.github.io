@@ -70,7 +70,7 @@
 		<li> <a href="#arcetri-account">How can I obtain an Arcetri account?</a>
 		<li> <a href="#unix-arcetri-key">How do I use Unix/Linux/macOS to generate SSH keys?</a>
 		<li> <a href="#windows-arcetri-key">How do I use Windows to generate SSH keys?</a>
-		<li> <a href="#arcetri-login">How do I login to Arcetri?</a>
+		<li> <a href="#arcetri-login">How do I login to the pacini head node on Arcetri?</a>
 		<li> <a href="#arcetri-contact">Who do I contact if I need help with Arcetri?</a>
 		<li> <a href="#arcetri-names">What is the meaning behind the names, Pacini, Franco and Arcetri?</a>
 		<li> <a href="#arcetri-differences">What is the difference between Pacini and Arcetri?</a>
@@ -170,7 +170,7 @@
 			your VPN password over the phone.
 			</p>
 			<p>
-			<a name="windows-arcetri-key"></a>
+			<a name="unix-arcetri-key"></a>
 			After your account is created, see how to login to Arcetri.
 			</p>
 		    </div>
@@ -214,7 +214,7 @@
 			    </ul>
 			    <b>3. Send us public SSH key</b>
 			    Attach your <code>id_rsa.pub</code> file to your account request email.<br>
-			    <a name="arcetri-login"></a>
+			    <a name="windows-arcetri-key"></a>
 			    <b>WARNING:</b> send <code>id_rsa.pub</code>, not <code>id_rsa</code> file! <code>id_rsa</code> is your private confidential key, similar to your passwords!
 			</p>
 		    </div>
@@ -288,7 +288,7 @@
 			    <b>Step 2: F. Detail's of the imported key will be displayed.</b> (see above)
 			    </p>
 			    <p>
-			    <a name="unix-arcetri-key"></a>
+			    <a name="arcetri-login"></a>
 			    <b>WARNING:</b> Send <code>id_rsa.pub</code>, not <code>id_rsa</code> file!
 			    <code>id_rsa</code> is your private confidential key, similar to your passwords!
 			</p>
@@ -299,7 +299,7 @@
 		    <div class="card-header" role="tab" id="headingOne">
 			<h5 class="mb-0">
 			    <a href="#arcetri-login">
-				How do I login to Arcetri?
+				How do I login to the pacini head node on Arcetri?
 			    </a>
 			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#top">(jump to top)</a>
 			</h5>
@@ -548,32 +548,57 @@
 			  should XQuartz take too long to initialize and start.</p>
 
 			<p>
+			<h4>Login to pacini using ssh over Cisco AnyConnect</h4>
+			<p>In order to be able to connect to pacini using the
+			   X2Go client connection over ssh. one needs to
+			   first establish a VPN connection to <b>arcetri-asa.cisco.com</b>.
+			</p>
+			<p> For more information, see:
+			    <a href="#arcetri-login">
+				How do I login to the pacini head node on Arcetri?
+			    </a>
+			</p>
+
+			<p>
 			<h4>X2Go client connection over ssh</h4>
 			<p>Run the X2Go client and select the pacini profile.</p>
 			<p>NOTE: The pacini profile was created in the
 			   <b>X2Go Client configuration</b> step above.</p>
 			<p>NOTE: The X2Go client on macOS is called <b>x2goclient</b>.</p>
-			<img src="img/faq/graphical/osx-4.png" width="70%"><br>
+			<img src="img/faq/graphical/osx-4.png" width="70%"><br><br>
 
-			<br>Click the session card to start the session<br>
-			<img src="img/faq/graphical/osx-5.png" width="70%"><br>
+			<p>Double click the <b>Pacini</b> session card to start the session</p>
+			<img src="img/faq/graphical/osx-5.png" width="70%"><br><br>
 
-			<br>You should see full desktop on pacini<br>
+			<p>Be <b>patient</b> as the X2Go client launches a KDE desktop
+			   as a new X Window.
+			   This can take longer to start then you might think,
+			   and certainly takes longer then starting just a simple
+			   ssh connection.</p>
 			<img src="img/faq/graphical/osx-6.png" width="70%"><br>
 			</p>
 
 			<p>
 			<h4>Open a Terminal window</h4>
-			<br>You may access a shell prompt via the Terminal desktop application.<br>
-			<img src="img/faq/graphical/osx-7.png" width="70%"><br>
-			For example:<br>
+			<p>You may access a shell prompt via the Terminal desktop application.</p>
+			<img src="img/faq/graphical/osx-7.png" width="70%"><br><br>
+
+			<p>For example:</p>
 			<img src="img/faq/graphical/osx-8.png" width="70%"><br>
 
 			<p>
-			<h4>To end the session</h4>
-			<img src="img/faq/graphical/osx-10.png" width="70%"><br>
+			<h4>To end the X2Go session</h4>
+			<p>To end the X2Go client session, click on the stop buttion
+			   (see below) obn the main X2Go client window:</p>
+			<img src="img/faq/graphical/osx-10.png" width="70%">
+			<p>click ((<b>Yes</b>))</p>
+
+			<p>After clicking ((<b>Yes</b>)) the X2Go client window will
+			   show you a Login / Password field.</p>
 			<a name="graphical-matlab"></a>
-			<p>click ((Yes))</p>
+			<p>Because we do NOT use a password based ssh, this field will not work.
+			   Just click ((<b>Cancel</b>)) to restore the Pacini profile.</p>
+			<img src="img/faq/graphical/osx-11.png" width="70%">
 		    </div>
 		</div>
 
@@ -597,20 +622,16 @@
 			<img src="img/faq/graphical/osx-7.png" width="70%"><br>
 
 			<p>
-			<h4>module load</h4>
-			<img src="img/faq/graphical/osx-8.png" width="70%"><br>
-			<ol>
-			    <li>Load desired version of Matlab by “module load” command. </li>
-			    <li>Launch Matlab</li>
-			</ol>
+			<h4>module load matlab</h4>
+			<img src="img/faq/graphical/osx-8.png" width="70%"><br><br>
+			<p>You need to be sure the matlab module is loaded
+			   before you run matlab.</p>
 
+			<p>
+			<h4>run matlab</h4>
 			<img src="img/faq/graphical/osx-9.png" width="70%"><br>
-			Matlab should be up and running by this point.
-
-			<h4>To end the session</h4>
-			<img src="img/faq/graphical/osx-10.png" width="70%"><br>
 			<a name="modules-what"></a>
-			<p>Click ((Yes))</p>
+			Matlab should be up and running by this point.
 		    </div>
 		</div>
 	    </div>
