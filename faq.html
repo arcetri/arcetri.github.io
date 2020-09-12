@@ -84,7 +84,7 @@
 		<ul>
 		<a name="Modules-index"></a>
 		<li> <a href="#graphical-X2Go">How do I open a graphical desktop on pacini?</a>
-		<li> <a href="#graphical-matlab">How do I use Matlab on pacini?</a>
+		<li> <a href="#graphical-matlab">How do I use Matlab in graphical mode?</a>
 		</ul>
 
 		<h1 class="textheader">Modules FAQ</h1>
@@ -625,13 +625,17 @@
 		    <div class="card-header" role="tab" id="graphical-card-matlab">
 			<h5 class="mb-0">
 			    <a href="#graphical-matlab">
-				How do I use Matlab on pacini?
+				How do I use Matlab in graphical mode?
 			    </a>
 			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#top">(jump to top)</a>
 			</h5>
 		    </div>
 
 		    <div class="card-block textcard">
+
+			<h4>Important note</h4>
+			The matlab application should ONLY be run on <b>laplace000</b>.
+			<br><br>
 
 			<h4>Start a graphical session</h4>
 			First, access a graphical desktop on the pacini cluster.
@@ -641,18 +645,27 @@
 			<img src="img/faq/graphical/osx-7.png" width="70%"><br>
 
 			<p>
+			<h4>ssh -X laplace000</h4>
+			<img src="img/faq/graphical/osx-8a.png" width="70%"><br><br>
+			<p>The matlab applcation should only be run on laplace000.
+			Please do <b>NOT</b> run it on the head node.</p>
+			<p>In order to run matlab on laplace000, you need to <b>ssh</b>
+			over to the laplace000 while using the <b>-X</b> option
+			in order to enable X11 forwarding.</b>
 			<h4>module load matlab</h4>
 			<img src="img/faq/graphical/osx-8.png" width="70%"><br><br>
-			<p>You need to be sure the matlab module is loaded
-			   before you run matlab.</p>
-			<p> See <a href="#modules-what">What are modules?</a> for
-			    more information on modules.</p>
-
-			<p>
-			<h4>run matlab</h4>
+			<p>You need to be sure the matlab module is loaded before you run matlab.</p>
+			<h4>start matlab</h4>
 			<img src="img/faq/graphical/osx-9.png" width="70%"><br>
+			<p>After you have <b>ssh -X laplace000</b> and performed the
+			<b>module laod matlab</b> you need to run matlab from the command line.</p>
+			<p>After a bit of tiem you should see a matlab logo:</p>
+			<img src="img/faq/graphical/osx-9a.png" width="70%"><br>
+			<p>The matlab window will appear soon afterwards.</p>
 			<a name="modules-what"></a>
-			Matlab should be up and running by this point.
+			<p><b>Important note:</b> We have only one matlab license, so when you
+			are finished, please <b>EXIT</b> matlab so that others may be able
+			to use it after you are finished.</p>
 		    </div>
 		</div>
 	    </div>
